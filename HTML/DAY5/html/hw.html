@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM PROJECT 2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        font-family: "Urbanist", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Job Application: Senior Web Developer</h1>
+    <p>
+      Thank You for your interest in joining our team. Please fill out the
+      application below
+    </p>
+    <hr />
+    <h2>Personal Information</h2>
+
+    <label for="name">Full Name:</label>
+    <br />
+    <input type="text" id="name" name="name" />
+    <br />
+    <br />
+    <label for="email">Email</label>
+    <br />
+    <input type="email" name="email" id="email" />
+    <br />
+    <br />
+    <label for="phone">Phone</label>
+    <br />
+    <input type="tel" name="phone" id="phone" />
+    <br />
+    <br />
+    <label for="linkedin">Linked In Profile URL</label>
+    <br />
+    <input
+      type="text"
+      name="linkedin"
+      id="linkedin"
+      placeholder="https://www.linkedin.com/feed/update/urn:li:activity:7369368508817735681/"
+    />
+    <br />
+    <br />
+    <hr />
+
+    <h2>Professional Experience</h2>
+
+    <label for="upload">Upload Your Resume ( PDF OR DOCX) </label>
+    <br />
+    <input type="file" name="upload" id="upload" />
+
+    <br /><br />
+
+    <label for="cover">Cover Letter</label>
+    <br />
+    <textarea
+      name="cover"
+      id="cover"
+      rows="10"
+      cols="40"
+      placeholder="Tell us why you're a great fit for this role ..."
+    ></textarea>
+
+    <br /><br />
+    <label for="yoe">Year of Professional Experience </label>
+    <br />
+    <input type="number" name="yoe" id="yoe" />
+    <br /><br />
+    <label for="Earliest">Earliest Possible Start Date:</label>
+    <br />
+    <input type="date" name="Earliest" id="Earliest" />
+    <br /><br />
+    <hr />
+    <h2>Skills & Availability</h2>
+    <label for="Primary">Primary Skillset (Choose one)</label>
+    <br />
+    <input type="radio" name="selopt" value="front end" id="foe" />
+    <label for="foe">Front End Development</label>
+    <br />
+    <input type="radio" name="selopt" value="back end" id="boe" />
+    <label for="boe">Back End Development</label>
+    <br />
+    <input type="radio" name="selopt" value="full stack" id="fst" />
+    <label for="fst">Full Stack Development</label>
+    <br />
+    <br />
+    <label for="Additional">Additional Skills (Select all that Apply)</label>
+    <br />
+    <input type="checkbox" name="skilltechnoe" value="react" id="react" />
+    <label for="react">React Js</label>
+    <br />
+    <input type="checkbox" name="skilltechnoe" value="nodeJs" id="njs" />
+    <label for="njs">Node Js</label>
+    <br />
+    <input type="checkbox" name="skilltechnoe" value="dbms" id="dbms" />
+    <label for="dbms">DataBase Management</label>
+    <br />
+    <input type="checkbox" name="skilltechnoe" value="Cloud" id="cld" />
+    <label for="cld">Cloud DevOps</label>
+    <br />
+
+    <br />
+    <label for="Perform">Perform Work Type:</label>
+    <br />
+    <select name="TimeSelect" id="Perform">
+      <option value="Full-Time">Full - Time</option>
+      <option value="Half-Time">Half - Time</option>
+      <option value="Part-Time">Part - Time</option>
+    </select>
+
+    <hr />
+
+    <h2>Final Confirmation</h2>
+
+    <input type="checkbox" name="legally" id="legally" />
+    <label for="legally">I am legally authorized to work in this country</label>
+    <br />
+    <br />
+    <label for="how">How did you Hear About Us?</label>
+    <br />
+    <input type="text" name="how" id="how" placeholder="Linked In company" />
+    <br />
+    <br />
+    <button type="submit">Submit Application</button>
+    <button type="reset">Clear Form</button>
+  </body>
+</html>
