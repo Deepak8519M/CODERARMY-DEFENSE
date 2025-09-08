@@ -145,16 +145,18 @@ footer {
 .contactForm .cnt {
   /* background: blue; */
   display: flex;
+  flex-direction: column;
   padding: 10px;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 10px;
 }
 .cnt label {
   font-size: 20px;
 }
 .contactForm .cnt input {
-  width: 80%;
+  width: 100%;
   padding: 10px;
+  border: 0;
+  outline: none;
   border-radius: 3px;
 }
 .cnt textarea {
