@@ -172,3 +172,15 @@ footer {
   height: fit-content;
   padding: 30px;
 }
+.coursePage tr {
+  /* background: red; */
+  gap: 10px;
+  display: flex;
+  padding: 10px;
+}
+.coursePage tr iframe {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+/* https://www.notion.so/DAY6-08th-Sept-268beb1a72a480c5add0cdaf126b1801?source=copy_link */
