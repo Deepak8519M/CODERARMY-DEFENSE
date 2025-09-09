@@ -296,44 +296,59 @@ main {
   transform: translateX(-50%);
   object-fit: contain;
 }
-
 .section2 {
-  margin-top: 60px;
-  display: flex;
+  margin: 80px auto 20px;
   width: 90%;
-  margin: 60px auto 10px;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.95),
+    rgba(57, 255, 20, 0.05)
+  );
+  border-radius: 15px;
+  padding: 40px;
+  border: 1px solid rgba(57, 255, 20, 0.2);
 }
 
 .section2 .left {
   width: 50%;
-  padding: 15px 25px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .section2 .left .logo {
-  width: 40%;
-  padding: 10px 30px;
+  width: fit-content;
+  padding: 12px 35px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  border: 4px solid #39ff14;
+  gap: 12px;
+  border: 3px solid #39ff14;
   cursor: pointer;
-  font-size: 0.9vw;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.section2 .left .logo:hover {
+  background: rgba(57, 255, 20, 0.1);
+  transform: scale(1.05);
 }
 
 .section2 .left .logo .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #39ff14;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
 .section2 .left .logo h2 {
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.6vw;
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -343,43 +358,239 @@ main {
 
 .section2 .left h1 {
   color: white;
-  font-size: 3vw;
-  margin-top: 20px;
+  font-size: 3.8vw;
   font-family: "Bebas Neue", sans-serif;
+  margin-top: 20px;
+  line-height: 1.2;
 }
 
 .section2 .bottom {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .section2 .bottom .line1 {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  border-left: 4px solid #39ff14;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.section2 .bottom .line1:hover {
+  transform: translateX(10px);
+  background: rgba(57, 255, 20, 0.05);
+}
+
+.section2 .bottom .line1 h2 {
+  font-size: 2.2vw;
+  color: #39ff14;
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  align-items: center;
   gap: 10px;
-  border-top: 3px solid white;
-  color: white;
+}
+
+.section2 .bottom .line1 p {
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Urbanist", sans-serif;
+  line-height: 1.5;
+}
+
+.section2 .left .action-btn {
+  background: #39ff14;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.section2 .left .action-btn:hover {
+  background: white;
+  color: #39ff14;
+  transform: translateY(-3px);
 }
 
 .section2 .right {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .section2 .right .image {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 85%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(57, 255, 20, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.section2 .right .image:hover {
+  transform: scale(1.02);
 }
 
 .section2 .right .image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section2 {
+    padding: 30px;
+    min-height: auto;
+    margin: 60px auto 20px;
+  }
+
+  .section2 .left {
+    width: 55%;
+    padding: 15px 20px;
+    gap: 20px;
+  }
+
+  .section2 .left .logo {
+    font-size: 1.3vw;
+    padding: 10px 25px;
+  }
+
+  .section2 .left .logo h2 {
+    font-size: 2.2vw;
+  }
+
+  .section2 .left h1 {
+    font-size: 4.8vw;
+  }
+
+  .section2 .bottom .line1 h2 {
+    font-size: 2.8vw;
+  }
+
+  .section2 .bottom .line1 p {
+    font-size: 1.6vw;
+  }
+
+  .section2 .left .action-btn {
+    font-size: 2vw;
+    padding: 12px 25px;
+  }
+
+  .section2 .right {
+    width: 40%;
+  }
+
+  .section2 .right .image {
+    height: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 50px auto 20px;
+  }
+
+  .section2 .left {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .section2 .left .logo {
+    font-size: 2.5vw;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .section2 .left .logo h2 {
+    font-size: 3.5vw;
+  }
+
+  .section2 .left h1 {
+    font-size: 6.5vw;
+  }
+
+  .section2 .bottom .line1 {
+    padding: 12px;
+    border-left: 3px solid #39ff14;
+  }
+
+  .section2 .bottom .line1 h2 {
+    font-size: 4vw;
+  }
+
+  .section2 .bottom .line1 p {
+    font-size: 2.8vw;
+  }
+
+  .section2 .left .action-btn {
+    font-size: 3.5vw;
+    padding: 12px 25px;
+    align-self: center;
+  }
+
+  .section2 .right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .section2 .right .image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    padding: 15px;
+    margin: 40px auto 20px;
+  }
+
+  .section2 .left .logo {
+    font-size: 3.5vw;
+    width: 60%;
+  }
+
+  .section2 .left .logo h2 {
+    font-size: 4.5vw;
+  }
+
+  .section2 .left h1 {
+    font-size: 8vw;
+  }
+
+  .section2 .bottom .line1 h2 {
+    font-size: 5vw;
+  }
+
+  .section2 .bottom .line1 p {
+    font-size: 3.5vw;
+  }
+
+  .section2 .left .action-btn {
+    font-size: 4.5vw;
+    padding: 10px 20px;
+  }
+
+  .section2 .right .image {
+    height: 200px;
+  }
 }
 
 .section3 {
