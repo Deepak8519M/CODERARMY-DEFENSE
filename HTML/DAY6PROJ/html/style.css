@@ -1134,18 +1134,17 @@ footer {
 }
 
 /* dietPage Styling */
-
 .diet-page {
-  margin-top: 80px; /* For fixed nav */
+  margin-top: 80px; /* Space for fixed nav */
 }
 
 .section7 {
   width: 100%;
   min-height: 100vh;
-  padding: 60px 120px;
+  padding: 80px 120px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   color: white;
   background: black;
   position: relative;
@@ -1160,49 +1159,7 @@ footer {
   height: 100%;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(57, 255, 20, 0.1),
-    rgba(0, 0, 0, 0.9)
-  );
-  z-index: 1;
-  animation: glowPulse 10s infinite ease-in-out;
-}
-
-@keyframes glowPulse {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-.diet-page {
-  margin-top: 80px; /* For fixed nav */
-}
-
-.section7 {
-  width: 100%;
-  min-height: 100vh;
-  padding: 60px 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  color: white;
-  background: black;
-  position: relative;
-  overflow: hidden;
-}
-
-.section7-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(57, 255, 20, 0.1),
+    rgba(57, 255, 20, 0.15),
     rgba(0, 0, 0, 0.9)
   );
   z-index: 1;
@@ -1220,27 +1177,41 @@ footer {
 }
 
 .section7 h1 {
-  font-size: 3.5vw;
+  font-size: 4vw;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   color: #39ff14;
-  z-index: 2;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
   position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section7 .intro {
   font-size: 1.2vw;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  z-index: 2;
-  position: relative;
   width: 80%;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
 }
 
 .diet-content {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
   z-index: 2;
   position: relative;
@@ -1251,94 +1222,240 @@ footer {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .diet-column h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.5vw;
   color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
 }
 
 .macro-card,
-.plan-card {
+.tool-card,
+.recipe-card {
   background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border: 2px solid #39ff14;
   border-radius: 20px;
-  padding: 20px;
-  transition: transform 0.3s ease;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .macro-card:hover,
-.plan-card:hover {
+.tool-card:hover,
+.recipe-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
 .macro-card h3,
-.plan-card h3 {
+.tool-card h3,
+.recipe-card h3 {
   font-family: "Bebas Neue", sans-serif;
-  color: white;
   font-size: 1.8vw;
+  color: white;
 }
 
 .macro-card p,
-.plan-card p {
-  font-size: 1vw;
+.tool-card p,
+.recipe-card p {
+  font-size: 1.1vw;
   color: rgba(255, 255, 255, 0.8);
+  font-family: "Urbanist", sans-serif;
 }
 
-.macro-card ul,
-.tips-section ul {
+.macro-card ul {
   list-style: none;
   font-size: 1vw;
   color: white;
+  margin: 15px 0;
 }
 
 .macro-card ul li {
   margin-bottom: 10px;
 }
 
-.plan-card table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+.macro-card strong,
+.tool-card strong,
+.recipe-card strong {
+  color: #39ff14;
 }
 
-.plan-card table th,
-.plan-card table td {
-  border: 1px solid rgba(57, 255, 20, 0.3);
-  padding: 10px;
-  text-align: left;
+.macro-calculator,
+.meal-planner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Urbanist", sans-serif;
   font-size: 1vw;
+  color: #39ff14;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1vw;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.plan-card table th {
-  background: rgba(57, 255, 20, 0.1);
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
-.tips-section {
+.form-group input:focus,
+.form-group select:focus {
+  border-color: white;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+.macro-calculator button,
+.meal-planner button {
+  background: #39ff14;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3vw;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.macro-calculator button:hover,
+.meal-planner button:hover {
+  background: white;
+  color: #39ff14;
+  transform: translateY(-5px);
+}
+
+.macro-result,
+.meal-result {
+  margin-top: 20px;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.macro-result p,
+.meal-result p {
+  margin: 5px 0;
+}
+
+.macro-result strong,
+.meal-result strong {
+  color: #39ff14;
+}
+
+.recipe-section,
+.meal-prep-section {
   z-index: 2;
   position: relative;
   margin-top: 40px;
 }
 
-.tips-section h2 {
+.recipe-section h2,
+.meal-prep-section h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.5vw;
   color: #39ff14;
   text-align: center;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
 }
 
-.tips-section ul {
+.recipe-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.recipe-card .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+.recipe-card .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.meal-prep-section ul {
+  list-style: none;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 1.1vw;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.tips-section ul li {
+.meal-prep-section ul li {
   margin-bottom: 15px;
+}
+
+.faq-section {
+  z-index: 2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.faq-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.faq-item {
+  margin: 20px 0;
+}
+
+.faq-question {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(57, 255, 20, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 /* Responsive */
@@ -1351,25 +1468,47 @@ footer {
     font-size: 6vw;
   }
 
-  .diet-column h2 {
+  .section7 .intro {
+    font-size: 2.5vw;
+  }
+
+  .diet-column h2,
+  .recipe-section h2,
+  .meal-prep-section h2,
+  .faq-section h2 {
     font-size: 4vw;
   }
 
   .macro-card h3,
-  .plan-card h3 {
+  .tool-card h3,
+  .recipe-card h3 {
     font-size: 3vw;
   }
 
   .macro-card p,
-  .plan-card p,
+  .tool-card p,
+  .recipe-card p,
   .macro-card ul li,
-  .plan-card table th,
-  .plan-card table td,
-  .tips-section ul li {
+  .form-group input,
+  .form-group select,
+  .form-group label,
+  .macro-result,
+  .meal-result,
+  .meal-prep-section ul li,
+  .faq-answer {
     font-size: 2vw;
   }
-}
 
+  .macro-calculator button,
+  .meal-planner button {
+    font-size: 2.5vw;
+    padding: 10px 20px;
+  }
+
+  .faq-question {
+    font-size: 2.5vw;
+  }
+}
 /* Exercise Page */
 
 .exercise-page {
@@ -1691,6 +1830,392 @@ footer {
   .progress-tracker button {
     font-size: 2.5vw;
     padding: 10px 20px;
+  }
+
+  .faq-question {
+    font-size: 2.5vw;
+  }
+}
+
+/* Community Page */
+
+.community-page {
+  margin-top: 80px; /* Space for fixed nav */
+}
+
+.section9 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: white;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.section9-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(57, 255, 20, 0.15),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 1;
+  animation: glowPulse 10s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.section9 h1 {
+  font-size: 4vw;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #39ff14;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section9 .intro {
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+}
+
+.community-content {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+}
+
+.community-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.community-column h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.challenge-card,
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.challenge-card h3,
+.testimonial-card h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8vw;
+  color: white;
+}
+
+.challenge-card p,
+.testimonial-card p {
+  font-size: 1.1vw;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Urbanist", sans-serif;
+}
+
+.challenge-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1vw;
+  color: #39ff14;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1vw;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+  border-color: white;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+.challenge-signup button,
+.learn-more,
+.event-signup {
+  background: #39ff14;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3vw;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.challenge-signup button:hover,
+.learn-more:hover,
+.event-signup:hover {
+  background: white;
+  color: #39ff14;
+  transform: translateY(-5px);
+}
+
+.signup-result {
+  margin-top: 20px;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-result strong {
+  color: #39ff14;
+}
+
+.testimonial-carousel {
+  position: relative;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.carousel-prev,
+.carousel-next {
+  background: rgba(57, 255, 20, 0.2);
+  border: 2px solid #39ff14;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: #39ff14;
+  transform: scale(1.1);
+}
+
+.carousel-prev i,
+.carousel-next i {
+  color: white;
+  font-size: 1.2vw;
+}
+
+.events-section {
+  z-index: 2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.events-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.events-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  padding: 30px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.event-card h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8vw;
+  color: white;
+}
+
+.event-card p {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0;
+}
+
+.faq-section {
+  z-index: 2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.faq-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.faq-item {
+  margin: 20px 0;
+}
+
+.faq-question {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(57, 255, 20, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section9 {
+    padding: 40px 20px;
+  }
+
+  .section9 h1 {
+    font-size: 6vw;
+  }
+
+  .section9 .intro {
+    font-size: 2.5vw;
+  }
+
+  .community-column h2,
+  .events-section h2,
+  .faq-section h2 {
+    font-size: 4vw;
+  }
+
+  .challenge-card h3,
+  .testimonial-card h4,
+  .event-card h3 {
+    font-size: 3vw;
+  }
+
+  .challenge-card p,
+  .testimonial-card p,
+  .event-card p,
+  .form-group input,
+  .form-group label,
+  .signup-result,
+  .faq-answer {
+    font-size: 2vw;
+  }
+
+  .challenge-signup button,
+  .learn-more,
+  .event-signup {
+    font-size: 2.5vw;
+    padding: 10px 20px;
+  }
+
+  .carousel-prev i,
+  .carousel-next i {
+    font-size: 2vw;
   }
 
   .faq-question {
