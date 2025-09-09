@@ -1132,3 +1132,348 @@ footer {
     min-height: 300px;
   }
 }
+
+/* dietPage Styling */
+
+.diet-page {
+  margin-top: 80px; /* For fixed nav */
+}
+
+.section7 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.section7-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(57, 255, 20, 0.1),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 1;
+  animation: glowPulse 10s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.section7 h1 {
+  font-size: 3.5vw;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #39ff14;
+  z-index: 2;
+  position: relative;
+}
+
+.section7 .intro {
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.diet-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+}
+
+.diet-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diet-column h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+}
+
+.macro-card,
+.plan-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.macro-card:hover,
+.plan-card:hover {
+  transform: translateY(-10px);
+}
+
+.macro-card h3,
+.plan-card h3 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 1.8vw;
+}
+
+.macro-card p,
+.plan-card p {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.macro-card ul,
+.tips-section ul {
+  list-style: none;
+  font-size: 1vw;
+  color: white;
+}
+
+.macro-card ul li {
+  margin-bottom: 10px;
+}
+
+.plan-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.plan-card table th,
+.plan-card table td {
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  padding: 10px;
+  text-align: left;
+  font-size: 1vw;
+  color: white;
+}
+
+.plan-card table th {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+.tips-section {
+  z-index: 2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.tips-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-align: center;
+}
+
+.tips-section ul {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tips-section ul li {
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section7 {
+    padding: 40px 20px;
+  }
+
+  .section7 h1 {
+    font-size: 6vw;
+  }
+
+  .diet-column h2 {
+    font-size: 4vw;
+  }
+
+  .macro-card h3,
+  .plan-card h3 {
+    font-size: 3vw;
+  }
+
+  .macro-card p,
+  .plan-card p,
+  .macro-card ul li,
+  .plan-card table th,
+  .plan-card table td,
+  .tips-section ul li {
+    font-size: 2vw;
+  }
+}
+
+/* Exercise Page */
+
+.exercise-page {
+  margin-top: 80px;
+}
+
+.section8 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.section8-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(57, 255, 20, 0.1),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 1;
+  animation: glowPulse 10s infinite ease-in-out;
+}
+
+.section8 h1 {
+  font-size: 3.5vw;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #39ff14;
+  z-index: 2;
+  position: relative;
+}
+
+.section8 .intro {
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.exercise-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.exercise-level {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.exercise-level:hover {
+  transform: translateY(-10px);
+}
+
+.exercise-level h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+}
+
+.exercise-level p {
+  font-size: 1.1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.exercise-level table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.exercise-level table th,
+.exercise-level table td {
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  padding: 12px;
+  text-align: left;
+  font-size: 1vw;
+  color: white;
+}
+
+.exercise-level table th {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+.tips-section {
+  z-index: 2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.tips-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-align: center;
+}
+
+.tips-section ul {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1vw;
+  color: rgba(255, 255, 255, 0.8);
+  list-style: none;
+}
+
+.tips-section ul li {
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section8 {
+    padding: 40px 20px;
+  }
+
+  .section8 h1 {
+    font-size: 6vw;
+  }
+
+  .exercise-level h2 {
+    font-size: 4vw;
+  }
+
+  .exercise-level p,
+  .exercise-level table th,
+  .exercise-level table td,
+  .tips-section ul li {
+    font-size: 2vw;
+  }
+}
