@@ -1177,6 +1177,48 @@ footer {
   }
 }
 
+.diet-page {
+  margin-top: 80px; /* For fixed nav */
+}
+
+.section7 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.section7-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(57, 255, 20, 0.1),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 1;
+  animation: glowPulse 10s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 .section7 h1 {
   font-size: 3.5vw;
   text-align: center;
@@ -1331,16 +1373,16 @@ footer {
 /* Exercise Page */
 
 .exercise-page {
-  margin-top: 80px;
+  margin-top: 80px; /* Space for fixed nav */
 }
 
 .section8 {
   width: 100%;
   min-height: 100vh;
-  padding: 60px 120px;
+  padding: 80px 120px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   color: white;
   background: black;
   position: relative;
@@ -1355,30 +1397,53 @@ footer {
   height: 100%;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(57, 255, 20, 0.1),
+    rgba(57, 255, 20, 0.15),
     rgba(0, 0, 0, 0.9)
   );
   z-index: 1;
   animation: glowPulse 10s infinite ease-in-out;
 }
 
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 .section8 h1 {
-  font-size: 3.5vw;
+  font-size: 4vw;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   color: #39ff14;
-  z-index: 2;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
   position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section8 .intro {
   font-size: 1.2vw;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  z-index: 2;
-  position: relative;
   width: 80%;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
 }
 
 .exercise-content {
@@ -1394,28 +1459,31 @@ footer {
   border: 2px solid #39ff14;
   border-radius: 20px;
   padding: 30px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .exercise-level:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
 .exercise-level h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.5vw;
   color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
 }
 
 .exercise-level p {
   font-size: 1.1vw;
   color: rgba(255, 255, 255, 0.8);
+  font-family: "Urbanist", sans-serif;
 }
 
 .exercise-level table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .exercise-level table th,
@@ -1425,35 +1493,169 @@ footer {
   text-align: left;
   font-size: 1vw;
   color: white;
+  font-family: "Urbanist", sans-serif;
 }
 
 .exercise-level table th {
-  background: rgba(57, 255, 20, 0.1);
+  background: rgba(57, 255, 20, 0.15);
 }
 
-.tips-section {
+.exercise-level .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+.exercise-level .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.tool-card h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.tool-card p {
+  font-size: 1.1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.progress-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1vw;
+  color: #39ff14;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1vw;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+  border-color: white;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+.progress-tracker button {
+  background: #39ff14;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3vw;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.progress-tracker button:hover {
+  background: white;
+  color: #39ff14;
+  transform: translateY(-5px);
+}
+
+.progress-result {
+  margin-top: 20px;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.progress-result p {
+  margin: 5px 0;
+}
+
+.progress-result strong {
+  color: #39ff14;
+}
+
+.faq-section {
   z-index: 2;
   position: relative;
   margin-top: 40px;
 }
 
-.tips-section h2 {
+.faq-section h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2.5vw;
   color: #39ff14;
   text-align: center;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
 }
 
-.tips-section ul {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 1.1vw;
+.faq-item {
+  margin: 20px 0;
+}
+
+.faq-question {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(57, 255, 20, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1vw;
   color: rgba(255, 255, 255, 0.8);
-  list-style: none;
-}
-
-.tips-section ul li {
-  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 /* Responsive */
@@ -1466,14 +1668,32 @@ footer {
     font-size: 6vw;
   }
 
-  .exercise-level h2 {
+  .section8 .intro {
+    font-size: 2.5vw;
+  }
+
+  .exercise-level h2,
+  .tool-card h2 {
     font-size: 4vw;
   }
 
   .exercise-level p,
   .exercise-level table th,
   .exercise-level table td,
-  .tips-section ul li {
+  .tool-card p,
+  .form-group input,
+  .form-group label,
+  .progress-result,
+  .faq-answer {
     font-size: 2vw;
+  }
+
+  .progress-tracker button {
+    font-size: 2.5vw;
+    padding: 10px 20px;
+  }
+
+  .faq-question {
+    font-size: 2.5vw;
   }
 }
