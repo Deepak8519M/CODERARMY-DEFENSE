@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra Premium Gym - Sculpt Your Body, Elevate Your Spirit</title>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        transition: background 0.3s ease;
+      }
+
+      nav.scrolled {
+        background: rgba(0, 0, 0, 1);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #a8ff78;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 1.5rem;
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #a8ff78;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        background: url("https://source.unsplash.com/random/1920x1080/?bodybuilder")
+          no-repeat center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin: 0;
+        color: #a8ff78;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        animation: slideInLeft 1.5s ease-out;
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #ffffff;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        animation: slideInRight 1.5s ease-out;
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .cta-btn {
+        background: #a8ff78;
+        color: #1a1a1a;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .cta-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(168, 255, 120, 0.7);
+      }
+
+      /* Badges */
+      .badges {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 800px;
+        height: 60%;
+        pointer-events: none;
+      }
+
+      .badge {
+        position: absolute;
+        background: rgba(168, 255, 120, 0.8);
+        color: #1a1a1a;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .badge:nth-child(1) {
+        top: 10%;
+        left: 10%;
+      }
+      .badge:nth-child(2) {
+        top: 20%;
+        right: 10%;
+      }
+      .badge:nth-child(3) {
+        bottom: 30%;
+        left: 15%;
+      }
+      .badge:nth-child(4) {
+        bottom: 20%;
+        right: 15%;
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 2rem;
+        text-align: center;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      #home {
+        padding: 0;
+      }
+
+      #about,
+      #programs {
+        background: #1e1e1e;
+      }
+
+      #diet,
+      #exercise {
+        background: linear-gradient(to right, #1a1a1a, #1e1e1e);
+      }
+
+      #contact {
+        background: #1a1a1a;
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: #a8ff78;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        animation: fadeInUp 1s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(168, 255, 120, 0.5);
+      }
+
+      .card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #a8ff78;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      /* Parallax Effect */
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #diet {
+        background-image: url("https://source.unsplash.com/random/1920x1080/?diet");
+      }
+
+      #exercise {
+        background-image: url("https://source.unsplash.com/random/1920x1080/?exercise");
+      }
+
+      /* Contact Form */
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      input,
+      textarea {
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      button {
+        background: #a8ff78;
+        color: #1a1a1a;
+        padding: 1rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      /* Footer */
+      footer {
+        background: #0a0a0a;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #a8ff78;
+      }
+
+      .social-links {
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        margin: 0 0.5rem;
+        color: #ffffff;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #a8ff78;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="logo">Ultra Premium Gym</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#diet">Diet</a></li>
+        <li><a href="#exercise">Exercise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Page Hero -->
+    <section id="home" class="hero">
+      <h1>Sculpt Your Body, Elevate Your Spirit</h1>
+      <p>Transform Your Life at Ultra Premium Gym</p>
+      <a href="#programs" class="cta-btn">Get Started</a>
+      <div class="badges">
+        <div class="badge">Free Trial</div>
+        <div class="badge">1.5K+ Members</div>
+        <div class="badge">30+ Classes</div>
+        <div class="badge">50+ Trainers</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Ultra Premium Gym is more than a fitness center – it's a lifestyle. Our
+        motto: "Sculpt Your Body, Elevate Your Spirit." We offer
+        state-of-the-art facilities, expert trainers, and personalized programs
+        to help you achieve your goals.
+      </p>
+    </section>
+
+    <section id="programs">
+      <h2>Our Programs</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Personal Training</h3>
+          <p>One-on-one sessions tailored to your needs.</p>
+        </div>
+        <div class="card">
+          <h3>Group Classes</h3>
+          <p>Fun and motivating workouts with like-minded individuals.</p>
+        </div>
+        <div class="card">
+          <h3>Wellness Workshops</h3>
+          <p>Learn about nutrition, recovery, and mental health.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diet Page -->
+    <section id="diet" class="parallax">
+      <h2>Diet Plans</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Weight Loss</h3>
+          <p>Calorie-controlled meals with high protein and veggies.</p>
+        </div>
+        <div class="card">
+          <h3>Muscle Gain</h3>
+          <p>High-calorie plans focused on proteins and carbs.</p>
+        </div>
+        <div class="card">
+          <h3>Balanced</h3>
+          <p>Maintain your health with balanced macros.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exercise Page -->
+    <section id="exercise" class="parallax">
+      <h2>Exercise Routines</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Strength Training</h3>
+          <p>Build muscle with weights and resistance.</p>
+        </div>
+        <div class="card">
+          <h3>Cardio</h3>
+          <p>Improve endurance with running, cycling, and more.</p>
+        </div>
+        <div class="card">
+          <h3>Yoga</h3>
+          <p>Enhance flexibility and mindfulness.</p>
+        </div>
+        <div class="card">
+          <h3>And More</h3>
+          <p>HIIT, Pilates, and custom workouts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Address: 123 Fitness Ave, Premium City, USA</p>
+      <p>Email: info@ultrapremiumgym.com</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#diet">Diet</a>
+        <a href="#exercise">Exercise</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>Opening Hours: Mon-Fri 6AM-10PM | Sat-Sun 8AM-8PM</p>
+      <p>&copy; 2025 Ultra Premium Gym. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Sticky Nav on Scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      // Smooth Scroll for Links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
