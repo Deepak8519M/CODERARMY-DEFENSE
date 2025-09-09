@@ -579,3 +579,256 @@ main {
   background: white;
   color: #39ff14;
 }
+
+/* fOOTER */
+
+footer {
+  position: relative;
+  width: 100%;
+  background: black; /* Matches site theme */
+  color: white;
+  padding: 80px 120px 40px;
+  font-family: "Urbanist", sans-serif;
+  overflow: hidden; /* Prevents overflow from animations */
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(57, 255, 20, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 1;
+  animation: pulse 10s infinite ease-in-out; /* Subtle glowing effect */
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 4px solid #39ff14;
+  border-radius: 50px;
+  width: fit-content;
+  transition: box-shadow 0.3s ease;
+}
+
+.footer-logo:hover {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5); /* Neon glow on hover */
+}
+
+.footer-logo .dot {
+  width: 12px;
+  height: 12px;
+  background: #39ff14;
+  border-radius: 50%;
+}
+
+.footer-logo h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2vw;
+  color: white;
+}
+
+.footer-logo h2 span {
+  color: #39ff14;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8vw;
+  color: #39ff14;
+  margin-bottom: 20px;
+}
+
+.footer-column.explore ul {
+  list-style: none;
+}
+
+.footer-column.explore ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column.explore ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1vw;
+  transition: color 0.3s ease;
+}
+
+.footer-column.explore ul li a:hover {
+  color: #39ff14;
+}
+
+.footer-column.connect .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-column.connect .social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-column.connect .social-icon:hover {
+  background: #39ff14;
+  color: black;
+  transform: scale(1.1); /* Subtle zoom on hover */
+}
+
+.footer-column.newsletter p {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.footer-column.newsletter .newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-column.newsletter .newsletter-form input {
+  padding: 12px;
+  border: 2px solid #39ff14;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1vw;
+  width: 200px;
+  outline: none;
+}
+
+.footer-column.newsletter .newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-column.newsletter .newsletter-form button {
+  background: #39ff14;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vw;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer-column.newsletter .newsletter-form button:hover {
+  background: white;
+  color: #39ff14;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom .footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom .footer-links a {
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #39ff14;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-logo h2 {
+    font-size: 4vw;
+  }
+
+  .footer-column h3 {
+    font-size: 3vw;
+  }
+
+  .footer-column.explore ul li a,
+  .footer-column.newsletter p,
+  .footer-column.newsletter .newsletter-form input,
+  .footer-bottom p,
+  .footer-bottom .footer-links a {
+    font-size: 2vw;
+  }
+
+  .footer-column.connect .social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 2.5vw;
+  }
+
+  .footer-column.newsletter .newsletter-form input {
+    width: 150px;
+  }
+
+  .footer-column.newsletter .newsletter-form button {
+    font-size: 2vw;
+    padding: 10px 20px;
+  }
+}
