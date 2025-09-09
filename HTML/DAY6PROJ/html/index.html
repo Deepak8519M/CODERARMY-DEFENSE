@@ -16,13 +16,27 @@
         <div class="dot"></div>
         <h2>Code <span>Flex</span></h2>
       </div>
-      <ul>
+      <ul class="nav-links">
         <li><a href="">Home</a></li>
         <li><a href="diet.html">Diet</a></li>
         <li><a href="exercise.html">Exercise</a></li>
         <li><a href="community.html">Community</a></li>
       </ul>
-      <button>Join Now</button>
+      <button class="join-btn">Join Now</button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="diet.html">Diet</a></li>
+          <li><a href="exercise.html">Exercise</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+        <button class="mobile-join-btn">Join Now</button>
+      </div>
     </nav>
     <main>
       <div class="section1">
@@ -341,5 +355,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .querySelector(".hamburger")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".mobile-menu").classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
