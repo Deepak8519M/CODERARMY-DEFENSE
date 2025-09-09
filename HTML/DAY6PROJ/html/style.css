@@ -16,7 +16,7 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 nav {
-  /* position: fixed; */
+  position: fixed;
   background: rgba(37, 29, 29, 0.779);
   width: 100%;
   /* background: red; */
@@ -28,7 +28,12 @@ nav {
   /* background: red; */
   cursor: pointer;
   z-index: 20;
-  /* top: 0; */
+  top: 0;
+  background: rgba(255, 255, 255, 0.1); /* transparent bg */
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  z-index: 1000;
 }
 nav .logo {
   /* background: blue; */
@@ -112,11 +117,12 @@ main {
 
 .layer1 .top h1 {
   /* background: red; */
+  white-space: nowrap;
 
   width: 90%;
 
   color: white;
-  margin: -55px auto;
+  margin: -50px auto;
   font-size: 26vw;
   text-align: center;
   /* font-family: "Roboto Condensed", sans-serif; */
