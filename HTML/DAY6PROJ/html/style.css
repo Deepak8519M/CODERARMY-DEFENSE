@@ -350,10 +350,10 @@ main {
   overflow: hidden;
 }
 
-.layer1 .bottom .right .card-img img {
+.layer1 .bottom .right .card-img video {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 
 .layer1 .bottom .right h3 {
@@ -3230,5 +3230,312 @@ footer {
 
   .faq-question {
     font-size: 2.5vw;
+  }
+}
+
+/* Progress Hub Page  */
+
+/* Enhanced CSS for Progress Hub - Bigger, Better UI with Animations and Responsiveness */
+
+/* Base Styles (Reuse from original) */
+.progress-hub-page {
+  margin-top: 80px; /* Space for nav */
+}
+
+.section10 {
+  padding: 100px 150px; /* Larger padding for bigger feel */
+  min-height: 200vh; /* Make it tall and expansive */
+  background: black;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section10-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(57, 255, 20, 0.2),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 1;
+  animation: glowPulse 8s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.section10 h1 {
+  font-size: 5vw; /* Larger heading */
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #39ff14;
+  text-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.section10 .intro {
+  font-size: 1.5vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  width: 70%;
+  margin: 20px auto;
+  z-index: 2;
+}
+
+.progress-content {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Flexible grid for more columns */
+  gap: 60px; /* Larger gaps for spacious feel */
+  z-index: 2;
+  position: relative;
+}
+
+.progress-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* More space between cards */
+}
+
+.progress-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(57, 255, 20, 0.05)
+  );
+  backdrop-filter: blur(15px);
+  border: 3px solid #39ff14;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  animation: cardFadeIn 1s ease-out;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress-card:hover {
+  transform: translateY(-15px) scale(1.05); /* Bigger hover effect */
+  box-shadow: 0 0 40px rgba(57, 255, 20, 0.6);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(57, 255, 20, 0.1)
+  );
+}
+
+.progress-card h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2vw;
+  color: #39ff14;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+  margin-bottom: 20px;
+}
+
+.progress-card p {
+  font-size: 1.3vw;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.2vw;
+  color: #39ff14;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.form-group input,
+.form-group select {
+  padding: 15px;
+  border: 2px solid #39ff14;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.2vw;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: white;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
+.progress-card button {
+  background: #39ff14;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress-card button:hover {
+  background: white;
+  color: #39ff14;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+}
+
+.progress-result,
+.log-result,
+.calc-result,
+.insights,
+.integration-result {
+  margin-top: 25px;
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+.badge {
+  background: #39ff14;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vw;
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .section10 {
+    padding: 80px 100px;
+  }
+  .section10 h1 {
+    font-size: 6vw;
+  }
+  .progress-card {
+    padding: 30px;
+  }
+  .progress-card h3 {
+    font-size: 3vw;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 1.8vw;
+  }
+  .progress-card button {
+    font-size: 2vw;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section10 {
+    padding: 60px 40px;
+    min-height: auto;
+  }
+  .progress-content {
+    grid-template-columns: 1fr;
+  }
+  .section10 h1 {
+    font-size: 8vw;
+  }
+  .intro {
+    font-size: 3vw;
+    width: 90%;
+  }
+  .progress-card {
+    padding: 25px;
+    border-radius: 20px;
+  }
+  .progress-card h3 {
+    font-size: 4.5vw;
+  }
+  .form-group label {
+    font-size: 2.5vw;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 3vw;
+    padding: 12px;
+  }
+  .progress-card button {
+    font-size: 3.5vw;
+    padding: 12px 25px;
+  }
+  .progress-result,
+  .log-result {
+    font-size: 2.5vw;
+  }
+  canvas {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section10 {
+    padding: 40px 20px;
+  }
+  .section10 h1 {
+    font-size: 10vw;
+  }
+  .progress-card {
+    padding: 20px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 4vw;
+  }
+  .progress-card button {
+    font-size: 4.5vw;
+    padding: 10px 20px;
   }
 }
