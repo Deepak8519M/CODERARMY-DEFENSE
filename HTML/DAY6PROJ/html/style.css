@@ -16,6 +16,8 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 nav {
+  /* position: fixed; */
+  background: rgba(37, 29, 29, 0.779);
   width: 100%;
   /* background: red; */
   display: flex;
@@ -26,6 +28,7 @@ nav {
   /* background: red; */
   cursor: pointer;
   z-index: 20;
+  /* top: 0; */
 }
 nav .logo {
   /* background: blue; */
@@ -86,6 +89,7 @@ nav button {
 }
 main {
   width: 100%;
+  margin-top: 40px;
 }
 .section1 {
   /* background: red; */
@@ -105,11 +109,10 @@ main {
   width: 90%;
   margin: 20px auto;
 }
-.layer1 .top {
-  /* background: greenyellow; */
-}
+
 .layer1 .top h1 {
   /* background: red; */
+
   width: 90%;
 
   color: white;
