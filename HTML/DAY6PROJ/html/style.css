@@ -3539,13 +3539,16 @@ footer {
     padding: 10px 20px;
   }
 }
+
 /* General container styling */
 .section311 {
   width: 100%;
   height: fit-content;
   padding: 30px 100px;
-  background: white;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e0e6ef 100%);
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Heading styling */
@@ -3553,22 +3556,24 @@ footer {
   font-size: 2.5rem;
   font-weight: 600;
   width: 60%;
-  color: #4a4a4a;
+  color: #2a2a2a;
   font-family: "Bebas Neue", sans-serif;
   line-height: 1.2;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .section311 h1 span {
-  color: #000;
+  color: #39ff14;
 }
 
 /* Paragraph styling */
 .section311 p {
   font-size: 1rem;
-  color: #333;
+  color: #444;
   margin-bottom: 10px;
   max-width: 80%;
+  font-family: "Arial", sans-serif;
 }
 
 /* Buttons container */
@@ -3581,24 +3586,24 @@ footer {
 
 /* Button styling */
 .section311 .btns button {
-  background: #39ff14;
+  background: linear-gradient(90deg, #39ff14 0%, #2ecc71 100%);
   padding: 10px 20px;
   border-radius: 50px;
-  border: 2px solid white;
+  border: 2px solid #fff;
   font-family: "Bebas Neue", sans-serif;
-  color: black;
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 .section311 .btns button:hover {
-  background: white;
-  color: #39ff14;
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4);
+  background: linear-gradient(90deg, #2ecc71 0%, #39ff14 100%);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(57, 255, 20, 0.5);
 }
 
 /* Cards container */
@@ -3607,7 +3612,6 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px 30px;
   margin-top: 20px;
-  cursor: pointer;
 }
 
 /* Individual card */
@@ -3618,15 +3622,15 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section311 .cards .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(0px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Card image container */
@@ -3634,32 +3638,38 @@ footer {
   width: 100%;
   height: 350px;
   position: relative;
-  /* background: #e0e0e0; */
   background: #39ff14;
+  overflow: hidden;
 }
 
 /* Card image */
 .section311 .cards .card .card-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensures full image is visible */
+  object-fit: contain;
   object-position: center;
-  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.section311 .cards .card:hover .card-img img {
+  transform: scale(1.05);
 }
 
 /* Card heading */
 .section311 .cards .card h2 {
   font-size: 1.5rem;
   font-family: "Bebas Neue", sans-serif;
-  color: #000;
+  color: #222;
   margin: 0.5rem 1rem 0.25rem;
+  text-transform: uppercase;
 }
 
 /* Card paragraph */
 .section311 .cards .card p {
   font-size: 0.9rem;
-  color: #555;
+  color: #666;
   margin: 0 1rem 1rem;
+  font-family: "Arial", sans-serif;
 }
 
 /* Responsive adjustments */
@@ -3674,7 +3684,7 @@ footer {
   }
 
   .section311 p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .section311 .btns {
@@ -3699,7 +3709,7 @@ footer {
   }
 
   .section311 p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     max-width: 100%;
   }
 
@@ -3731,7 +3741,7 @@ footer {
   }
 
   .section311 p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .section311 .btns button {
