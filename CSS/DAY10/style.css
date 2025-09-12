@@ -42,15 +42,19 @@ h1 {
 }
 .first {
   background: red;
-  flex-grow: 1;
+  /* flex-basis: 200px; */
+
+  /* flex-grow: 1; */
+  /* flex-shrink: 4; */
 }
 .second {
   background: blueviolet;
-  flex-grow: 2;
+  /* flex-grow: 2; */
 }
 .third {
   background: greenyellow;
 }
 .fourth {
   background: orangered;
+  /* align-self: flex-end; */
 }
