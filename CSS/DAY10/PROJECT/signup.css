@@ -52,7 +52,7 @@ body::before {
 }
 
 .signup-box {
-  width: 600px;
+  width: 1000px;
   height: fit-content;
   padding: 40px;
   background: rgba(255, 255, 255, 0.1);
