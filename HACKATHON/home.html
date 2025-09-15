@@ -2,65 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Material Flow - Home</title>
+    <title>Material Flow - Documentation Hub</title>
   </head>
-  <body bgcolor="#0E0E12" text="white" link="white" vlink="white">
-    <!-- 🔝 Top Navigation -->
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Navigation -->
     <table width="100%" cellpadding="15" cellspacing="0" bgcolor="#121212">
       <tr>
         <td align="left">
-          <font face="Courier New" size="5" color="white">
-            <b>⚡ Material Flow</b>
-          </font>
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white"
+                  ><b>Material Flow</b></font
+                >
+              </td>
+            </tr>
+          </table>
         </td>
         <td align="right">
-          <table cellpadding="5" cellspacing="5">
-            <tr>
-              <td bgcolor="#4A148C" align="center">
-                <a href="#"
-                  ><font face="Courier New" color="white">Home</font></a
-                >
-              </td>
-              <td bgcolor="#4A148C" align="center">
-                <a href="#"
-                  ><font face="Courier New" color="white">Features</font></a
-                >
-              </td>
-              <td bgcolor="#4A148C" align="center">
-                <a href="type1.html"
-                  ><font face="Courier New" color="white">Docs</font></a
-                >
-              </td>
-              <td bgcolor="#4A148C" align="center">
-                <a href="#"
-                  ><font face="Courier New" color="white">Contact</font></a
-                >
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-
-    <!-- 🏆 Hero Banner -->
-    <table width="100%" cellpadding="50" cellspacing="0" bgcolor="#18181C">
-      <tr>
-        <td align="center">
-          <font face="Trebuchet MS" size="7" color="#FFFFFF"
-            ><b>Material Flow</b></font
-          ><br /><br />
-          <font face="Courier New" size="4" color="lightgray">
-            The ultimate AI-inspired documentation platform for all your lecture
-            series and resources. </font
-          ><br /><br />
           <table cellpadding="10" cellspacing="10">
             <tr>
-              <td bgcolor="#4A148C" align="center">
-                <font face="Courier New" color="white"><b>Get Started</b></font>
+              <td bgcolor="#4A148C">
+                <a href="#home"
+                  ><font face="Trebuchet MS" color="white">Home</font></a
+                >
               </td>
-              <td bgcolor="white" align="center">
-                <font face="Courier New" color="#4A148C"
-                  ><b>Download Docs</b></font
+              <td bgcolor="#4A148C">
+                <a href="#features"
+                  ><font face="Trebuchet MS" color="white">Features</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C">
+                <a href="#details"
+                  ><font face="Trebuchet MS" color="white">Details</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C">
+                <a href="#footer"
+                  ><font face="Trebuchet MS" color="white">Footer</font></a
                 >
               </td>
             </tr>
@@ -69,76 +56,175 @@
       </tr>
     </table>
 
-    <!-- 💡 Features Section -->
-    <table width="100%" cellpadding="20" cellspacing="20" bgcolor="#0E0E12">
+    <!-- 📰 Marquee -->
+
+    <!-- 🎯 Hero / Home -->
+    <table
+      id="home"
+      width="100%"
+      cellpadding="50"
+      cellspacing="0"
+      bgcolor="#0E0E12"
+    >
       <tr>
-        <td align="center" colspan="3">
+        <td align="center">
+          <font face="Trebuchet MS" size="7" color="white"
+            >Learn Smarter with Material Flow</font
+          ><br /><br />
+          <font face="Courier New" size="4" color="lightgray">
+            A unified hub where students, developers, and professionals can
+            access lectures, notes, and resources without clutter. Built to save
+            time, designed to improve focus. </font
+          ><br /><br />
+          <br />
+          <img
+            src="./assets/ray-so-export (1).png"
+            alt="Hero Image"
+            width="900px"
+          />
+        </td>
+      </tr>
+    </table>
+
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              🚀 New Batch Starts Soon! Limited Seats. Enroll Now for the 6-Day
+              HTML Lecture Series!
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- 🌟 Features Section -->
+    <table
+      id="features"
+      width="100%"
+      cellpadding="50"
+      cellspacing="20"
+      bgcolor="#18181C"
+    >
+      <tr>
+        <td colspan="3" align="center">
+          <font face="Trebuchet MS" size="6" color="white"
+            ><b>Features You Can’t Find Anywhere Else</b></font
+          ><br /><br />
+          <font face="Courier New" size="4" color="lightgray">
+            Built for learners who want more than just notes. Explore the full
+            ecosystem of features designed to make study efficient, interactive,
+            and inspiring.
+          </font>
+        </td>
+      </tr>
+      <!-- row of 3 feature cards -->
+      <tr>
+        <td bgcolor="#2C2C34" valign="top" width="33%">
           <font face="Trebuchet MS" size="5" color="white"
-            ><b>Features</b></font
+            ><b>📚 Smart Summaries</b></font
+          ><br /><br />
+          <font face="Courier New" size="3" color="lightgray"
+            >Notes that feel alive. Structured with key terms, highlighted
+            points, and direct examples.</font
+          >
+        </td>
+        <td bgcolor="#2C2C34" valign="top" width="33%">
+          <font face="Trebuchet MS" size="5" color="white"
+            ><b>🎥 Synced Lectures</b></font
+          ><br /><br />
+          <font face="Courier New" size="3" color="lightgray"
+            >Documentation that follows lecture flow with timestamps and
+            references.</font
+          >
+        </td>
+        <td bgcolor="#2C2C34" valign="top" width="33%">
+          <font face="Trebuchet MS" size="5" color="white"
+            ><b>🛠️ Curated Resources</b></font
+          ><br /><br />
+          <font face="Courier New" size="3" color="lightgray"
+            >Access to external books, tools, and cheatsheets that truly
+            help.</font
           >
         </td>
       </tr>
+      <!-- row with 1 big image occupying 2 cells + 1 card -->
       <tr>
-        <td bgcolor="#18181C" align="center">
-          <font face="Courier New" size="4" color="#4A148C"
-            ><b>📄 Full Documentation</b></font
-          ><br />
-          <font face="Courier New" size="2" color="lightgray">
-            Organize all your lectures and resources in a clear, AI-friendly
-            format.
-          </font>
+        <td colspan="2" bgcolor="#2C2C34" align="center">
+          <img src="./assets/homepage.png" alt="Feature Demo" width="100%" />
         </td>
-        <td bgcolor="#18181C" align="center">
-          <font face="Courier New" size="4" color="#4A148C"
-            ><b>⚡ Fast Access</b></font
-          ><br />
-          <font face="Courier New" size="2" color="lightgray">
-            Quickly search, navigate, and learn with a futuristic interface.
-          </font>
-        </td>
-        <td bgcolor="#18181C" align="center">
-          <font face="Courier New" size="4" color="#4A148C"
-            ><b>🎨 Customizable</b></font
-          ><br />
-          <font face="Courier New" size="2" color="lightgray">
-            Adapt the design and structure for your own courses or projects.
-          </font>
+        <td bgcolor="#2C2C34" valign="top">
+          <font face="Trebuchet MS" size="5" color="white"
+            ><b>⚡ Instant Access</b></font
+          ><br /><br />
+          <font face="Courier New" size="3" color="lightgray"
+            >One click away from lectures, notes, and resources. No friction, no
+            wasted time.</font
+          >
         </td>
       </tr>
     </table>
 
-    <!-- 📨 Newsletter Section -->
-    <table width="100%" cellpadding="50" cellspacing="0" bgcolor="#18181C">
+    <!-- 📑 Details Section -->
+    <table
+      id="details"
+      width="100%"
+      cellpadding="50"
+      cellspacing="20"
+      bgcolor="#0E0E12"
+    >
       <tr>
-        <td align="center">
+        <td colspan="2" align="center">
+          <font face="Trebuchet MS" size="6" color="white"
+            ><b>The Bigger Picture</b></font
+          ><br /><br />
+          <font face="Courier New" size="4" color="lightgray">
+            Material Flow is not just another notes app. It is a fully connected
+            knowledge hub. Our mission is simple: make learning frictionless,
+            engaging, and future-ready.
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#2C2C34" valign="top">
           <font face="Trebuchet MS" size="5" color="white"
-            ><b>Stay Updated</b></font
+            ><b>🚀 Why It Matters</b></font
           ><br /><br />
-          <font face="Courier New" size="3" color="lightgray">
-            Subscribe to our newsletter and get the latest updates on courses
-            and resources. </font
+          <font face="Courier New" size="3" color="lightgray"
+            >In a world full of scattered resources, Material Flow brings
+            everything into one streamlined hub.</font
+          >
+        </td>
+        <td bgcolor="#2C2C34" valign="top">
+          <font face="Trebuchet MS" size="5" color="white"
+            ><b>🌍 For Everyone</b></font
           ><br /><br />
-          <table cellpadding="10" cellspacing="10">
-            <tr>
-              <td bgcolor="white">
-                <font face="Courier New" color="#0E0E12">Enter your email</font>
-              </td>
-              <td bgcolor="#4A148C" align="center">
-                <font face="Courier New" color="white"><b>Subscribe</b></font>
-              </td>
-            </tr>
-          </table>
+          <font face="Courier New" size="3" color="lightgray"
+            >From students to professionals, anyone who learns, teaches, or
+            shares knowledge can benefit.</font
+          >
         </td>
       </tr>
     </table>
 
     <!-- 🔻 Footer -->
-    <table width="100%" cellpadding="20" bgcolor="#121212">
+    <table id="footer" width="100%" cellpadding="50" bgcolor="#121212">
       <tr>
         <td align="center">
-          <font face="Courier New" size="2" color="gray">
-            &copy; 2025 Material Flow | All rights reserved
-          </font>
+          <font face="Trebuchet MS" size="7" color="white"
+            ><b>Material Flow</b></font
+          ><br /><br />
+          <font face="Courier New" size="3" color="gray"
+            >© 2025 Material Flow | Hackathon Project | Pure HTML Only</font
+          >
         </td>
       </tr>
     </table>
