@@ -10,41 +10,6 @@ body {
   height: 100%;
 }
 body {
-  background: #dcf648;
-  width: 100%;
-  height: 100vh;
+  background: black;
   font-family: "Bebas Neue", sans-serif;
-}
-h1 {
-  font-size: 4.2vw;
-}
-.top,
-.bottom {
-  /* background: red; */
-  width: 50%;
-
-  position: absolute;
-  color: white;
-}
-
-img {
-  /* background: red; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-.top {
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-.bottom {
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  text-align: right;
 }
