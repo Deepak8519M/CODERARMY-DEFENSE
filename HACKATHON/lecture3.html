@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Day 3 of MaterialFlow: Learn HTML nested lists and tables with detailed examples and practical tips."
+    />
+    <meta
+      name="keywords"
+      content="HTML, nested lists, tables, rowspan, colspan, MaterialFlow, web development"
+    />
+    <meta name="author" content="Your Name" />
+    <title>MaterialFlow Documentation - Day 3: Nested Lists and Tables</title>
+  </head>
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Announcement Marquee -->
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              📚 Day 3: Master Nested Lists and Tables with MaterialFlow -
+              Structure Complex Data Like a Pro! 🚀
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- Top Navigation -->
+    <table
+      width="100%"
+      cellpadding="15"
+      cellspacing="0"
+      bgcolor="#121212"
+      border="0"
+    >
+      <tr>
+        <td align="left">
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="MaterialFlow Logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white">
+                  <b
+                    >Material<font color="#8812EF"
+                      ><strong>Flow</strong></font
+                    ></b
+                  >
+                </font>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right">
+          <table cellpadding="5" cellspacing="5">
+            <tr>
+              <td bgcolor="#4A148C" align="center">
+                <a href="home.html" aria-label="Go to Home Page">
+                  <font face="Courier New" color="white">Home</font>
+                </a>
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="lectures.html" aria-label="View All Lectures">
+                  <font face="Courier New" color="white">Lectures</font>
+                </a>
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="docs.html" aria-label="Access Documentation">
+                  <font face="Courier New" color="white">Docs</font>
+                </a>
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="resources.html" aria-label="Explore Resources">
+                  <font face="Courier New" color="white">Resources</font>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🏗️ Main Layout -->
+    <table width="100%" border="0" cellpadding="20" cellspacing="0">
+      <tr valign="top">
+        <!-- 📌 Sidebar -->
+        <td width="20%" bgcolor="#18181C">
+          <font face="Verdana" size="4" color="white"><b>📂 Menu</b></font>
+          <hr color="#333333" />
+          <font face="Verdana" size="3" color="lightgray">
+            <table
+              width="100%"
+              cellpadding="10"
+              cellspacing="10"
+              bgcolor="#18181C"
+            >
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="home.html" aria-label="Home Page">
+                    <font color="white">🏠 Home Page</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="docs.html" aria-label="Documentation">
+                    <font color="white">📄 Documentation</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture1.html" aria-label="Day 1: Basics">
+                    <font color="white">Day 1️⃣: Basics</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture2.html" aria-label="Day 2: Structure">
+                    <font color="white">Day 2️⃣: Structure</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#18181C" align="left">
+                  <a
+                    href="lecture3.html"
+                    aria-label="Day 3: Nested Lists and Tables"
+                  >
+                    <font color="white">Day 3️⃣: Nested Lists & Tables</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture4.html" aria-label="Day 4: Forms">
+                    <font color="white">Day 4️⃣: Forms</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture5.html" aria-label="Day 5: Multimedia">
+                    <font color="white">Day 5️⃣: Multimedia</font>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture6.html" aria-label="Day 6: Advanced">
+                    <font color="white">Day 6️⃣: Advanced</font>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </font>
+        </td>
+        <!-- 📖 Right Content -->
+        <td width="80%" bgcolor="#0E0E12">
+          <!-- Title -->
+          <h1>
+            <font face="Trebuchet MS" size="8" color="white">
+              📘 Day 3: Nested Lists and Tables - Organize Complex Data in HTML
+            </font>
+          </h1>
+          <hr color="#7610D0" />
+
+          <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28144%2C19%2C254%2C1%29&t=cobalt&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=13.5px&lh=150%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253EDay%25203%253A%2520HTML%2520Nested%2520Lists%2520%2526%2520Tables%2520-%2520MaterialFlow%253C%252Ftitle%253E%250A%2520%2520%253C%252Fhead%253E%250A%2520%2520%253Cbody%2520bgcolor%253D%2522%25230E0E12%2522%2520text%253D%2522white%2522%253E%250A%2520%2520%2520%2520%253Ch1%253EDay%25203%253A%2520HTML%2520Nested%2520Lists%2520%2526%2520Tables%2520%25F0%259F%2593%258B%253C%252Fh1%253E%250A%2520%2520%2520%2520%253Cp%253EMaster%2520organizing%2520complex%2520data%2520with%2520nested%2520lists%2520and%2520tables%2520in%2520HTML.%253C%252Fp%253E%250A%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%253Cfont%2520face%253D%2522Courier%2520New%2522%2520size%253D%25223%2522%2520color%253D%2522lightgray%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520Learned%2520to%2520create%2520nested%2520lists%2520using%2520%253Cul%253E%2520and%2520%253Col%253E%2520inside%2520%253Cli%253E%2520for%2520hierarchical%2520data%2520%28e.g.%252C%2520countries%2520with%2520cities%29.%2520Built%2520tables%2520with%2520%253Ctable%253E%252C%2520%253Ctr%253E%252C%2520%253Ctd%253E%252C%2520%253Cth%253E%252C%2520and%2520used%2520%253Cthead%253E%252C%2520%253Ctbody%253E%252C%2520%253Ctfoot%253E%252C%2520rowspan%252C%2520colspan%2520for%2520advanced%2520layouts.%250A%2520%2520%2520%2520%2520%2520%253C%252Ffont%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+            style="
+              width: 1024px;
+              height: 556px;
+              border: 0;
+              transform: scale(1);
+              overflow: hidden;
+            "
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+
+          <br /><br />
+
+          <!-- Introduction -->
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Introduction to Nested Lists and Tables"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="3" color="lightgray">
+                  Welcome to Day 3 of MaterialFlow's lecture series! This
+                  session explores nested lists and tables in HTML, essential
+                  for organizing complex data. You'll learn to create
+                  multi-level lists and tables with rows, columns, headers, and
+                  advanced attributes like rowspan and colspan. With 10 detailed
+                  examples, practical tips, and debugging strategies, this guide
+                  equips you to build semantically meaningful, accessible
+                  layouts for web pages. Dive in and master data organization!
+                  🚀
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Introduction</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Nested lists and tables are vital for organizing complex data.
+              <strong>Nested lists</strong> are used in menus (e.g., Amazon's
+              category dropdowns), outlines (e.g., Wikipedia's table of
+              contents), and FAQs. <em>Tables</em> are ideal for data like
+              employee records or product specs (e.g., e-commerce comparison
+              tables). <i>Accessibility</i>: Use
+              <code>&lt;th scope="col"&gt;</code> for headers and
+              <code>aria-label</code> for screen readers. <b>SEO</b>: Semantic
+              tags like <code>&lt;thead&gt;</code> help search engines parse
+              content. <u>Pitfalls</u>: Avoid tables for layout; use CSS.
+              <mark>Debugging</mark>: Validate with W3C tools.
+              <del>Old practice</del>: Table layouts. <ins>Modern</ins>:
+              Data-only tables. <sub>Example</sub>: Table<sub>1</sub>.
+              <sup>Level</sup>: Beginner<sup>3</sup>.
+              <samp>Sample output: • Parent - Child</samp>
+              <kbd>Ctrl + S to save</kbd>. <var>var maxNesting = 4;</var>
+              <cite>MDN: "Use tables for data, lists for hierarchies."</cite>
+            </font>
+          </details>
+          <br />
+
+          <br />
+
+          <!-- Section 2: Nested Lists -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >2. Mastering Nested Lists in HTML 🗂️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Nested Lists Overview"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Nested Lists Overview</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Nested Lists Overview</b><br />
+                  A <dfn>nested list</dfn> is a list inside another, creating a
+                  hierarchy similar to nested loops in programming. Use
+                  <code>&lt;ul&gt;</code> (unordered, bulleted) or
+                  <code>&lt;ol&gt;</code> (ordered, numbered) inside
+                  <code>&lt;li&gt;</code> tags. <br /><br />
+                  <strong>Benefits</strong>: Organizes complex data like menus
+                  or outlines. <em>Real-life</em>: Dropdown menus on e-commerce
+                  sites. <br />
+                  <strong>Caution</strong>: Limit nesting to 3-4 levels for
+                  readability. <b>Semantics</b>: Enhances accessibility for
+                  screen readers. <u>Key</u>: Proper tag closure.
+
+                  <br /><br />
+                  <mark>Highlight</mark>: Browsers auto-indent nested lists.
+                  <del>Avoid</del>: Over-nesting. <ins>Use</ins>: Clear
+                  hierarchies. <sub>Depth</sub>: List<sub>n</sub>.
+                  <sup>Levels</sup>: Max<sup>4</sup>.
+                  <q>"Lists structure content efficiently."</q>
+
+                  <blockquote cite="https://developer.mozilla.org">
+                    MDN: Nested lists are ideal for hierarchical data.
+                  </blockquote>
+                  <br /><br />
+                  <table
+                    width="100%"
+                    border="1"
+                    cellpadding="5"
+                    cellspacing="0"
+                  >
+                    <tr bgcolor="#4A148C">
+                      <th scope="col">
+                        <font face="Courier New" size="2" color="white"
+                          >List Type</font
+                        >
+                      </th>
+                      <th scope="col">
+                        <font face="Courier New" size="2" color="white"
+                          >Tag</font
+                        >
+                      </th>
+                      <th scope="col">
+                        <font face="Courier New" size="2" color="white"
+                          >Purpose</font
+                        >
+                      </th>
+                      <th scope="col">
+                        <font face="Courier New" size="2" color="white"
+                          >Real-Life Example</font
+                        >
+                      </th>
+                    </tr>
+                    <tr bgcolor="#18181C">
+                      <td>Unordered</td>
+                      <td><code>&lt;ul&gt;</code></td>
+                      <td>Bulleted, non-sequential</td>
+                      <td>Blog category menus</td>
+                    </tr>
+                    <tr bgcolor="#18181C">
+                      <td>Ordered</td>
+                      <td><code>&lt;ol&gt;</code></td>
+                      <td>Numbered, sequential</td>
+                      <td>Tutorial steps</td>
+                    </tr>
+                  </table>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >In-Depth Nested Lists Explanation</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Nested lists create structured hierarchies, e.g., a company org
+              chart: Departments > Teams > Employees. <strong>Steps</strong>:
+              Start with parent list, nest child inside <code>&lt;li&gt;</code>.
+              <em>Real-life</em>: Wikipedia's table of contents uses nested
+              <code>&lt;ul&gt;</code>. <i>Pros</i>: Compact, clear. <b>Cons</b>:
+              Deep nesting reduces usability—limit to 3 levels.
+              <u>Debugging</u>: Check closing tags with W3C validator.
+              <mark>Extend</mark>: Use <code>type="square"</code> for bullets or
+              <code>reversed</code> for countdowns. <del>Old</del>: Manual
+              indentation. <ins>Modern</ins>: CSS for styling. <sub>Sub</sub>:
+              Level<sub>2</sub>. <sup>Sup</sup>: Depth<sup>3</sup>.
+              <samp>Output: • Parent - 1. Child</samp>
+              <kbd>Ctrl + ] to indent</kbd>. <var>var nestDepth = 3;</var>
+              <time datetime="2025-09-18">Updated 2025-09-18</time>.
+              <cite>W3C: "Nesting enhances semantic structure."</cite>
+            </font>
+          </details>
+          <br />
+          <figure>
+            <img
+              src="./nested-list.jpg"
+              alt="Nested List Structure Diagram"
+              width="700"
+              height="400"
+            />
+          </figure>
+          <br />
+
+          <!-- Sub-section 2.1: Basic Ordered and Unordered Lists -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.1. Basic Ordered and Unordered Lists</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Basic Lists Explanation"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Basic Lists</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Basic Lists Recap</b><br />
+                  From Day 2, <code>&lt;ul&gt;</code> creates bulleted lists for
+                  non-sequential items (e.g., groceries: milk, eggs), while
+                  <code>&lt;ol&gt;</code> creates numbered lists for sequential
+                  items (e.g., recipe steps: boil water, add ingredients).
+                  Example: List countries (India, USA, England).
+                  <strong>Foundation</strong>: Essential for nesting.
+                  <em>Use case</em>: Unordered for blog tags, ordered for
+                  tutorials. <i>Note</i>: Browsers apply default styling.
+                  <b>Extend</b>: Use <code>start="2"</code> for custom
+                  numbering. <u>Key</u>: Use <code>&lt;li&gt;</code> for items.
+                  <mark>Highlight</mark>: Block elements. <del>Avoid</del>:
+                  Empty <code>&lt;li&gt;</code>. <ins>Add</ins>: CSS for
+                  styling. <sub>Index</sub>: List<sub>1</sub>. <sup>Level</sup>:
+                  Basic<sup>1</sup>. <samp>Output: • India</samp>
+                  <kbd>Tab to indent</kbd>. <var>var listItems = 3;</var>
+                  <time datetime="2025-09-18">2025-09-18</time>. <br /><br />
+                  <pre>
+<code>
+&lt;ul&gt;
+    &lt;li&gt;India&lt;/li&gt;
+    &lt;li&gt;USA&lt;/li&gt;
+    &lt;li&gt;England&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start="2"&gt;
+    &lt;li&gt;Step 1&lt;/li&gt;
+    &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >More on Basic Lists</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Basic lists are versatile. <strong>Unordered</strong>: Ideal for
+              collections like skills in a resume. <em>Ordered</em>: Perfect for
+              processes like assembly guides. <i>Real-life</i>: Ordered lists in
+              cooking apps for steps; unordered in to-do apps for tasks.
+              <b>Debug</b>: Avoid missing <code>&lt;/li&gt;</code>.
+              <u>Extend</u>: Use <code>type="A"</code> for alphabetical lists.
+              <mark>Tip</mark>: Use CSS for custom bullets. <del>Old</del>:
+              Inline styles. <ins>Modern</ins>: External CSS. <sub>Sub</sub>:
+              Item<sub>1</sub>. <sup>Sup</sup>: List<sup>2</sup>.
+              <samp>Output: 1. Step</samp> <kbd>Ctrl + S to save</kbd>.
+              <var>var listType = "ordered";</var>
+              <cite>W3Schools: "Lists are core to HTML."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 2.2: Creating a Nested Unordered List -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.2. Creating a Nested Unordered List</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Nested Unordered Lists"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Nested Unordered Lists</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Nested Unordered Lists</b><br />
+                  Place a <code>&lt;ul&gt;</code> inside an
+                  <code>&lt;li&gt;</code> to nest. Example: Countries > Cities
+                  (India > Delhi, Mumbai, Goa). <strong>Purpose</strong>:
+                  Hierarchical organization. <em>Use</em>: Navigation menus
+                  (e.g., Products > Electronics > Phones). <i>Tip</i>: Browsers
+                  indent automatically. <b>Extend</b>: Use
+                  <code>type="circle"</code> for sub-bullets. <u>Key</u>: Close
+                  tags properly. <mark>Highlight</mark>: Semantic structure.
+                  <del>Avoid</del>: Deep nesting. <ins>Use</ins>: Limited
+                  levels. <sub>Level</sub>: 2<sub>nest</sub>. <sup>Depth</sup>:
+                  Max<sup>3</sup>. <samp>Output: • India - • Delhi</samp>
+                  <kbd>Shift + Tab to outdent</kbd>.
+                  <var>var cityCount = 3;</var> <br /><br />
+                  <pre>
+<code>
+&lt;ul&gt;
+    &lt;li&gt;India
+        &lt;ul type="circle"&gt;
+            &lt;li&gt;Delhi&lt;/li&gt;
+            &lt;li&gt;Mumbai&lt;/li&gt;
+            &lt;li&gt;Goa&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;USA
+        &lt;ul type="square"&gt;
+            &lt;li&gt;California&lt;/li&gt;
+            &lt;li&gt;Texas&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;England
+        &lt;ul&gt;
+            &lt;li&gt;London&lt;/li&gt;
+            &lt;li&gt;Oval&lt;/li&gt;
+            &lt;li&gt;Yorkshire&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Nested Unordered Lists</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Nested unordered lists are common in navigation.
+              <strong>Example</strong>: E-commerce menus (Clothing > Men >
+              Shirts). <em>Pros</em>: Clear hierarchy. <i>Cons</i>: Over-nesting
+              confuses users. <b>Debug</b>: Use browser dev tools to inspect.
+              <u>Extend</u>: Add ARIA roles like <code>role="menu"</code>.
+              <mark>Tip</mark>: Style with CSS. <del>Old</del>: Inline
+              attributes. <ins>Modern</ins>: CSS classes. <sub>Sub</sub>:
+              City<sub>1</sub>. <sup>Sup</sup>: Level<sup>2</sup>.
+              <samp>Output: • Country - • City</samp>
+              <kbd>Ctrl + ] to indent</kbd>. <var>var nestLevel = 2;</var>
+              <cite>GeeksforGeeks: "Nesting improves menu design."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 2.3: Combining Unordered and Ordered Nested Lists -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.3. Combining Unordered and Ordered Nested Lists</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Mixed Nested Lists"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Mixed Nested Lists</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Mixed Nested Lists</b><br />
+                  Combine <code>&lt;ul&gt;</code> and
+                  <code>&lt;ol&gt;</code> for complex hierarchies. Example:
+                  Cities (unordered) with sub-areas (ordered, e.g., Delhi > 1.
+                  Dwarka, 2. Vikaspuri). <strong>Use</strong>: Tutorials with
+                  steps under categories. <em>Real-life</em>: Course outlines
+                  (Topics > Steps). <i>Tip</i>: Debug by checking nesting order.
+                  <b>Extend</b>: Use <code>reversed</code> for countdowns.
+                  <u>Key</u>: Semantic mixing. <mark>Highlight</mark>: Clear
+                  structure. <del>Avoid</del>: Inconsistent types.
+                  <ins>Use</ins>: Logical combinations. <sub>Level</sub>:
+                  3<sub>nest</sub>. <sup>Depth</sup>: Max<sup>4</sup>.
+                  <samp>Output: • City - 1. Area</samp>
+                  <kbd>Ctrl + F to search</kbd>.
+                  <var>var mixedList = true;</var> <br /><br />
+                  <pre>
+<code>
+&lt;ul&gt;
+    &lt;li&gt;Delhi
+        &lt;ol&gt;
+            &lt;li&gt;Dwarka&lt;/li&gt;
+            &lt;li&gt;Vikaspuri&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Texas
+        &lt;ol&gt;
+            &lt;li&gt;Austin&lt;/li&gt;
+            &lt;li&gt;Dallas&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Mixed Lists</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Mixing list types adds flexibility. <strong>Example</strong>:
+              Project plan: Tasks (unordered) > Steps (ordered). <em>Pros</em>:
+              Clear progression. <i>Cons</i>: Complex debugging. <b>Debug</b>:
+              Use dev tools to trace nesting. <u>Extend</u>: Add
+              <code>aria-label</code> for accessibility. <mark>Tip</mark>: Keep
+              nesting shallow. <del>Old</del>: Mixed without purpose.
+              <ins>Modern</ins>: Semantic mixing. <sub>Sub</sub>:
+              Step<sub>1</sub>. <sup>Sup</sup>: Level<sup>3</sup>.
+              <samp>Output: • Task - 1. Step</samp> <kbd>Ctrl + Z to undo</kbd>.
+              <var>var mixType = "ul-ol";</var>
+              <cite>MDN: "Mixing enhances clarity."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 2.4: GeeksforGeeks Course List -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.4. GeeksforGeeks Course List Example</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="GeeksforGeeks Course List"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Course List Example</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Course List Example</b><br />
+                  Build a nested unordered list for courses: DSA, Web
+                  Technology, etc., with sub-topics (e.g., DSA > Array, Linked
+                  List). <strong>File</strong>: <code>first.html</code>.
+                  <em>Use</em>: Educational platforms. <i>Tip</i>: Use headings
+                  for structure. <b>Extend</b>: Add links to sub-topics.
+                  <u>Key</u>: Clear hierarchy. <mark>Highlight</mark>: Reusable
+                  structure. <del>Avoid</del>: Flat lists. <ins>Use</ins>:
+                  Nested for depth. <sub>Sub</sub>: Topic<sub>1</sub>.
+                  <sup>Sup</sup>: Course<sup>2</sup>.
+                  <samp>Output: • DSA - • Array</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var courseCount = 5;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;h1&gt;Nested Unordered List&lt;/h1&gt;
+&lt;h2&gt;GeeksforGeeks Course List&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;DSA
+        &lt;ul&gt;
+            &lt;li&gt;Array&lt;/li&gt;
+            &lt;li&gt;Linked List&lt;/li&gt;
+            &lt;li&gt;Stack&lt;/li&gt;
+            &lt;li&gt;Queue&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Web Technology
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Aptitude&lt;/li&gt;
+    &lt;li&gt;GATE&lt;/li&gt;
+    &lt;li&gt;Placement&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Course List Example</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              This example mirrors real course platforms like GeeksforGeeks.
+              <strong>Pros</strong>: Clear topic breakdown. <em>Cons</em>:
+              Requires careful nesting. <i>Real-life</i>: Online learning
+              portals. <b>Debug</b>: Check for missing <code>&lt;/ul&gt;</code>.
+              <u>Extend</u>: Add <code>&lt;a href&gt;</code> for course links.
+              <mark>Tip</mark>: Use CSS for styling. <del>Old</del>: Plain
+              lists. <ins>Modern</ins>: Nested with links. <sub>Sub</sub>:
+              Topic<sub>1</sub>. <sup>Sup</sup>: Course<sup>2</sup>.
+              <samp>Output: • Course - • Topic</samp>
+              <kbd>Ctrl + ] to indent</kbd>. <var>var topicCount = 4;</var>
+              <cite>GeeksforGeeks: "Structured lists aid learning."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 2.5: Daily Meal Plan -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.5. Daily Meal Plan Example</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Daily Meal Plan"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Daily Meal Plan</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Daily Meal Plan</b><br />
+                  Create an ordered list for meals (Breakfast, Lunch, Dinner)
+                  with nested unordered lists for sub-items.
+                  <strong>File</strong>: <code>second.html</code>. <em>Use</em>:
+                  Recipe apps. <i>Tip</i>: Use headings for hierarchy.
+                  <b>Extend</b>: Mix ordered/unordered for details. <u>Key</u>:
+                  Semantic structure. <mark>Highlight</mark>: Mixed nesting.
+                  <del>Avoid</del>: Flat lists. <ins>Use</ins>: Nested for
+                  details. <sub>Sub</sub>: Meal<sub>1</sub>. <sup>Sup</sup>:
+                  Plan<sup>2</sup>. <samp>Output: 1. Breakfast - • Main</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var mealCount = 3;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;h1&gt;Daily Meal Plan&lt;/h1&gt;
+&lt;ol&gt;
+    &lt;li&gt;Breakfast
+        &lt;ul&gt;
+            &lt;li&gt;Main
+                &lt;ul&gt;
+                    &lt;li&gt;Maple Syrup&lt;/li&gt;
+                    &lt;li&gt;Fresh Berries&lt;/li&gt;
+                    &lt;li&gt;Whipped Cream&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Side&lt;/li&gt;
+            &lt;li&gt;Drink&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Lunch
+        &lt;ul&gt;
+            &lt;li&gt;Main Course
+                &lt;ol&gt;
+                    &lt;li&gt;Start&lt;/li&gt;
+                    &lt;li&gt;Add&lt;/li&gt;
+                    &lt;li&gt;Place&lt;/li&gt;
+                    &lt;li&gt;Finish&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Side&lt;/li&gt;
+            &lt;li&gt;Beverages&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Dinner
+        &lt;ul&gt;
+            &lt;li&gt;Appetizer&lt;/li&gt;
+            &lt;li&gt;Main Course
+                &lt;ol&gt;
+                    &lt;li&gt;First&lt;/li&gt;
+                    &lt;li&gt;Next&lt;/li&gt;
+                    &lt;li&gt;Finally&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Dessert&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Meal Plan Example</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              This example shows complex nesting. <strong>Pros</strong>:
+              Detailed breakdown. <em>Cons</em>: Requires careful tag matching.
+              <i>Real-life</i>: Meal planning apps like Yummly. <b>Debug</b>:
+              Use dev tools to inspect hierarchy. <u>Extend</u>: Add images for
+              dishes. <mark>Tip</mark>: Use CSS for styling. <del>Old</del>:
+              Flat meal lists. <ins>Modern</ins>: Nested for details.
+              <sub>Sub</sub>: Dish<sub>1</sub>. <sup>Sup</sup>:
+              Meal<sup>2</sup>. <samp>Output: 1. Breakfast - • Main</samp>
+              <kbd>Ctrl + ] to indent</kbd>. <var>var dishCount = 3;</var>
+              <cite>Real-world: "Nested lists for recipes."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 2.6: Homework for Nested Lists -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.6. Homework for Nested Lists</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Nested Lists Homework"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Homework Assignments</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Homework</b><br />
+                  Create two nested list examples: 1. Company org chart
+                  (Departments > Teams). 2. Study plan (Subjects > Topics).
+                  <strong>File</strong>: <code>homework.html</code>.
+                  <em>Use</em>: Practical application. <i>Tip</i>: Sketch
+                  hierarchy first. <b>Extend</b>: Add links to resources.
+                  <u>Key</u>: Practice nesting. <mark>Highlight</mark>: Real
+                  data. <del>Avoid</del>: Simple lists. <ins>Use</ins>: Complex
+                  hierarchies. <sub>Sub</sub>: Task<sub>1</sub>. <sup>Sup</sup>:
+                  Assignment<sup>2</sup>. <samp>Output: • Dept - • Team</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var taskCount = 2;</var>
+                  <time datetime="2025-09-19">Due 2025-09-19</time>.
+                  <br /><br />
+                  <pre>
+<code>
+&lt;!-- Homework Example 1: Org Chart --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Engineering
+        &lt;ul&gt;
+            &lt;li&gt;Frontend&lt;/li&gt;
+            &lt;li&gt;Backend&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Marketing
+        &lt;ul&gt;
+            &lt;li&gt;Social Media&lt;/li&gt;
+            &lt;li&gt;Content&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Homework Details</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Homework reinforces nesting skills. <strong>Org Chart</strong>:
+              Shows company structure. <em>Study Plan</em>: Organizes learning.
+              <i>Real-life</i>: Corporate sites, educational platforms.
+              <b>Debug</b>: Check nesting with validators. <u>Extend</u>: Add
+              CSS for styling. <mark>Tip</mark>: Use real data. <del>Old</del>:
+              Flat lists. <ins>Modern</ins>: Nested hierarchies. <sub>Sub</sub>:
+              Task<sub>1</sub>. <sup>Sup</sup>: Assignment<sup>2</sup>.
+              <samp>Output: • Subject - • Topic</samp>
+              <kbd>Ctrl + Z to undo</kbd>. <var>var homeworkTasks = 2;</var>
+              <cite>GitHub: Share code for review.</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Section 3: HTML Tables -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >3. Mastering HTML Tables 📊</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Tables Overview"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Tables Overview</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Tables Overview</b><br />
+                  Tables display data in rows (<code>&lt;tr&gt;</code>) and
+                  columns (<code>&lt;td&gt;</code>), with headers
+                  (<code>&lt;th&gt;</code>). Use <code>&lt;table&gt;</code> with
+                  <code>border="1"</code> for visibility. Semantic tags:
+                  <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+                  <code>&lt;tfoot&gt;</code>. <strong>Use</strong>: Data
+                  presentation like spreadsheets. <em>Real-life</em>: Product
+                  tables on Amazon. <i>Tip</i>: Use <code>scope</code> for
+                  headers. <b>Extend</b>: Add <code>rowspan</code>,
+                  <code>colspan</code>. <u>Key</u>: Semantic structure.
+                  <mark>Highlight</mark>: Accessibility. <del>Avoid</del>:
+                  Layout tables. <ins>Use</ins>: Data only. <sub>Sub</sub>:
+                  Row<sub>1</sub>. <sup>Sup</sup>: Col<sup>2</sup>.
+                  <samp>Output: | Header | Data |</samp>
+                  <kbd>Ctrl + F to search</kbd>. <var>var tableRows = 5;</var>
+                  <cite>MDN: "Tables for tabular data only."</cite>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Tables Overview</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Tables are grid-based. <strong>Pros</strong>: Clear data
+              presentation. <em>Cons</em>: Complex with spans. <i>Real-life</i>:
+              Financial dashboards, employee lists. <b>Debug</b>: Count
+              rows/columns first. <u>Extend</u>: Use <code>caption</code> for
+              titles. <mark>Tip</mark>: Add ARIA for accessibility.
+              <del>Old</del>: Table layouts. <ins>Modern</ins>: CSS grids.
+              <sub>Sub</sub>: Cell<sub>1</sub>. <sup>Sup</sup>:
+              Table<sup>2</sup>. <samp>Output: | Item | Price |</samp>
+              <kbd>Ctrl + S to save</kbd>. <var>var colCount = 3;</var>
+              <cite>W3C: "Semantic tables enhance accessibility."</cite>
+            </font>
+          </details>
+          <br />
+
+          <img src="./TableExeDraw.png" alt="" />
+
+          <!-- Sub-section 3.1: Introduction to Table Structure -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.1. Introduction to Table Structure</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Table Structure"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Basic Table Structure</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Table Structure</b><br />
+                  Tables use <code>&lt;tr&gt;</code> for rows,
+                  <code>&lt;td&gt;</code> for data, <code>&lt;th&gt;</code> for
+                  headers. Example: Employee table (Name, Role).
+                  <strong>File</strong>: <code>index.html</code>. <em>Use</em>:
+                  Data grids. <i>Tip</i>: Add <code>border="1"</code>.
+                  <b>Extend</b>: Use <code>align="center"</code>. <u>Key</u>:
+                  Row-column grid. <mark>Highlight</mark>: Semantic headers.
+                  <del>Avoid</del>: Missing <code>&lt;tr&gt;</code>.
+                  <ins>Use</ins>: Proper structure. <sub>Sub</sub>:
+                  Row<sub>1</sub>. <sup>Sup</sup>: Col<sup>2</sup>.
+                  <samp>Output: | Name | Role |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var rowCount = 3;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Name&lt;/td&gt;
+        &lt;td&gt;Role&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Rohit&lt;/td&gt;
+        &lt;td&gt;Frontend Developer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Mohit&lt;/td&gt;
+        &lt;td&gt;Backend Developer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Anjali&lt;/td&gt;
+        &lt;td&gt;Fullstack Developer&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Table Structure</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Tables are grid-based. <strong>Pros</strong>: Clear data layout.
+              <em>Cons</em>: Complex with spans. <i>Real-life</i>: LinkedIn
+              employee lists. <b>Debug</b>: Check row counts. <u>Extend</u>: Add
+              <code>scope</code> for headers. <mark>Tip</mark>: Use CSS for
+              borders. <del>Old</del>: Inline borders. <ins>Modern</ins>: CSS
+              styling. <sub>Sub</sub>: Cell<sub>1</sub>. <sup>Sup</sup>:
+              Table<sup>1</sup>. <samp>Output: | Name | Role |</samp>
+              <kbd>Ctrl + F to search</kbd>. <var>var colCount = 2;</var>
+              <cite>MDN: "Tables for data only."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.2: Using <th> for Table Headers -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.2. Using &lt;th&gt; for Table Headers</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Table Headers"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Table Headers with &lt;th&gt;</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Table Headers</b><br />
+                  Use <code>&lt;th&gt;</code> for headers instead of
+                  <code>&lt;td&gt;</code> for semantic meaning. Example:
+                  Shopping list (Item, Quantity, Price).
+                  <strong>Benefit</strong>: Bold by default, accessible.
+                  <em>Use</em>: Data tables. <i>Tip</i>: Add
+                  <code>scope="col"</code>. <b>Extend</b>: Use
+                  <code>&lt;thead&gt;</code>. <u>Key</u>: Semantic headers.
+                  <mark>Highlight</mark>: SEO-friendly. <del>Avoid</del>: Using
+                  <code>&lt;td&gt;</code> for headers. <ins>Use</ins>:
+                  <code>&lt;th&gt;</code>. <sub>Sub</sub>: Header<sub>1</sub>.
+                  <sup>Sup</sup>: Col<sup>3</sup>.
+                  <samp>Output: | Item | Qty | Price |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var headerCount = 3;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th scope="col"&gt;Item&lt;/th&gt;
+        &lt;th scope="col"&gt;Quantity&lt;/th&gt;
+        &lt;th scope="col"&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Apple&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;$1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Orange&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;$0.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Total&lt;/td&gt;
+        &lt;td&gt;15&lt;/td&gt;
+        &lt;td&gt;$1.5&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Headers Explanation</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Headers improve accessibility. <strong>Pros</strong>: Clear,
+              semantic. <em>Cons</em>: Misuse reduces clarity. <i>Real-life</i>:
+              E-commerce price tables. <b>Debug</b>: Ensure
+              <code>scope</code> matches. <u>Extend</u>: Add
+              <code>aria-label</code>. <mark>Tip</mark>: Use CSS for styling.
+              <del>Old</del>: <code>&lt;td&gt;</code> headers.
+              <ins>Modern</ins>: <code>&lt;th&gt;</code>. <sub>Sub</sub>:
+              Header<sub>1</sub>. <sup>Sup</sup>: Table<sup>2</sup>.
+              <samp>Output: | Item | Qty |</samp> <kbd>Ctrl + F to search</kbd>.
+              <var>var headerType = "th";</var>
+              <cite>W3C: "Headers enhance table accessibility."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.3: Professional Table Structure -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.3. Professional Table Structure with &lt;thead&gt;,
+              &lt;tbody&gt;, &lt;tfoot&gt;</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Professional Table Structure"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Professional Table Structure</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Professional Structure</b><br />
+                  Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+                  <code>&lt;tfoot&gt;</code> for semantic tables. Example:
+                  Shopping list with totals. <strong>Benefit</strong>: Clear
+                  sectioning. <em>Use</em>: Financial reports. <i>Tip</i>: Add
+                  <code>caption</code>. <b>Extend</b>: Use <code>scope</code>.
+                  <u>Key</u>: Semantic clarity. <mark>Highlight</mark>:
+                  Accessibility. <del>Avoid</del>: Flat tables. <ins>Use</ins>:
+                  Structured tags. <sub>Sub</sub>: Row<sub>1</sub>.
+                  <sup>Sup</sup>: Table<sup>3</sup>.
+                  <samp>Output: | Total | $1.5 |</samp>
+                  <kbd>Ctrl + S to save</kbd>.
+                  <var>var tableSections = 3;</var> <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;caption&gt;Shopping List&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Item&lt;/th&gt;
+            &lt;th scope="col"&gt;Quantity&lt;/th&gt;
+            &lt;th scope="col"&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Apple&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;$1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Orange&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;$0.5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Total&lt;/td&gt;
+            &lt;td&gt;15&lt;/td&gt;
+            &lt;td&gt;$1.5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Professional Structure</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Semantic tables improve code clarity. <strong>Pros</strong>:
+              Accessible, organized. <em>Cons</em>: More tags. <i>Real-life</i>:
+              Sales reports. <b>Debug</b>: Check section closure. <u>Extend</u>:
+              Add ARIA roles. <mark>Tip</mark>: Use CSS for styling.
+              <del>Old</del>: Flat tables. <ins>Modern</ins>: Semantic sections.
+              <sub>Sub</sub>: Section<sub>1</sub>. <sup>Sup</sup>:
+              Table<sup>3</sup>. <samp>Output: | Total | $1.5 |</samp>
+              <kbd>Ctrl + F to search</kbd>. <var>var sectionCount = 3;</var>
+              <cite>W3C: "Semantic tables are standard."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.4: Implementing colspan -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.4. Implementing colspan for Merging Columns</font
+            >
+          </h3>
+
+          <img src="./rowspan.jpeg" width="400px" alt="" />
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Colspan Example"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Colspan Example</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Colspan</b><br />
+                  Use <code>colspan="n"</code> to merge columns. Example:
+                  Contact Info spanning two columns (phone, email).
+                  <strong>File</strong>: <code>second.html</code>. <em>Use</em>:
+                  Data summaries. <i>Tip</i>: Align with data. <b>Extend</b>:
+                  Combine with <code>rowspan</code>. <u>Key</u>: Column merging.
+                  <mark>Highlight</mark>: Visual clarity. <del>Avoid</del>:
+                  Misaligned spans. <ins>Use</ins>: Correct counts.
+                  <sub>Sub</sub>: Col<sub>1</sub>. <sup>Sup</sup>:
+                  Span<sup>2</sup>. <samp>Output: | Contact Info |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var colspanValue = 2;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Name&lt;/th&gt;
+            &lt;th scope="col" colspan="2"&gt;Contact Info&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;123-456-7890&lt;/td&gt;
+            &lt;td&gt;john@example.com&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cooper&lt;/td&gt;
+            &lt;td&gt;234-567-8901&lt;/td&gt;
+            &lt;td&gt;cooper@example.com&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Mohan&lt;/td&gt;
+            &lt;td&gt;345-678-9012&lt;/td&gt;
+            &lt;td&gt;mohan@example.com&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Colspan Explanation</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Colspan merges columns for headers or summaries.
+              <strong>Pros</strong>: Clean presentation. <em>Cons</em>:
+              Misalignment errors. <i>Real-life</i>: Contact directories.
+              <b>Debug</b>: Check column counts. <u>Extend</u>: Use with
+              <code>rowspan</code>. <mark>Tip</mark>: Plan spans first.
+              <del>Old</del>: Manual spacing. <ins>Modern</ins>: Colspan
+              attributes. <sub>Sub</sub>: Col<sub>2</sub>. <sup>Sup</sup>:
+              Span<sup>2</sup>. <samp>Output: | Contact |</samp>
+              <kbd>Ctrl + F to search</kbd>. <var>var colspanCount = 2;</var>
+              <cite>MDN: "Colspan for clear headers."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.5: Implementing rowspan -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.5. Implementing rowspan for Merging Rows</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Rowspan Example"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Rowspan Example</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Rowspan</b><br />
+                  Use <code>rowspan="n"</code> to merge rows. Example: Cell
+                  spanning two rows. <strong>File</strong>:
+                  <code>fourth.html</code>. <em>Use</em>: Data grouping.
+                  <i>Tip</i>: Adjust subsequent rows. <b>Extend</b>: Combine
+                  with <code>colspan</code>. <u>Key</u>: Row merging.
+                  <mark>Highlight</mark>: Visual hierarchy. <del>Avoid</del>:
+                  Incorrect counts. <ins>Use</ins>: Proper spans.
+                  <sub>Sub</sub>: Row<sub>1</sub>. <sup>Sup</sup>:
+                  Span<sup>2</sup>. <samp>Output: | Cell |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var rowspanValue = 2;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Column One&lt;/th&gt;
+            &lt;th scope="col"&gt;Column Two&lt;/th&gt;
+            &lt;th scope="col"&gt;Column Three&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Row One Cell One&lt;/td&gt;
+            &lt;td&gt;Row One Cell Two&lt;/td&gt;
+            &lt;td&gt;Row One Cell Three&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row Two Cell Two&lt;/td&gt;
+            &lt;td&gt;Row Two Cell Three&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Row Three Cell One&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Rowspan Explanation</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Rowspan groups rows for clarity. <strong>Pros</strong>: Visual
+              grouping. <em>Cons</em>: Complex debugging. <i>Real-life</i>:
+              Timetables. <b>Debug</b>: Check row counts. <u>Extend</u>: Combine
+              with <code>colspan</code>. <mark>Tip</mark>: Sketch first.
+              <del>Old</del>: Manual spacing. <ins>Modern</ins>: Rowspan
+              attributes. <sub>Sub</sub>: Row<sub>2</sub>. <sup>Sup</sup>:
+              Span<sup>2</sup>. <samp>Output: | Cell |</samp>
+              <kbd>Ctrl + F to search</kbd>. <var>var rowspanCount = 2;</var>
+              <cite>MDN: "Rowspan for row grouping."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.6: Advanced Table with rowspan and colspan -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.6. Advanced Table with rowspan and colspan</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Advanced Table"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Advanced Table Example</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Advanced Table</b><br />
+                  Complex table with multiple rowspans and colspans.
+                  <strong>File</strong>: <code>fifth.html</code>. Plan: 7 rows,
+                  5 columns. <em>Use</em>: System architecture tables.
+                  <i>Tip</i>: Count max rows/cols first. <b>Extend</b>: Add
+                  <code>aria-label</code>. <u>Key</u>: Careful planning.
+                  <mark>Highlight</mark>: Hierarchical data. <del>Avoid</del>:
+                  Unplanned spans. <ins>Use</ins>: Systematic filling.
+                  <sub>Sub</sub>: Row<sub>1</sub>. <sup>Sup</sup>:
+                  Col<sup>5</sup>. <samp>Output: | System | Apps |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var maxRows = 7;</var>
+                  <br /><br />
+                  <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;caption&gt;System Architecture&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Level One&lt;/th&gt;
+            &lt;th scope="col"&gt;Level Two&lt;/th&gt;
+            &lt;th scope="col"&gt;Level Three&lt;/th&gt;
+            &lt;th scope="col"&gt;Level Four&lt;/th&gt;
+            &lt;th scope="col"&gt;Level Five&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="6"&gt;System&lt;/td&gt;
+            &lt;td rowspan="4"&gt;System Apps&lt;/td&gt;
+            &lt;td rowspan="3"&gt;System ENV&lt;/td&gt;
+            &lt;td rowspan="2"&gt;Foo&lt;/td&gt;
+            &lt;td&gt;App Test&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;App Memory&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;App Test&lt;/td&gt;
+            &lt;td rowspan="2"&gt;Bar&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;System ENV 2&lt;/td&gt;
+            &lt;td&gt;App Memory&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2" colspan="2"&gt;System Memory&lt;/td&gt;
+            &lt;td&gt;Foo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;FS Test&lt;/td&gt;
+            &lt;td&gt;Bar&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Advanced Table</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Complex tables require planning. <strong>Pros</strong>: Detailed
+              hierarchies. <em>Cons</em>: Debugging complexity.
+              <i>Real-life</i>: System dashboards. <b>Debug</b>: Sketch
+              rows/cols. <u>Extend</u>: Add ARIA roles. <mark>Tip</mark>: Plan
+              spans first. <del>Old</del>: Manual tables. <ins>Modern</ins>:
+              Semantic spans. <sub>Sub</sub>: Row<sub>7</sub>. <sup>Sup</sup>:
+              Col<sup>5</sup>. <samp>Output: | System | Apps |</samp>
+              <kbd>Ctrl + F to search</kbd>. <var>var maxCols = 5;</var>
+              <cite>MDN: "Plan complex tables carefully."</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Sub-section 3.7: Conclusion and Homework for Tables -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.7. Conclusion and Homework for Tables</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="15"
+            cellspacing="0"
+            bordercolor="#7610D0"
+            aria-label="Tables Homework"
+          >
+            <caption>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Tables Homework</font
+              >
+            </caption>
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Conclusion and Homework</b><br />
+                  Tables with <code>rowspan</code> and <code>colspan</code> are
+                  manageable with practice. Homework: Create two tables: 1.
+                  Employee schedule (merged shifts). 2. Product comparison
+                  (merged features). <strong>File</strong>:
+                  <code>homework_tables.html</code>. <em>Use</em>: Practical
+                  skills. <i>Tip</i>: Sketch first. <b>Extend</b>: Add
+                  <code>caption</code>. <u>Key</u>: Logical planning.
+                  <mark>Highlight</mark>: Real data. <del>Avoid</del>: Unplanned
+                  spans. <ins>Use</ins>: Systematic approach. <sub>Sub</sub>:
+                  Task<sub>1</sub>. <sup>Sup</sup>: Assignment<sup>2</sup>.
+                  <samp>Output: | Employee | Shift |</samp>
+                  <kbd>Ctrl + S to save</kbd>. <var>var taskCount = 2;</var>
+                  <time datetime="2025-09-19">Due 2025-09-19</time>.
+                  <br /><br />
+                  <pre>
+<code>
+&lt;!-- Homework Example 1: Employee Schedule --&gt;
+&lt;table border="1"&gt;
+    &lt;caption&gt;Employee Schedule&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Name&lt;/th&gt;
+            &lt;th scope="col" colspan="2"&gt;Shift&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;John&lt;/td&gt;
+            &lt;td&gt;Morning&lt;/td&gt;
+            &lt;td&gt;9-12&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Evening&lt;/td&gt;
+            &lt;td&gt;6-9&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+                                </pre>
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <details>
+            <summary>
+              <font face="Trebuchet MS" size="3" color="white"
+                >Expanded Homework Details</font
+              >
+            </summary>
+            <font face="Courier New" size="2" color="lightgray">
+              Homework builds table skills. <strong>Employee Schedule</strong>:
+              Merges shifts. <em>Product Comparison</em>: Merges features.
+              <i>Real-life</i>: HR systems, e-commerce. <b>Debug</b>: Check span
+              counts. <u>Extend</u>: Add ARIA roles. <mark>Tip</mark>: Use real
+              data. <del>Old</del>: Flat tables. <ins>Modern</ins>: Semantic
+              spans. <sub>Sub</sub>: Task<sub>1</sub>. <sup>Sup</sup>:
+              Assignment<sup>2</sup>. <samp>Output: | Name | Shift |</samp>
+              <kbd>Ctrl + Z to undo</kbd>. <var>var homeworkTasks = 2;</var>
+              <cite>GitHub: Share for feedback.</cite>
+            </font>
+          </details>
+          <br />
+
+          <!-- Additional Section: Tips and Tricks -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white">
+              4. Key Summary 📌
+            </font>
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Nested Lists</b>: Organize hierarchies using
+                  <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> inside
+                  <code>&lt;li&gt;</code>. Limit nesting for readability.<br /><br />
+                  <b>Tables</b>: Use <code>&lt;table&gt;</code>,
+                  <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>,
+                  <code>&lt;th&gt;</code> for data grids. Add
+                  <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+                  <code>&lt;tfoot&gt;</code>, <code>rowspan</code>,
+                  <code>colspan</code> for structure. Use for data, not layout.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <img
+            src="./TableTag.png"
+            alt="HTML Structure Diagram"
+            width="800"
+            height="300"
+          />
+          <br />
+
+          <!-- Navigation Links -->
+          <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td align="left">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture2.html">
+                        <font face="Courier New" size="3" color="white"
+                          >⬅ Previous</font
+                        >
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture4.html">
+                        <font face="Courier New" size="3" color="white"
+                          >Next ➡</font
+                        >
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <table width="100%" border="0" cellpadding="20" bgcolor="#121212">
+            <tr>
+              <td align="center">
+                <font color="gray" face="Verdana" size="2">
+                  Crafted by Your Name | Coder Army Rohit Negi Hackathon 1 2025
+                  | Pure HTML
+                </font>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
