@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MaterialFlow Documentation - Day 2: HTML Essentials</title>
+  </head>
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Announcement Marquee -->
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              📚 Day 2: Master HTML Essentials with MaterialFlow - Headings,
+              Paragraphs, Lists, Links, Images, and More! 🚀
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- Top Navigation -->
+    <table width="100%" cellpadding="15" cellspacing="0" bgcolor="#121212">
+      <tr>
+        <td align="left">
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white"
+                  ><b
+                    >Material<font color="#8812EF"
+                      ><strong>Flow</strong></font
+                    ></b
+                  ></font
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right">
+          <table cellpadding="5" cellspacing="5">
+            <tr>
+              <td bgcolor="#4A148C" align="center">
+                <a href="home.html"
+                  ><font face="Courier New" color="white">Home</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Lectures</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Docs</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Resources</font></a
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🏗️ Main Layout -->
+    <table width="100%" border="0" cellpadding="20" cellspacing="0">
+      <tr valign="top">
+        <!-- 📌 Sidebar -->
+        <td width="20%" bgcolor="#18181C">
+          <font face="Verdana" size="4" color="white"><b>📂 Menu</b></font>
+          <hr color="#333333" />
+          <font face="Verdana" size="3" color="lightgray">
+            <table
+              width="100%"
+              cellpadding="10"
+              cellspacing="10"
+              bgcolor="#18181C"
+            >
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="home.html"
+                    ><font color="white">🏠 Home Page</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#18181C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">📄 Documentation</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture1.html"
+                    ><font color="white">Day 1️⃣: Basics</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture2.html"
+                    ><font color="white">Day 2️⃣: Structure</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 3️⃣: Forms</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 4️⃣: Tables</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 5️⃣: Multimedia</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 6️⃣: Advanced</font></a
+                  >
+                </td>
+              </tr>
+            </table>
+          </font>
+        </td>
+        <!-- 📖 Right Content -->
+        <td width="80%" bgcolor="#0E0E12">
+          <!-- Title -->
+          <h1>
+            <font face="Trebuchet MS" size="8" color="white"
+              >📘 Day 2: HTML Essentials - Structure Your First Webpage</font
+            >
+          </h1>
+          <hr color="#7610D0" />
+          <br />
+
+          <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28248%2C231%2C28%2C1%29&t=blackboard&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253EDay%25202%253A%2520HTML%2520Essentials%2520-%2520MaterialFlow%253C%252Ftitle%253E%250A%2520%2520%253C%252Fhead%253E%250A%2520%2520%253Cbody%2520bgcolor%253D%2522%25230E0E12%2522%2520text%253D%2522white%2522%253E%250A%2520%2520%2520%2520%253Ch1%253EDay%25202%253A%2520HTML%2520Essentials%2520%25F0%259F%259A%2580%253C%252Fh1%253E%250A%2520%2520%2520%2520%253Cp%253ELearn%2520the%2520core%2520of%2520web%2520development%2520with%2520HTML%252C%2520the%2520backbone%2520of%2520every%2520webpage.%253C%252Fp%253E%250A%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520Mastered%2520HTML%2520basics%253A%2520structuring%2520content%2520with%2520headings%2520%28%253Ch1%253E%2520to%2520%253Ch6%253E%29%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520paragraphs%2520%28%253Cp%253E%29%252C%2520lists%2520%28%253Cul%253E%252C%2520%253Col%253E%252C%2520%253Cli%253E%29%252C%2520links%2520%28%253Ca%253E%29%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520images%2520%28%253Cimg%253E%29%252C%2520and%2520breaks%2520%28%253Cbr%253E%252C%2520%253Chr%253E%29.%2520%250A%2520%2520%2520%2520%2520%2520%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+            style="
+              width: 1000px;
+              height: 655px;
+              border: 0;
+              transform: scale(1);
+              overflow: hidden;
+            "
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+
+          <br />
+
+          <!-- Introduction -->
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="3" color="lightgray">
+                  Welcome to Day 2 of MaterialFlow's lecture series, where we
+                  dive deep into HTML essentials! Learn how to structure web
+                  content using core tags like <code>&lt;h1&gt;</code> to
+                  <code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>,
+                  <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>,
+                  <code>&lt;a&gt;</code>, and <code>&lt;img&gt;</code>. This
+                  beginner-friendly guide walks you through setting up a VS Code
+                  environment, applying semantic tags, and building a
+                  mini-project to create a functional webpage from scratch. 🚀
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 1: What is HTML? -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >1. Understanding HTML: HyperText Markup Language 🌐</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>HTML Overview</b><br />
+                  HTML stands for <b>HyperText Markup Language</b>, the backbone
+                  of web development. It enables the creation of structured web
+                  pages with hyperlinks for navigation and tags for semantic
+                  meaning. The term "HyperText" refers to links connecting
+                  pages, as seen in the first website (<a
+                    href="https://info.cern.ch/hypertext/WWW/TheProject.html"
+                    target="_blank"
+                    >World Wide Web</a
+                  >). "Markup Language" involves using tags to define content
+                  structure, like headings and paragraphs, making content
+                  meaningful for browsers and search engines.
+                </font>
+                <br /><br />
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <td align="center">
+                      <font face="Courier New" size="2" color="white">
+                        <b>Key Concepts</b>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>
+                      <ul>
+                        <li>HyperText: Links pages for seamless navigation.</li>
+                        <li>
+                          Markup: Tags like <code>&lt;h1&gt;</code> and
+                          <code>&lt;p&gt;</code> give content structure.
+                        </li>
+                        <li>
+                          Purpose: Builds the skeleton of a webpage, defining
+                          its layout and meaning.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <font face="Courier New" size="2" color="lightgray">
+              <b>Example: First Website</b><br />
+              The first website used hyperlinks to navigate between pages, with
+              no design or search functionality. Explore it here:
+              <a
+                href="https://info.cern.ch/hypertext/WWW/TheProject.html"
+                target="_blank"
+                >World Wide Web</a
+              >.
+            </font>
+          </p>
+          <hr color="#7610D0" />
+
+          <!-- Section 2: Setting Up VS Code -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >2. Setting Up Your Workspace: VS Code and Extensions 🛠️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>VS Code Installation</b><br />
+                  Visual Studio Code (VS Code) is a free, powerful code editor
+                  for writing HTML. Follow these steps to set it up:
+                </font>
+                <ol>
+                  <li>
+                    Download VS Code from
+                    <a href="https://code.visualstudio.com/" target="_blank"
+                      >code.visualstudio.com</a
+                    >.
+                  </li>
+                  <li>
+                    Install it by opening the downloaded file (auto-detects your
+                    OS).
+                  </li>
+                  <li>Open VS Code to access its interface.</li>
+                </ol>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Essential Extensions</b><br />
+                  Enhance your coding experience with these extensions:
+                </font>
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Extension</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Purpose</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Link</font
+                      >
+                    </th>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Live Server</td>
+                    <td>Real-time webpage preview with auto-reload</td>
+                    <td>
+                      <a
+                        href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+                        target="_blank"
+                        >Install</a
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Live Preview</td>
+                    <td>Preview HTML within VS Code</td>
+                    <td>
+                      <a
+                        href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server"
+                        target="_blank"
+                        >Install</a
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Prettier</td>
+                    <td>Formats code for consistency</td>
+                    <td>
+                      <a
+                        href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                        target="_blank"
+                        >Install</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Creating Your First HTML File</b><br />
+                  1. Create a folder (e.g., "Defense") on your desktop.<br />
+                  2. Open it in VS Code via "Open Folder" or drag-and-drop.<br />
+                  3. Create a file named <code>index.html</code>.<br />
+                  4. Write: <code>Hello Coder Army, how are you all?</code
+                  ><br />
+                  5. Use Live Server to view it in a browser.<br />
+                  6. Enable Auto Save (<code>Ctrl + S</code> or
+                  <code>Command + S</code>) for convenience.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <font face="Courier New" size="2" color="lightgray">
+              <b>Placeholder for Code Snippet</b><br />
+              [Insert your VS Code setup or initial HTML code snippet here]
+            </font>
+          </p>
+          <hr color="#7610D0" />
+
+          <!-- Section 3: HTML Tags and Elements -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >3. HTML Tags and Elements: Building Blocks of Webpages 📝</font
+            >
+          </h2>
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.1. Why Tags Matter</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Without tags, text in HTML appears unstructured and flat. Tags
+                  like <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> add
+                  semantic meaning and structure, making content readable for
+                  users and machines. For example, wrapping "Web Development
+                  Course" in <code>&lt;h1&gt;</code> marks it as the main
+                  heading, while <code>&lt;p&gt;</code> defines paragraphs.
+                </font>
+                <br /><br />
+                <pre>
+<code>
+&lt;h1&gt;Web Development Course&lt;/h1&gt;
+&lt;p&gt;In this course, learn to become a full stack developer from zero to advanced.&lt;/p&gt;
+</code>
+                </pre>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.2. Heading Tags (h1-h6)</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  HTML provides six heading tags: <code>&lt;h1&gt;</code> to
+                  <code>&lt;h6&gt;</code>. They define content hierarchy, with
+                  <code>&lt;h1&gt;</code> being the most important (used once
+                  per page) and <code>&lt;h6&gt;</code> the least.
+                </font>
+                <br /><br />
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <th>
+                      <font face="Courier New" size="2" color="white">Tag</font>
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Purpose</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Example</font
+                      >
+                    </th>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;h1&gt;</code></td>
+                    <td>Main page title</td>
+                    <td><code>&lt;h1&gt;Welcome to HTML&lt;/h1&gt;</code></td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;h2&gt;</code></td>
+                    <td>Major section heading</td>
+                    <td><code>&lt;h2&gt;Introduction&lt;/h2&gt;</code></td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;h3&gt;</code></td>
+                    <td>Sub-section heading</td>
+                    <td><code>&lt;h3&gt;Basics of Tags&lt;/h3&gt;</code></td>
+                  </tr>
+                </table>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>SEO Importance:</b> Headings help search engines understand
+                  content hierarchy. Use one <code>&lt;h1&gt;</code> per page
+                  and maintain a logical sequence (e.g.,
+                  <code>&lt;h1&gt;</code> → <code>&lt;h2&gt;</code> →
+                  <code>&lt;h3&gt;</code>).
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.3. Paragraph Tags</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;p&gt;</code> tag defines paragraphs, separating
+                  blocks of text with spacing. Use it for regular content, not
+                  headings.
+                </font>
+                <br /><br />
+                <pre>
+<code>
+&lt;p&gt;This course covers HTML basics for beginners.&lt;/p&gt;
+&lt;p&gt;Explore tags, attributes, and more!&lt;/p&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Tip:</b> Use <code>lorem50</code> in VS Code to generate 50
+                  words of placeholder text for testing.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.4. Horizontal Rule and Line Break Tags</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Horizontal Rule (<code>&lt;hr&gt;</code>)</b>: A
+                  self-closing tag that draws a thematic break (line) to
+                  separate content.<br />
+                  <b>Line Break (<code>&lt;br&gt;</code>)</b>: A self-closing
+                  tag that inserts a single line break within text.
+                </font>
+                <br /><br />
+                <pre>
+<code>
+&lt;p&gt;Topic 1&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Topic 2&lt;/p&gt;
+&lt;p&gt;Address: 221B Baker Street&lt;br /&gt;London, England&lt;/p&gt;
+</code>
+                </pre>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.5. List Tags (Ordered and Unordered)</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Lists organize related items. Use <code>&lt;ul&gt;</code> for
+                  unordered (bulleted) lists and <code>&lt;ol&gt;</code> for
+                  ordered (numbered) lists, with <code>&lt;li&gt;</code> for
+                  each item.
+                </font>
+                <br /><br />
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >List Type</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white">Tag</font>
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Example</font
+                      >
+                    </th>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Unordered</td>
+                    <td><code>&lt;ul&gt;</code></td>
+                    <td>
+                      <pre>
+<code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Ordered</td>
+                    <td><code>&lt;ol&gt;</code></td>
+                    <td>
+                      <pre>
+<code>
+&lt;ol&gt;
+  &lt;li&gt;Boil water&lt;/li&gt;
+  &lt;li&gt;Add tea&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+                      </pre>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.6. Anchor Tags and Attributes</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;a&gt;</code> tag creates hyperlinks. Use the
+                  <code>href</code> attribute for the destination URL and
+                  <code>target="_blank"</code> to open links in a new tab.
+                  Attributes add properties to tags.
+                </font>
+                <br /><br />
+                <pre>
+<code>
+&lt;!-- Example Anchor Tag --&gt;
+&lt;a href="https://coderarmy.in" target="_blank"&gt;Visit Coder Army&lt;/a&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Comments:</b> Use <code>&lt;!-- Comment --&gt;</code> to
+                  add notes invisible to users.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.7. Image Tags</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;img&gt;</code> tag embeds images. It’s
+                  self-closing and requires <code>src</code> (image path) and
+                  <code>alt</code> (accessibility text). Use
+                  <code>height</code> and <code>width</code> for sizing.
+                </font>
+                <br /><br />
+                <pre>
+<code>
+&lt;img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="200px" width="200px" alt="Beagle Dog"&gt;
+</code>
+                </pre>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <font face="Courier New" size="2" color="lightgray">
+              <b>Placeholder for Code Snippet</b><br />
+              [Insert your image or anchor tag code snippet here]
+            </font>
+          </p>
+          <hr color="#7610D0" />
+
+          <!-- Section 4: Mini-Project -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >4. Mini-Project: Front-End Developer Guide 🚀</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#333333"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Build a webpage titled "How to Become a Front-End Developer"
+                  using learned tags. This project reinforces HTML skills
+                  through practical application.
+                </font>
+                <br /><br />
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Element</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Purpose</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Example</font
+                      >
+                    </th>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Main Heading</td>
+                    <td>Title</td>
+                    <td>
+                      <code
+                        >&lt;h1&gt;How to Become a Front-End
+                        Developer&lt;/h1&gt;</code
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Image</td>
+                    <td>Visual</td>
+                    <td>
+                      <code
+                        >&lt;img src="developer.jpg" height="200px"
+                        width="200px" alt="Developer"&gt;</code
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Horizontal Rule</td>
+                    <td>Separator</td>
+                    <td><code>&lt;hr /&gt;</code></td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Sub-Heading</td>
+                    <td>Section Title</td>
+                    <td><code>&lt;h2&gt;Skills Required&lt;/h2&gt;</code></td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Unordered List</td>
+                    <td>List Skills</td>
+                    <td>
+                      <code
+                        >&lt;ul&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;li&gt;CSS&lt;/li&gt;&lt;/ul&gt;</code
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Ordered List</td>
+                    <td>List Steps</td>
+                    <td>
+                      <code
+                        >&lt;ol&gt;&lt;li&gt;Learn
+                        HTML&lt;/li&gt;&lt;li&gt;Build
+                        Projects&lt;/li&gt;&lt;/ol&gt;</code
+                      >
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>Link</td>
+                    <td>Call to Action</td>
+                    <td>
+                      <code
+                        >&lt;a href="https://coderarmy.in"
+                        target="_blank"&gt;Buy Course&lt;/a&gt;</code
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Sample Project Code</b><br />
+                </font>
+                <pre>
+<code>
+&lt;h1&gt;How to Become a Front-End Developer&lt;/h1&gt;
+&lt;img src="developer.jpg" height="200px" width="200px" alt="Front End Developer"&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Who is a Front-End Developer?&lt;/h2&gt;
+&lt;p&gt;A front-end developer builds the user-facing parts of websites using HTML, CSS, and JavaScript.&lt;/p&gt;
+&lt;h2&gt;Skills Required&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Step-by-Step Guide&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Master HTML&lt;/li&gt;
+  &lt;li&gt;Learn CSS&lt;/li&gt;
+  &lt;li&gt;Build Projects&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a href="https://coderarmy.in" target="_blank"&gt;Buy the Course&lt;/a&gt;
+</code>
+                </pre>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <font face="Courier New" size="2" color="lightgray">
+              <b>Placeholder for Project Code Snippet</b><br />
+              [Insert your mini-project code snippet here]
+            </font>
+          </p>
+          <hr color="#7610D0" />
+
+          <!-- Section 5: Key Summary -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >5. Key Summary 📌</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>What is HTML?</b><br />
+                  HTML (HyperText Markup Language) is the foundation of web
+                  pages, using tags to structure content and enable navigation
+                  via hyperlinks.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Tags and Their Uses</b>
+                </font>
+                <ul>
+                  <li>
+                    <b
+                      >Headings
+                      (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>):</b
+                    >
+                    Define content hierarchy, with <code>&lt;h1&gt;</code> as
+                    the main title.
+                  </li>
+                  <li>
+                    <b>Paragraph (<code>&lt;p&gt;</code>):</b> Structures
+                    regular text content.
+                  </li>
+                  <li>
+                    <b>Anchor (<code>&lt;a&gt;</code>):</b> Creates hyperlinks
+                    with <code>href</code> and <code>target</code> attributes.
+                  </li>
+                  <li>
+                    <b>Image (<code>&lt;img&gt;</code>):</b> Embeds images with
+                    <code>src</code> and <code>alt</code> attributes.
+                  </li>
+                  <li>
+                    <b
+                      >Lists (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>,
+                      <code>&lt;li&gt;</code>):</b
+                    >
+                    Organize items as bulleted or numbered lists.
+                  </li>
+                  <li>
+                    <b>Horizontal Rule (<code>&lt;hr&gt;</code>):</b> Adds
+                    thematic breaks.
+                  </li>
+                  <li>
+                    <b>Line Break (<code>&lt;br&gt;</code>):</b> Inserts line
+                    breaks within text.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <img
+            src="./assets/html_structure.png"
+            alt="HTML Structure Diagram"
+            width="600"
+            height="300"
+          />
+          <p>
+            <font face="Courier New" size="2" color="lightgray">
+              <b>Visual Aid:</b> A diagram showing HTML tag hierarchy
+              (placeholder image).
+            </font>
+          </p>
+          <hr color="#7610D0" />
+
+          <!-- Navigation Links (Previous and Next as Buttons) -->
+          <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td align="left">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture1.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >⬅ Previous</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture3.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >Next ➡</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🔻 Footer -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="#121212">
+      <tr>
+        <td align="center">
+          <font color="gray" face="Verdana" size="2">
+            Crafted by Your Name | Coder Army Rohit Negi Hackathon 1 2025 | Pure
+            HTML Dark Theme
+          </font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
