@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaterialFlow Documentation - Day 6: HTML Media and Deployment</title>
+  </head>
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Announcement Marquee -->
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              📚 Day 6: Master HTML Media and Deployment with MaterialFlow -
+              Embed Audio, Video, and Deploy Your Multi-Page Website! 🚀
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- Top Navigation -->
+    <table width="100%" cellpadding="15" cellspacing="0" bgcolor="#121212">
+      <tr>
+        <td align="left">
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white"
+                  ><b
+                    >Material<font color="#8812EF"
+                      ><strong>Flow</strong></font
+                    ></b
+                  ></font
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right">
+          <table cellpadding="5" cellspacing="5">
+            <tr>
+              <td bgcolor="#4A148C" align="center">
+                <a href="home.html"
+                  ><font face="Courier New" color="white">Home</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="lecture1.html"
+                  ><font face="Courier New" color="white">Lectures</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="docs.html"
+                  ><font face="Courier New" color="white">Docs</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="resources.html"
+                  ><font face="Courier New" color="white">Resources</font></a
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🏗️ Main Layout -->
+    <table width="100%" border="0" cellpadding="20" cellspacing="0">
+      <tr valign="top">
+        <!-- 📌 Sidebar -->
+        <td width="20%" bgcolor="#18181C">
+          <font face="Verdana" size="4" color="white"><b>📂 Menu</b></font>
+          <hr color="#333333" />
+          <font face="Verdana" size="3" color="lightgray">
+            <table
+              width="100%"
+              cellpadding="10"
+              cellspacing="10"
+              bgcolor="#18181C"
+            >
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="home.html"
+                    ><font color="white">🏠 Home Page</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">📄 Documentation</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture1.html"
+                    ><font color="white">Day 1️⃣: Basics</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture2.html"
+                    ><font color="white">Day 2️⃣: Structure</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture3.html"
+                    ><font color="white">Day 3️⃣: Nested Lists & Tables</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture4.html"
+                    ><font color="white"
+                      >Day 4️⃣: File Paths & Semantics</font
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture5.html"
+                    ><font color="white">Day 5️⃣: HTML Forms</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#18181C" align="left">
+                  <a href="lecture6.html"
+                    ><font color="white">Day 6️⃣: HTML Media</font></a
+                  >
+                </td>
+              </tr>
+            </table>
+          </font>
+        </td>
+        <!-- 📖 Right Content -->
+        <td width="80%" bgcolor="#0E0E12">
+          <!-- Title -->
+          <h1>
+            <font face="Trebuchet MS" size="8" color="white"
+              >📘 Day 6: HTML Media and Multi-Page Website Deployment</font
+            >
+          </h1>
+          <hr color="#7610D0" />
+
+          <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%2868%2C35%2C245%2C1%29&t=cobalt&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=13.5px&lh=150%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253EDay%25206%253A%2520Media%2520Tags%2520%2526%2520Deployment%2520-%2520MaterialFlow%253C%252Ftitle%253E%250A%2520%2520%253C%252Fhead%253E%250A%2520%2520%253Cbody%2520bgcolor%253D%2522%25230E0E12%2522%2520text%253D%2522white%2522%253E%250A%2520%2520%2520%2520%253Ch1%253EDay%25206%253A%2520Media%2520Tags%2520%2526%2520Deployment%2520%25F0%259F%258C%2590%253C%252Fh1%253E%250A%2520%2520%2520%2520%253Cp%253ELearn%2520to%2520embed%2520media%2520and%2520deploy%2520multi-page%2520websites.%253C%252Fp%253E%250A%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%253Cfont%2520face%253D%2522Courier%2520New%2522%2520size%253D%25223%2522%2520color%253D%2522lightgray%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520Mastered%2520embedding%2520audio%2520%28%253Caudio%253E%29%2520and%2520video%2520%28%253Cvideo%253E%29%2520with%2520%253Csource%253E%2520for%2520compatibility%252C%2520and%2520YouTube%2520videos%2520via%2520%253Ciframe%253E.%2520Built%2520multi-page%2520websites%2520with%2520%253Cheader%253E%252C%2520%253Cmain%253E%252C%2520%253Cfooter%253E%252C%2520and%2520navigation%2520using%2520%253Ca%253E.%2520Deployed%2520projects%2520on%2520Netlify%2520with%2520HTTPS.%250A%2520%2520%2520%2520%2520%2520%253C%252Ffont%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+            style="
+              width: 1024px;
+              height: 580px;
+              border: 0;
+              transform: scale(1);
+              overflow: hidden;
+            "
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+
+          <!-- Introduction -->
+
+          <br />
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="3" color="lightgray">
+                  Welcome to Day 6 of MaterialFlow's lecture series, the final
+                  HTML session focusing on media integration and deployment.
+                  This guide covers embedding audio, video, and YouTube videos
+                  using <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>,
+                  and <code>&lt;iframe&gt;</code> tags, ensuring browser
+                  compatibility with fallback mechanisms. You'll also learn to
+                  deploy a multi-page website using Netlify, making it publicly
+                  accessible with HTTPS security. By the end, you'll have the
+                  skills to create and share a fully functional website! 🚀
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 1: Introduction to HTML Media -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >1. Introduction to HTML Media 📹</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The web is more than text and images—it’s a platform for rich
+                  media like audio and video. Historically, browsers relied on
+                  third-party plugins (e.g., Adobe Flash, QuickTime) for media
+                  playback, which was inefficient and insecure. HTML5 introduced
+                  the <code>&lt;video&gt;</code> and
+                  <code>&lt;audio&gt;</code> tags to provide a standardized,
+                  plugin-free way to embed media, ensuring compatibility across
+                  modern browsers and devices.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why Media Matters:</b><br />
+                  - <b>Engagement:</b> Videos and audio enhance user interaction
+                  and content delivery.<br />
+                  - <b>Accessibility:</b> Native tags eliminate plugin
+                  dependencies, improving performance.<br />
+                  - <b>Compatibility:</b> Modern browsers support various media
+                  formats with fallback options.<br />
+                  <b>Real-World Examples:</b> Course videos, podcasts, and
+                  promotional media on websites.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 2: The <video> Tag -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >2. The &lt;video&gt; Tag 🎥</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;video&gt;</code> tag embeds video content, with
+                  the <code>src</code> attribute specifying the video file.
+                  Without additional attributes, it displays only the first
+                  frame.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Basic Example:</b>
+                </font>
+                <pre>
+<video width="400px" src="./work.mp4"></video>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Adding Controls:</b> The <code>controls</code> attribute
+                  adds a browser-native player with play/pause, timeline,
+                  volume, and fullscreen options.
+                </font>
+                <pre>
+<video width="400px" src="./work.mp4" controls></video>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Attributes:</b><br />
+                  - <b>width, height:</b> Set player dimensions (e.g.,
+                  <code>width="640" height="360"</code>).<br />
+                  - <b>autoplay:</b> Starts video on page load (requires
+                  <code>muted</code> in modern browsers).<br />
+                  - <b>loop:</b> Restarts video after completion.<br />
+                  - <b>poster:</b> Displays an image before playback (e.g.,
+                  <code>poster="thumbnail.jpg"</code>).<br />
+                  <b>Example with Attributes:</b>
+                </font>
+                <pre>
+<video src="./work.mp4" width="640" height="360" controls autoplay muted loop poster="images/thumbnail.jpg"></video>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Embedding a promotional video
+                  on a course website.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 3: The <audio> Tag -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >3. The &lt;audio&gt; Tag 🎵</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;audio&gt;</code> tag embeds audio files (e.g.,
+                  MP3, WAV) and works similarly to <code>&lt;video&gt;</code>.
+                  The <code>controls</code> attribute provides a player
+                  interface.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<p>Listen to our theme song:</p>
+<audio src="audio/theme-song.mp3" controls></audio>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Attributes:</b> Supports <code>autoplay</code>,
+                  <code>loop</code>, and <code>muted</code>, similar to
+                  <code>&lt;video&gt;</code>.<br />
+                  <b>Real-World Application:</b> Embedding a podcast or
+                  background music.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 4: Browser Compatibility with <source> -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >4. Browser Compatibility with &lt;source&gt; 🔄</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Different browsers support different media formats (e.g.,
+                  Chrome supports .webm, Safari prefers .mp4). The
+                  <code>&lt;source&gt;</code> element allows multiple formats
+                  for compatibility.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Robust Example:</b>
+                </font>
+                <pre>
+<video controls poster="" width="500px">
+  <source src="./work.mp4" type="video/webm">
+  <source src="./work.mp4" type="video/mp4">
+  Sorry, your browser doesn't support embedded videos.
+</video>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>How It Works:</b> The browser tries each
+                  <code>&lt;source&gt;</code> in order, playing the first
+                  supported format. Fallback text displays for unsupported
+                  browsers.<br />
+                  <b>Common Formats:</b><br />
+                  - <b>.mp4 (H.264):</b> Widely supported.<br />
+                  - <b>.webm (VP8/VP9):</b> Open-source, Chrome/Firefox.<br />
+                  - <b>.ogg (Theora):</b> Older open-source format.<br />
+                  <b>Real-World Application:</b> Ensuring videos play across all
+                  devices.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 5: Accessibility with <track> -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >5. Accessibility with &lt;track&gt; ♿</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;track&gt;</code> element adds subtitles or
+                  captions in WebVTT (.vtt) format, improving accessibility for
+                  deaf, hard-of-hearing, or non-native speakers.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<video controls width="500px">
+  <source src="./work.mp4" type="video/webm">
+  <source src="video.mp4" type="video/mp4">
+  <track src="captions_en.vtt" kind="captions" srclang="en" label="English">
+  <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español">
+</video>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Attributes:</b><br />
+                  - <b>kind:</b> <code>captions</code> (transcription),
+                  <code>subtitles</code> (translation),
+                  <code>descriptions</code> (audio for visually impaired).<br />
+                  - <b>srclang:</b> Language code (e.g., "en").<br />
+                  - <b>label:</b> Menu display name.<br />
+                  <b>Real-World Application:</b> Adding captions to educational
+                  videos.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 6: Embedding YouTube Videos -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >6. Embedding YouTube Videos with &lt;iframe&gt; 📺</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;iframe&gt;</code> tag embeds external content,
+                  like YouTube videos, using the embed URL format.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/NGYp1zCBthk"
+  allowfullscreen
+></iframe>
+
+
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>How to Get Embed URL:</b><br />
+                  - From YouTube watch URL (e.g.,
+                  <code>https://www.youtube.com/watch?v=dQw4w9WgXcQ</code>), use
+                  <code>https://www.youtube.com/embed/dQw4w9WgXcQ</code>.<br />
+                  - From share URL (e.g.,
+                  <code>https://youtu.be/dQw4w9WgXcQ</code>), change to
+                  <code>https://youtube.com/embed/dQw4w9WgXcQ</code>.<br />
+                  <b>Attributes:</b><br />
+                  - <b>allowfullscreen:</b> Enables full-screen mode.<br />
+                  <b>Real-World Application:</b> Embedding tutorial videos on a
+                  course page.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 7: Special Characters and Entities -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >7. Special Characters and Entities ©</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  HTML entities display special characters (e.g., ©, <, >) that
+                  might otherwise be interpreted as code.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<footer>
+  <p>Copyright &copy; 2025 MaterialFlow. All Rights Reserved.</p>
+</footer>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Common Entities:</b><br />
+                  - <b>&copy; or &#169;:</b> Copyright symbol (©).<br />
+                  - <b>&reg; or &#174;:</b> Registered trademark (®).<br />
+                  - <b>&trade; or &#8482;:</b> Trademark (™).<br />
+                  - <b>&lt; or &#60;:</b> Less-than (<).<br />
+                  - <b>&gt; or &#62;:</b> Greater-than (>).<br />
+                  <b>Real-World Application:</b> Displaying a copyright notice
+                  in a footer.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 8: Building a Multi-Page Website -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >8. Building a Multi-Page Website 🌐</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  A multi-page website consists of multiple HTML files linked
+                  via navigation, providing organized content presentation.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example Navigation:</b>
+                </font>
+                <pre>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Page Structure:</b><br />
+                  - <b>index.html:</b> Main page with a heading and image.<br />
+                  - <b>about.html:</b> Tutor info with a video.<br />
+                  - <b>courses.html:</b> Course list with YouTube embeds.<br />
+                  - <b>contact.html:</b> Form and contact image.<br />
+                  <b>Real-World Application:</b> A course-selling website with
+                  multiple pages.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 9: Deploying with Netlify -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >9. Deploying with Netlify 🚀</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Netlify simplifies deploying websites, making them publicly
+                  accessible with HTTPS security.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Steps:</b><br />
+                  1. Sign up at Netlify using Google.<br />
+                  2. Select "Add a new project" > "Deploy manually" or "Try
+                  Netlify Drop."<br />
+                  3. Upload the project folder (e.g., containing
+                  <code>index.html</code>, <code>about.html</code>).<br />
+                  4. Name the project (e.g., "My-First-Hunter-Project").<br />
+                  5. Access the live site via the provided URL (e.g.,
+                  <code>my-first-h-project.netlify.app</code>).<br />
+                  <b>Features:</b><br />
+                  - Automatic HTTPS via Let's Encrypt.<br />
+                  - Shareable public link.<br />
+                  <b>Real-World Application:</b> Sharing a portfolio or course
+                  website.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >10. Media Tags Overview 💪</font
+            >
+          </h2>
+
+          <font face="Courier New" size="2" color="lightgray">
+            <b>Media Tag Comparison Table</b>
+          </font>
+          <br />
+          <br />
+          <table border="1" cellpadding="5" cellspacing="0" bgcolor="#18181C">
+            <tr bgcolor="#4A148C">
+              <th>
+                <font face="Courier New" size="2" color="white">Tag</font>
+              </th>
+              <th>
+                <font face="Courier New" size="2" color="white">Purpose</font>
+              </th>
+              <th>
+                <font face="Courier New" size="2" color="white"
+                  >Key Attributes</font
+                >
+              </th>
+              <th>
+                <font face="Courier New" size="2" color="white">Use Case</font>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >&lt;video&gt;</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Embeds video content</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >controls, autoplay, muted, loop, poster, width, height</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Course intro video</font
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >&lt;audio&gt;</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Embeds audio content</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >controls, autoplay, muted, loop</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Podcast or theme song</font
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >&lt;iframe&gt;</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Embeds external content (e.g., YouTube)</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >src, width, height, allowfullscreen</font
+                >
+              </td>
+              <td>
+                <font face="Courier New" size="2" color="lightgray"
+                  >Course preview videos</font
+                >
+              </td>
+            </tr>
+          </table>
+
+          <!-- Section 10: Practical Project: Course Website -->
+          <br />
+
+          <!-- Section 11: Assignment - Gym Website -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >11. Assignment: Gym-Themed Website 💪</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Create a gym-themed multi-page website and deploy it on
+                  Netlify.<br />
+                  <b>Pages:</b><br />
+                  - <b>index.html:</b> General gym info with an image.<br />
+                  - <b>diet.html:</b> Diet plans with a video.<br />
+                  - <b>exercise.html:</b> Exercise routines with YouTube
+                  embeds.<br />
+                  - <b>contact.html:</b> Contact form and image.<br />
+                  <b>Requirements:</b><br />
+                  - Use <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>,
+                  or <code>&lt;iframe&gt;</code> for media.<br />
+                  - Include navigation and copyright symbol.<br />
+                  - Deploy on Netlify and share the URL.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 12: Conclusion and Next Steps -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >12. Conclusion and Next Steps 📝</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Day 6 completes the HTML course, covering media integration
+                  and deployment. You’ve learned to embed audio, video, and
+                  YouTube content, ensure browser compatibility, and deploy
+                  websites on Netlify. Next, explore CSS for styling and
+                  JavaScript for interactivity.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Homework:</b><br />
+                  - Complete the gym-themed website assignment.<br />
+                  - Research CSS properties for styling media players.<br />
+                  - Experiment with WebVTT files for captions.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Navigation Links (Previous and Next as Buttons) -->
+          <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td align="left">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture5.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >⬅ Previous</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture7.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >Next ➡</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🔻 Footer -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="#121212">
+      <tr>
+        <td align="center">
+          <font color="gray" face="Verdana" size="2">
+            Crafted by Arjun Kumar | Coder Army Rohit Negi Hackathon 1 2025 |
+            Pure HTML Dark Theme
+          </font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
