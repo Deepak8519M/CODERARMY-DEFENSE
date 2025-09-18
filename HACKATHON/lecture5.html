@@ -218,6 +218,12 @@
               >1. Introduction to HTML Forms 📝</font
             >
           </h2>
+
+          <img src="./form3.gif" alt="" />
+
+          <img width="300px" height="450px" src="./form2.jpeg" alt="" />
+
+          <br /><br />
           <table
             width="100%"
             border="3"
@@ -335,36 +341,53 @@
               >3.1. Understanding Data Flow to the Backend</font
             >
           </h3>
-          <table
-            width="100%"
-            border="3"
-            cellpadding="10"
-            cellspacing="0"
-            bordercolor="#7610D0"
-          >
-            <tr bgcolor="#18181C">
+
+          <table>
+            <tr>
               <td>
-                <font face="Courier New" size="2" color="lightgray">
-                  When a user submits a form, data is sent to the backend for
-                  processing and storage, typically in a database. The backend
-                  organizes data in tables with columns (e.g., "Username,"
-                  "Age"). The challenge is ensuring the backend correctly
-                  interprets which data belongs to which column, especially if
-                  fields are optional.
-                </font>
-                <br /><br />
-                <font face="Courier New" size="2" color="lightgray">
-                  <b>Data Flow Example:</b><br />
-                  - User fills out fields: Name, Age, Password.<br />
-                  - Form sends data as key-value pairs (e.g.,
-                  <code>username=Arjun</code>).<br />
-                  - Backend stores data in corresponding database columns.<br />
-                  <b>Issue Without Context:</b> Sending only values (e.g.,
-                  "Arjun", "25") without keys can confuse the backend if fields
-                  are skipped.<br />
-                  <b>Solution:</b> Use the <code>name</code> attribute to label
-                  data.
-                </font>
+                <img src="./form1.png" alt="" />
+              </td>
+              <td>
+                <table
+                  width="100%"
+                  border="3"
+                  cellpadding="10"
+                  cellspacing="0"
+                  bordercolor="#7610D0"
+                >
+                  <tr bgcolor="#18181C">
+                    <td>
+                      <font face="Courier New" size="2" color="lightgray">
+                        When a user submits a form, data is sent to the backend
+                        for processing and storage, typically in a database.
+                        <br />
+                        <br />
+                        The backend organizes data in tables with columns (e.g.,
+                        "Username," "Age").
+
+                        <br /><br />
+                        The challenge is ensuring the backend correctly
+                        interprets which data belongs to which column,
+                        especially if fields are optional.
+                      </font>
+                      <br /><br />
+                      <font face="Courier New" size="2" color="lightgray">
+                        <b>Data Flow Example:</b><br />
+                        - User fills out fields: Name, Age, Password.<br />
+                        - Form sends data as key-value pairs (e.g.,
+                        <code>username=Arjun</code>).<br />
+                        - Backend stores data in corresponding database
+                        columns.<br />
+                        <br />
+                        <b>Issue Without Context:</b> Sending only values (e.g.,
+                        "Arjun", "25") without keys can confuse the backend if
+                        fields are skipped.<br />
+                        <b>Solution:</b> Use the <code>name</code> attribute to
+                        label data.
+                      </font>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
@@ -376,6 +399,7 @@
               >3.2. The Role of the name Attribute</font
             >
           </h3>
+          <img src="./submitBtnNotes.png" alt="" />
           <table
             width="100%"
             border="3"
@@ -383,6 +407,8 @@
             cellspacing="0"
             bordercolor="#7610D0"
           >
+            <br />
+            <br />
             <tr bgcolor="#18181C">
               <td>
                 <font face="Courier New" size="2" color="lightgray">
@@ -427,6 +453,13 @@
           <br />
 
           <!-- Sub-section 3.3: Radio Buttons and name Attribute -->
+
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.2.1 Over View with simple Notes
+            </font>
+          </h3>
+          <img width="1000px" src="./SelectNotes.png" alt="" />
           <h3>
             <font face="Trebuchet MS" size="4" color="white"
               >3.3. Radio Buttons and the name Attribute</font
