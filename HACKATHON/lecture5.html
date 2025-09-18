@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MaterialFlow Documentation - Day 5: HTML Forms from Beginner to Advanced
+    </title>
+  </head>
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Announcement Marquee -->
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              📚 Day 5: Master HTML Forms from Beginner to Advanced with
+              MaterialFlow - Build Interactive, Secure, and User-Friendly Forms!
+              🚀
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- Top Navigation -->
+    <table width="100%" cellpadding="15" cellspacing="0" bgcolor="#121212">
+      <tr>
+        <td align="left">
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white"
+                  ><b
+                    >Material<font color="#8812EF"
+                      ><strong>Flow</strong></font
+                    ></b
+                  ></font
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right">
+          <table cellpadding="5" cellspacing="5">
+            <tr>
+              <td bgcolor="#4A148C" align="center">
+                <a href="home.html"
+                  ><font face="Courier New" color="white">Home</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Lectures</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Docs</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Resources</font></a
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🏗️ Main Layout -->
+    <table width="100%" border="0" cellpadding="20" cellspacing="0">
+      <tr valign="top">
+        <!-- 📌 Sidebar -->
+        <td width="20%" bgcolor="#18181C">
+          <font face="Verdana" size="4" color="white"><b>📂 Menu</b></font>
+          <hr color="#333333" />
+          <font face="Verdana" size="3" color="lightgray">
+            <table
+              width="100%"
+              cellpadding="10"
+              cellspacing="10"
+              bgcolor="#18181C"
+            >
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="home.html"
+                    ><font color="white">🏠 Home Page</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">📄 Documentation</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture1.html"
+                    ><font color="white">Day 1️⃣: Basics</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture2.html"
+                    ><font color="white">Day 2️⃣: Structure</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture3.html"
+                    ><font color="white">Day 3️⃣: Nested Lists & Tables</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture4.html"
+                    ><font color="white"
+                      >Day 4️⃣: File Paths & Semantics</font
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#18181C" align="left">
+                  <a href="lecture5.html"
+                    ><font color="white">Day 5️⃣: HTML Forms</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture6.html"
+                    ><font color="white">Day 6️⃣: Advanced</font></a
+                  >
+                </td>
+              </tr>
+            </table>
+          </font>
+        </td>
+        <!-- 📖 Right Content -->
+        <td width="80%" bgcolor="#0E0E12">
+          <!-- Title -->
+          <h1>
+            <font face="Trebuchet MS" size="8" color="white"
+              >📘 Day 5: HTML Forms from Beginner to Advanced - Build
+              Interactive Web Forms</font
+            >
+          </h1>
+          <hr color="#7610D0" />
+
+          <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28208%2C2%2C27%2C1%29&t=cobalt&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=13.5px&lh=150%25&si=false&es=2x&wm=false&code=%253C%2521DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%253Ctitle%253EHTML%2520Forms%2520-%2520MaterialFlow%253C%252Ftitle%253E%250A%253C%252Fhead%253E%250A%253Cbody%2520bgcolor%253D%2522%25230E0E12%2522%2520text%253D%2522white%2522%253E%250A%2520%2520%253Cform%253E%250A%2520%2520%2520%2520%253Clabel%2520for%253D%2522firstName%2522%253EFirst%2520Name%253A%253C%252Flabel%253E%250A%2520%2520%2520%2520%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522firstName%2522%2520name%253D%2522firstName%2522%2520placeholder%253D%2522Enter%2520your%2520first%2520name%2522%253E%250A%2520%2520%2520%2520%253Cbr%253E%253Cbr%253E%250A%2520%2520%2520%2520%253Clabel%2520for%253D%2522email%2522%253EEmail%253A%253C%252Flabel%253E%250A%2520%2520%2520%2520%253Cinput%2520type%253D%2522email%2522%2520id%253D%2522email%2522%2520name%253D%2522email%2522%2520required%253E%250A%2520%2520%2520%2520%253Cbr%253E%253Cbr%253E%250A%2520%2520%2520%2520%253Cbutton%2520type%253D%2522submit%2522%253ESubmit%253C%252Fbutton%253E%250A%2520%2520%253C%252Fform%253E%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+            style="
+              width: 1024px;
+              height: 600px;
+              border: 0;
+              transform: scale(1);
+              overflow: hidden;
+            "
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+
+          <!-- Introduction -->
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="3" color="lightgray">
+                  Welcome to Day 5 of MaterialFlow's lecture series, where we
+                  dive deep into HTML forms, a cornerstone of interactive web
+                  development. This comprehensive guide takes you from beginner
+                  to advanced, covering form creation, input types, data
+                  submission, and validation. You'll learn the "why" behind key
+                  attributes like <code>name</code>, <code>id</code>,
+                  <code>for</code>, and <code>value</code>, and build a
+                  production-ready university registration form. By the end,
+                  you'll understand how to create secure, accessible, and
+                  user-friendly forms that seamlessly integrate with backend
+                  systems. Let's get started! 🚀
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 1: Introduction to HTML Forms -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >1. Introduction to HTML Forms 📝</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  HTML forms are essential for enabling two-way communication on
+                  the web, allowing users to input and submit data to servers.
+                  They power critical website features like logins,
+                  registrations, searches, and e-commerce checkouts. Without
+                  forms, the web would be a read-only platform, limiting its
+                  interactivity.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why Forms Matter:</b><br />
+                  - <b>Interactivity:</b> Forms collect user data for actions
+                  like signing up, logging in, or submitting feedback.<br />
+                  - <b>Backend Integration:</b> They send data to servers for
+                  storage or processing in databases.<br />
+                  - <b>User Experience:</b> Well-designed forms improve
+                  usability and accessibility.<br />
+                  - <b>Versatility:</b> Forms support diverse input types, from
+                  text to file uploads.<br />
+                  <b>Real-World Examples:</b> Student registration forms, login
+                  pages, job applications, and e-commerce checkouts.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Core Objectives:</b><br />
+                  - Display interactive fields (text inputs, checkboxes,
+                  dropdowns).<br />
+                  - Package user data as key-value pairs.<br />
+                  - Send data to a specific server endpoint.<br />
+                  - Specify how data is sent (e.g., via GET or POST methods).
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 2: Basic Form Creation and Input Types -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >2. Basic Form Creation and Input Types 🛠️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Forms are created using the <code>&lt;form&gt;</code> tag,
+                  which acts as a container for input elements. The
+                  <code>&lt;input&gt;</code> tag is the most versatile element,
+                  with its behavior determined by the
+                  <code>type</code> attribute. Labels enhance usability by
+                  providing context for inputs.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Basic Form Structure:</b>
+                </font>
+                <pre>
+<code>
+&lt;form&gt;
+    &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="firstName" name="firstName"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Common Input Types:</b><br />
+                  - <b>Text:</b> <code>&lt;input type="text"&gt;</code> for
+                  single-line text (e.g., names).<br />
+                  - <b>Number:</b> <code>&lt;input type="number"&gt;</code> for
+                  numerical values with increment/decrement arrows.<br />
+                  - <b>Password:</b>
+                  <code>&lt;input type="password"&gt;</code> for hidden text
+                  (e.g., dots or stars).<br />
+                  - <b>Submit:</b> <code>&lt;input type="submit"&gt;</code> or
+                  <code>&lt;button type="submit"&gt;</code> to send form
+                  data.<br />
+                  <b>Real-World Application:</b> A login form with email and
+                  password fields, submitted via a button.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 3: Advanced Form Concepts -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >3. Advanced Form Concepts: Data Submission and Attributes
+              🔍</font
+            >
+          </h2>
+
+          <!-- Sub-section 3.1: Understanding Data Flow -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.1. Understanding Data Flow to the Backend</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  When a user submits a form, data is sent to the backend for
+                  processing and storage, typically in a database. The backend
+                  organizes data in tables with columns (e.g., "Username,"
+                  "Age"). The challenge is ensuring the backend correctly
+                  interprets which data belongs to which column, especially if
+                  fields are optional.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Data Flow Example:</b><br />
+                  - User fills out fields: Name, Age, Password.<br />
+                  - Form sends data as key-value pairs (e.g.,
+                  <code>username=Arjun</code>).<br />
+                  - Backend stores data in corresponding database columns.<br />
+                  <b>Issue Without Context:</b> Sending only values (e.g.,
+                  "Arjun", "25") without keys can confuse the backend if fields
+                  are skipped.<br />
+                  <b>Solution:</b> Use the <code>name</code> attribute to label
+                  data.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.2: The Role of the name Attribute -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.2. The Role of the name Attribute</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>name</code> attribute defines the key in key-value
+                  pairs sent to the backend, ensuring data is correctly
+                  identified. For example,
+                  <code>&lt;input type="text" name="username"&gt;</code> sends
+                  <code>username=value</code>.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;form&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;label for="age"&gt;Age:&lt-Ag&lt;/label&gt;
+    &lt;input type="number" id="age" name="age"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Resulting URL:</b> <code>?username=Arjun&age=25</code
+                  ><br />
+                  <b>Best Practices:</b><br />
+                  - Match <code>name</code> values to database column names for
+                  clarity.<br />
+                  - Use unique <code>name</code> attributes for distinct
+                  fields.<br />
+                  <b>Real-World Application:</b> A registration form sending
+                  user data to a server.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.3: Radio Buttons and name Attribute -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.3. Radio Buttons and the name Attribute</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Radio buttons (<code>&lt;input type="radio"&gt;</code>) allow
+                  users to select one option from a group. All buttons in a
+                  group share the same <code>name</code> attribute to ensure
+                  only one is selected.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="male" name="gender" value="Male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="female" name="gender" value="Female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="other" name="gender" value="Other"&gt;
+&lt;label for="other"&gt;Other&lt;/label&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Points:</b><br />
+                  - Same <code>name</code> groups radio buttons together.<br />
+                  - <code>value</code> defines the data sent to the backend.<br />
+                  <b>Real-World Application:</b> Selecting gender or preference
+                  options in a form.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.4: Linking Labels with for and id -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.4. Linking Labels with for and id Attributes</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>for</code> attribute in a
+                  <code>&lt;label&gt;</code> links it to an
+                  <code>&lt;input&gt;</code> via the input’s unique
+                  <code>id</code>. This enhances usability (clicking the label
+                  focuses the input) and accessibility (screen readers associate
+                  the label with the input).
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Best Practices:</b><br />
+                  - Use unique <code>id</code> values per input.<br />
+                  - Ensure <code>for</code> matches the input’s
+                  <code>id</code>.<br />
+                  <b>Real-World Application:</b> Improving form accessibility
+                  for screen reader users.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.5: The value Attribute for Radio Buttons and Checkboxes -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.5. The value Attribute for Radio Buttons and Checkboxes</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  For radio buttons and checkboxes, the
+                  <code>value</code> attribute defines the data sent to the
+                  backend when selected. Without it, the default value “on” is
+                  sent, which is not meaningful.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;input type="radio" id="female" name="gender" value="Female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Result:</b> Selecting “Female” sends
+                  <code>gender=Female</code>.<br />
+                  <b>Best Practices:</b><br />
+                  - Always set <code>value</code> for radio buttons and
+                  checkboxes.<br />
+                  - Use descriptive values that match backend expectations.<br />
+                  <b>Real-World Application:</b> Choosing options in a survey
+                  form.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.6: Checkboxes for Multiple Selections -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.6. Checkboxes for Multiple Selections</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Checkboxes (<code>&lt;input type="checkbox"&gt;</code>) allow
+                  multiple selections within a group, sharing the same
+                  <code>name</code> attribute but with unique
+                  <code>value</code> attributes.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;label&gt;Interests:&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="sports" name="interest" value="Sports"&gt;
+&lt;label for="sports"&gt;Sports&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="music" name="interest" value="Music"&gt;
+&lt;label for="music"&gt;Music&lt;/label&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Result:</b> Selecting both sends
+                  <code>interest=Sports&interest=Music</code>.<br />
+                  <b>Real-World Application:</b> Choosing multiple hobbies in a
+                  profile form.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 4: Specialized Input Types -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >4. Specialized Input Types (HTML5) ⚙️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  HTML5 introduced specialized <code>&lt;input&gt;</code> types
+                  to enhance user experience and validation.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Specialized Types:</b>
+                </font>
+                <pre>
+<code>
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="phone"&gt;Phone:&lt;/label&gt;
+&lt;input type="tel" id="phone" name="phone"&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="dob"&gt;Date of Birth:&lt;/label&gt;
+&lt;input type="date" id="dob" name="dob"&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="color"&gt;Favorite Color:&lt;/label&gt;
+&lt;input type="color" id="color" name="color"&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="range"&gt;Volume (0-100):&lt;/label&gt;
+&lt;input type="range" id="range" name="volume" min="0" max="100"&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="file"&gt;Upload File:&lt;/label&gt;
+&lt;input type="file" id="file" name="file"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Features:</b><br />
+                  - <b>Email:</b> Validates email format.<br />
+                  - <b>Tel:</b> For telephone numbers.<br />
+                  - <b>Date:</b> Displays a date picker.<br />
+                  - <b>Color:</b> Shows a color picker.<br />
+                  - <b>Range:</b> Creates a slider.<br />
+                  - <b>File:</b> Allows file uploads.<br />
+                  <b>Real-World Application:</b> A contact form with email and
+                  phone inputs.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 5: The textarea and select Elements -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >5. The textarea and select Elements 📋</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;textarea&gt;</code> tag allows multi-line text
+                  input, while the <code>&lt;select&gt;</code> tag creates
+                  dropdown menus for selecting one or multiple options.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;label for="address"&gt;Address:&lt;/label&gt;&lt;br&gt;
+&lt;textarea id="address" name="address" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for="course"&gt;Course:&lt;/label&gt;&lt;br&gt;
+&lt;select id="course" name="course"&gt;
+    &lt;option value=""&gt;--Select a Course--&lt;/option&gt;
+    &lt;option value="CSE"&gt;Computer Science&lt;/option&gt;
+    &lt;option value="ME"&gt;Mechanical Engineering&lt;/option&gt;
+    &lt;option value="CE"&gt;Civil Engineering&lt;/option&gt;
+&lt;/select&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Features:</b><br />
+                  - <b>Textarea:</b> Suitable for comments or addresses.<br />
+                  - <b>Select:</b> Compact for long option lists.<br />
+                  <b>Real-World Application:</b> A feedback form with a comment
+                  box and course selection dropdown.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 6: Form Validation with required Attribute -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >6. Form Validation with required Attribute ✅</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>required</code> attribute ensures fields are filled
+                  before submission, enhancing form reliability.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Behavior:</b> Browser prompts “Please fill out this field”
+                  if empty.<br />
+                  <b>Real-World Application:</b> Ensuring critical fields like
+                  email are completed in a signup form.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 7: Project - University Registration Form -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >7. Practical Project: University Registration Form 🌐</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Let’s build a production-ready university registration form
+                  incorporating various input types, labels, and validation.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>File: registration.html</b>
+                </font>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;University Registration Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#0E0E12" text="white"&gt;
+    &lt;header&gt;
+        &lt;img src="images/logo.png" alt="University Logo"&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+            &lt;a href="pages/registration.html"&gt;Register&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;University Registration Form&lt;/h1&gt;
+        &lt;p&gt;Please fill out the form below to register.&lt;/p&gt;
+        &lt;hr color="#7610D0"&gt;
+        &lt;form&gt;
+            &lt;h2&gt;Personal Details&lt;/h2&gt;
+            &lt;label for="firstName"&gt;First Name:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="firstName" name="firstName" placeholder="Example: Arjun" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="lastName" name="lastName" placeholder="Example: Sharma" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="dob"&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="date" id="dob" name="dob" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="radio" id="male" name="gender" value="Male" required&gt;
+            &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+            &lt;input type="radio" id="female" name="gender" value="Female"&gt;
+            &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+            &lt;input type="radio" id="other" name="gender" value="Other"&gt;
+            &lt;label for="other"&gt;Other&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="file"&gt;Upload Photo:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="file" id="file" name="file"&gt;&lt;br&gt;&lt;br&gt;
+
+            &lt;h2&gt;Contact Information&lt;/h2&gt;
+            &lt;label for="email"&gt;Email Address:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="phone"&gt;Phone Number:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="tel" id="phone" name="phone"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="address"&gt;Mailing Address:&lt;/label&gt;&lt;br&gt;
+            &lt;textarea id="address" name="address" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+            &lt;h2&gt;Academic Information&lt;/h2&gt;
+            &lt;label for="course"&gt;Select Your Course:&lt;/label&gt;&lt;br&gt;
+            &lt;select id="course" name="course" required&gt;
+                &lt;option value=""&gt;--Select a Course--&lt;/option&gt;
+                &lt;option value="CSE"&gt;Computer Science&lt;/option&gt;
+                &lt;option value="ME"&gt;Mechanical Engineering&lt;/option&gt;
+                &lt;option value="CE"&gt;Civil Engineering&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+            &lt;h3&gt;Extra-Curricular Interests&lt;/h3&gt;
+            &lt;input type="checkbox" id="sports" name="interest" value="Sports"&gt;
+            &lt;label for="sports"&gt;Sports&lt;/label&gt;&lt;br&gt;
+            &lt;input type="checkbox" id="music" name="interest" value="Music"&gt;
+            &lt;label for="music"&gt;Music&lt;/label&gt;&lt;br&gt;
+            &lt;input type="checkbox" id="tech" name="interest" value="Technology"&gt;
+            &lt;label for="tech"&gt;Technology&lt;/label&gt;&lt;br&gt;
+            &lt;input type="checkbox" id="volunteer" name="interest" value="Volunteering"&gt;
+            &lt;label for="volunteer"&gt;Volunteering&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+            &lt;h2&gt;Create Your Account&lt;/h2&gt;
+            &lt;label for="pass"&gt;Create a Password:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="password" id="pass" name="password" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="security"&gt;Security Question:&lt;/label&gt;&lt;br&gt;
+            &lt;select id="security" name="security" required&gt;
+                &lt;option value=""&gt;--Select a Question--&lt;/option&gt;
+                &lt;option value="q1"&gt;What is your pet's name?&lt;/option&gt;
+                &lt;option value="q2"&gt;What is your favorite book?&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="answer"&gt;Security Answer:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="answer" name="answer" required&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="checkbox" id="agree" name="agree" value="Agree" required&gt;
+            &lt;label for="agree"&gt;I agree to the terms and conditions&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+            &lt;button type="submit"&gt;Register&lt;/button&gt;
+            &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2025 MaterialFlow&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Features:</b><br />
+                  - Uses semantic elements (<code>&lt;header&gt;</code>,
+                  <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).<br />
+                  - Incorporates various input types (text, number, date, radio,
+                  checkbox, file, email, tel, textarea, select).<br />
+                  - Implements validation with
+                  <code>required</code> attributes.<br />
+                  - Includes linked labels for accessibility.<br />
+                  <b>Real-World Application:</b> A university registration
+                  portal collecting student data.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 8: Conclusion and Next Steps -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >8. Conclusion and Next Steps 📝</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Day 5 equips you with the skills to create interactive,
+                  secure, and accessible HTML forms. Practice building a
+                  registration form with various input types and validation.
+                  Next, explore CSS for styling forms and JavaScript for dynamic
+                  behavior.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Homework:</b><br />
+                  - Experiment with additional input types like
+                  <code>color</code> and <code>range</code>.<br />
+                  - Enhance the registration form with a security question and
+                  answer section.<br />
+                  - Research why <code>&lt;button type="submit"&gt;</code> is
+                  preferred over <code>&lt;input type="submit"&gt;</code>.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 9: HTML Forms Flow Chart -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >9. HTML Forms Flow Chart / Mind Map 🗺️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The following mind map outlines the structure of an HTML
+                  form:<br />
+                  - <code>&lt;form&gt;</code>: Main container<br />
+                  &nbsp;&nbsp;└── <code>&lt;label&gt;</code>: Field descriptions
+                  (linked via <code>for</code> and <code>id</code>)<br />
+                  &nbsp;&nbsp;└── <code>&lt;input&gt;</code>: Various types
+                  (text, number, password, radio, checkbox, etc.)<br />
+                  &nbsp;&nbsp;└── <code>&lt;textarea&gt;</code>: Multi-line text
+                  input<br />
+                  &nbsp;&nbsp;└── <code>&lt;select&gt;</code>: Dropdown with
+                  <code>&lt;option&gt;</code> tags<br />
+                  &nbsp;&nbsp;└── <code>&lt;button&gt;</code>: Submit or reset
+                  actions<br />
+                  Use <code>name</code> for backend data, <code>id</code> for
+                  frontend linking, and <code>value</code> for specific data
+                  submissions.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Visual Placeholder:</b> [Insert HTML form structure diagram
+                  here]
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Navigation Links (Previous and Next as Buttons) -->
+          <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td align="left">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture4.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >⬅ Previous</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture6.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >Next ➡</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🔻 Footer -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="#121212">
+      <tr>
+        <td align="center">
+          <font color="gray" face="Verdana" size="2">
+            Crafted by Arjun Kumar | Coder Army Rohit Negi Hackathon 1 2025 |
+            Pure HTML Dark Theme
+          </font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
