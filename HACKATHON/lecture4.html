@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MaterialFlow Documentation - Day 4: File Paths, Boilerplate & Semantic
+      Elements
+    </title>
+  </head>
+  <body bgcolor="#0E0E12" text="white">
+    <!-- 🔝 Announcement Marquee -->
+    <marquee
+      bgcolor="crimson"
+      behavior="scroll"
+      direction="left"
+      scrollamount="6"
+      hspace="10"
+      vspace="3"
+    >
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <font face="Trebuchet MS" size="4" color="white">
+              📚 Day 4: Master File Paths, Boilerplate, Semantic Elements, and
+              Multipage Websites with MaterialFlow - Build Robust, Accessible
+              Web Structures! 🚀
+            </font>
+          </td>
+        </tr>
+      </table>
+    </marquee>
+
+    <!-- Top Navigation -->
+    <table width="100%" cellpadding="15" cellspacing="0" bgcolor="#121212">
+      <tr>
+        <td align="left">
+          <table cellpadding="5" cellspacing="0">
+            <tr>
+              <td>
+                <img
+                  src="./assets/extension_icon.png"
+                  alt="logo"
+                  width="40"
+                  height="40"
+                />
+              </td>
+              <td>
+                <font face="Trebuchet MS" size="6" color="white"
+                  ><b
+                    >Material<font color="#8812EF"
+                      ><strong>Flow</strong></font
+                    ></b
+                  ></font
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right">
+          <table cellpadding="5" cellspacing="5">
+            <tr>
+              <td bgcolor="#4A148C" align="center">
+                <a href="home.html"
+                  ><font face="Courier New" color="white">Home</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Lectures</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Docs</font></a
+                >
+              </td>
+              <td bgcolor="#4A148C" align="center">
+                <a href="type2.html"
+                  ><font face="Courier New" color="white">Resources</font></a
+                >
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🏗️ Main Layout -->
+    <table width="100%" border="0" cellpadding="20" cellspacing="0">
+      <tr valign="top">
+        <!-- 📌 Sidebar -->
+        <td width="20%" bgcolor="#18181C">
+          <font face="Verdana" size="4" color="white"><b>📂 Menu</b></font>
+          <hr color="#333333" />
+          <font face="Verdana" size="3" color="lightgray">
+            <table
+              width="100%"
+              cellpadding="10"
+              cellspacing="10"
+              bgcolor="#18181C"
+            >
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="home.html"
+                    ><font color="white">🏠 Home Page</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">📄 Documentation</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture1.html"
+                    ><font color="white">Day 1️⃣: Basics</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture2.html"
+                    ><font color="white">Day 2️⃣: Structure</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="lecture3.html"
+                    ><font color="white">Day 3️⃣: Nested Lists & Tables</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#18181C" align="left">
+                  <a href="lecture4.html"
+                    ><font color="white"
+                      >Day 4️⃣: File Paths & Semantics</font
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 5️⃣: Multimedia</font></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#4A148C" align="left">
+                  <a href="testing.html"
+                    ><font color="white">Day 6️⃣: Advanced</font></a
+                  >
+                </td>
+              </tr>
+            </table>
+          </font>
+        </td>
+        <!-- 📖 Right Content -->
+        <td width="80%" bgcolor="#0E0E12">
+          <!-- Title -->
+          <h1>
+            <font face="Trebuchet MS" size="8" color="white"
+              >📘 Day 4: File Paths, Boilerplate, Semantic Elements, and
+              Multipage Websites - Build Robust Web Structures</font
+            >
+          </h1>
+          <hr color="#7610D0" />
+
+          <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28208%2C2%2C27%2C1%29&t=cobalt&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=13.5px&lh=150%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253EDay%25204%253A%2520HTML%2520File%2520Paths%2520%2526%2520Structure%2520-%2520MaterialFlow%253C%252Ftitle%253E%250A%2520%2520%253C%252Fhead%253E%250A%2520%2520%253Cbody%2520bgcolor%253D%2522%25230E0E12%2522%2520text%253D%2522white%2522%253E%250A%2520%2520%2520%2520%253Ch1%253EDay%25204%253A%2520HTML%2520File%2520Paths%2520%2526%2520Structure%2520%25F0%259F%2593%2582%253C%252Fh1%253E%250A%2520%2520%2520%2520%253Cp%253ELearn%2520how%2520to%2520organize%2520files%2520and%2520structure%2520webpages%2520effectively.%253C%252Fp%253E%250A%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%253Cfont%2520face%253D%2522Courier%2520New%2522%2520size%253D%25223%2522%2520color%253D%2522lightgray%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520Mastered%2520relative%2520file%2520paths%2520%28e.g.%252C%2520images%252Flogo.png%252C%2520..%252Findex.html%29%2520and%2520absolute%2520paths%2520%28e.g.%252C%2520https%253A%252F%252Fexample.com%29.%2520Learned%2520HTML%2520boilerplate%2520%28%253Chtml%253E%252C%2520%253Chead%253E%252C%2520%253Cbody%253E%29%2520and%2520tags%2520like%2520%253Cdiv%253E%252C%2520%253Cspan%253E%252C%2520%253Cheader%253E%252C%2520%253Cfooter%253E%252C%2520%253Cmain%253E%252C%2520with%2520class%2520and%2520id%2520for%2520grouping%2520and%2520styling.%250A%2520%2520%2520%2520%2520%2520%253C%252Ffont%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+            style="
+              width: 1024px;
+              height: 600px;
+              border: 0;
+              transform: scale(1);
+              overflow: hidden;
+            "
+            sandbox="allow-scripts allow-same-origin"
+          >
+          </iframe>
+
+          <!-- Introduction -->
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="3" color="lightgray">
+                  Welcome to Day 4 of MaterialFlow's lecture series, an in-depth
+                  exploration of file paths, HTML boilerplate, semantic
+                  elements, and building multipage websites. This comprehensive
+                  guide covers the essentials of linking resources using
+                  relative and absolute paths, structuring HTML with a standard
+                  boilerplate, organizing content with div, class, id, and
+                  semantic elements like header, main, and footer, and creating
+                  cohesive multipage websites. With practical examples, best
+                  practices, and real-world applications, you'll master creating
+                  secure, accessible, and SEO-friendly web structures. Let's
+                  dive in to elevate your HTML expertise! 🚀
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 1: File Path System -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >1. Understanding File Paths in HTML 📂</font
+            >
+          </h2>
+
+          <table>
+            <tr>
+              <td>
+                <img src="./filePathnote.png" alt="" />
+              </td>
+              <td>
+                <img width="600px" src="./filePath1note.png" alt="" />
+              </td>
+            </tr>
+          </table>
+
+          <br />
+
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  A website is a collection of interconnected files—HTML, CSS,
+                  JavaScript, images, videos, and fonts—organized in a folder
+                  structure. File paths provide the exact addresses to locate
+                  these resources. <b>Relative paths</b> are used for internal
+                  files, starting from the current file's directory, making
+                  projects portable across systems.
+                  <b>Absolute paths</b> specify full URLs or system paths for
+                  external resources. Mastering file paths ensures error-free
+                  linking, enhances security, and supports scalable website
+                  development.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why File Paths Matter:</b><br />
+                  - <b>Accuracy:</b> Incorrect paths lead to broken links or
+                  missing resources (e.g., 404 errors).<br />
+                  - <b>Portability:</b> Relative paths allow projects to
+                  function on any server or device.<br />
+                  - <b>Security:</b> Browsers restrict file access to prevent
+                  malicious code from accessing sensitive data.<br />
+                  - <b>Scalability:</b> Organized paths simplify managing large
+                  projects with many files.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 1.1: Relative File Paths -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >1.1. Relative File Paths</font
+            >
+          </h3>
+
+          <img src="./relativePath.png" width="500px" alt="" />
+          <br />
+          <br />
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Relative paths describe a file's location relative to the
+                  current file's directory. They are essential for linking
+                  internal resources like images, CSS, or other HTML files
+                  within your project. Relative paths use simple syntax:
+                  filenames for same-folder files, folder names for sub-folders,
+                  and "../" to navigate up to parent folders. They ensure your
+                  website remains portable, working consistently whether on a
+                  local machine or a web server.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example Folder Structure:</b><br />
+                  <pre>
+my-website/
+├── index.html
+├── about.html
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+└── pages/
+    ├── contact.html
+    └── terms.html
+                  </pre>
+                </font>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Scenario 1: Same Folder</b><br />
+                  Linking to <code>about.html</code> from
+                  <code>index.html</code> (both in <code>my-website/</code>):
+                </font>
+                <pre>
+<code>
+&lt;!-- In index.html --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Scenario 2: Sub-Folder</b><br />
+                  Linking to <code>logo.png</code> in the
+                  <code>images</code> folder from <code>index.html</code>:
+                </font>
+                <pre>
+<code>
+&lt;!-- In index.html --&gt;
+&lt;img src="images/logo.png" alt="My Website Logo"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Scenario 3: Parent Folder</b><br />
+                  Linking to <code>logo.png</code> from
+                  <code>contact.html</code> in the <code>pages</code> folder:
+                </font>
+                <pre>
+<code>
+&lt;!-- In pages/contact.html --&gt;
+&lt;img src="../images/logo.png" alt="My Website Logo"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Best Practices:</b><br />
+                  - Use "./" for clarity when linking to the current directory
+                  (e.g., <code>./about.html</code>).<br />
+                  - Avoid deep nesting (e.g., <code>../../../</code>) to keep
+                  paths manageable.<br />
+                  - Test links locally to ensure they resolve correctly before
+                  deploying.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> A portfolio website linking to
+                  a resume PDF in a sub-folder (<code>assets/resume.pdf</code>)
+                  or a CSS file in a parent folder (<code>../styles.css</code>).
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 1.2: Absolute File Paths -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >1.2. Absolute File Paths</font
+            >
+          </h3>
+
+          <img src="./absolutepath.png" alt="" />
+          <br /><br />
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Absolute paths provide the complete address of a resource,
+                  starting with a protocol (<code>http://</code> or
+                  <code>https://</code>) for web resources or a drive root
+                  (e.g., <code>C:\</code> or <code>/</code>) for local files.
+                  Use absolute paths for external resources like APIs, fonts, or
+                  images hosted on other servers. Local absolute paths (e.g.,
+                  <code>C:\Users\file.jpg</code>) are blocked by browsers for
+                  security reasons, making them unsuitable for web development.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Examples:</b><br />
+                  Linking to an external website or resource:
+                </font>
+                <pre>
+<code>
+&lt;!-- External website --&gt;
+&lt;a href="https://www.google.com"&gt;Search on Google&lt;/a&gt;
+
+&lt;!-- External image --&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Local Absolute Paths (Not for Web):</b><br />
+                  - <b>Windows:</b>
+                  <code>C:\Users\JohnDoe\Documents\report.docx</code><br />
+                  - <b>macOS/Linux:</b>
+                  <code>/Users/johndoe/Documents/report.docx</code><br />
+                  These paths are specific to a user's machine and fail on web
+                  servers or other devices.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why Avoid Local Absolute Paths?</b><br />
+                  Browsers operate in a sandboxed environment, restricting
+                  access to the local file system to prevent malicious code from
+                  reading sensitive data. For example:
+                </font>
+                <pre>
+<code>
+&lt;!-- Blocked by browsers for security --&gt;
+&lt;img src="C:/Users/Arjun/Desktop/sensitive_data.jpg" alt=""&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Embedding a YouTube video
+                  (<code>https://www.youtube.com/embed/video_id</code>) or
+                  linking to a CDN-hosted library like Bootstrap.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Best Practices:</b><br />
+                  - Use HTTPS for secure external links.<br />
+                  - Verify external resource availability to avoid broken
+                  links.<br />
+                  - Prefer relative paths for internal resources to ensure
+                  portability.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 1.3: Security and Limitations -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >1.3. Security and Limitations of File Paths</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Browsers enforce strict security policies to prevent
+                  unauthorized file access. Relative paths are confined to the
+                  project directory, and attempts to navigate beyond (e.g.,
+                  <code>../../../../</code>) are blocked to avoid accessing
+                  sensitive system files. This sandboxing ensures safe browsing
+                  but limits path flexibility. Absolute paths are safe for
+                  external web resources but not for local files due to browser
+                  restrictions.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example of Blocked Path:</b>
+                </font>
+                <pre>
+<code>
+&lt;!-- Blocked for security --&gt;
+&lt;img src="../../../../Desktop/sensitive_data.jpg" alt=""&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why Security Matters:</b><br />
+                  Without these restrictions, malicious websites could access
+                  private files, such as:
+                </font>
+                <pre>
+<code>
+&lt;!-- Hypothetical malicious code (blocked by browsers) --&gt;
+&lt;img src="C:/Users/Arjun/Documents/MyPrivatePasswords.txt"&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Best Practices:</b><br />
+                  - Use relative paths for all internal resources.<br />
+                  - Organize project folders logically to minimize complex
+                  paths.<br />
+                  - Test paths in a local development environment to catch
+                  errors early.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 2: HTML Boilerplate Code -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >2. HTML Boilerplate Code 🔧</font
+            >
+          </h2>
+
+          <img width="1000px" src="./boilerplatecode.png" alt="" />
+          <br /><br />
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The HTML boilerplate is a standardized template that ensures
+                  consistent rendering, accessibility, and responsiveness across
+                  browsers. It provides critical metadata to browsers, search
+                  engines, and assistive technologies, answering questions like:
+                  What HTML version is this? What language is used? How should
+                  it display on devices? The boilerplate prevents quirks mode,
+                  encoding errors, and poor mobile experiences, forming the
+                  foundation of every HTML document.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Standard HTML5 Boilerplate:</b>
+                </font>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Why Use Boilerplate?</b><br />
+                  - Ensures standards-compliant rendering.<br />
+                  - Supports global character sets (e.g., emojis, non-Latin
+                  scripts).<br />
+                  - Enables responsive design for mobile devices.<br />
+                  - Improves SEO and accessibility with proper metadata.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 2.1: Necessity of Boilerplate Code -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.1. The Necessity of Boilerplate Code</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Browsers are forgiving and can render simple HTML without a
+                  boilerplate by entering quirks mode, guessing encoding, or
+                  generating missing tags (e.g., <code>&lt;html&gt;</code>,
+                  <code>&lt;body&gt;</code>). However, this leads to
+                  unpredictable behavior, especially with complex layouts, CSS,
+                  or special characters. The boilerplate ensures reliability,
+                  accessibility, and professionalism.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example Without Boilerplate:</b>
+                </font>
+                <pre>
+<code>
+&lt;!-- Renders but risky --&gt;
+&lt;h1&gt;Hello Coder Army&lt;/h1&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Risks of Omitting Boilerplate:</b><br />
+                  - <b>Quirks Mode:</b> Inconsistent rendering across
+                  browsers.<br />
+                  - <b>Encoding Issues:</b> Special characters (e.g., €, ₹) may
+                  display as gibberish.<br />
+                  - <b>Poor Mobile Experience:</b> Pages may appear zoomed out
+                  or unreadable.<br />
+                  - <b>SEO/Accessibility Issues:</b> Missing metadata reduces
+                  search visibility and usability for screen readers.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> A blog site without a viewport
+                  meta tag fails to adapt to mobile screens, driving away users.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 2.2: Components of HTML Boilerplate -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >2.2. Components of HTML Boilerplate</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Each component of the boilerplate serves a specific purpose,
+                  ensuring the browser interprets the document correctly:
+                </font>
+                <br /><br />
+                <table width="100%" border="1" cellpadding="5" cellspacing="0">
+                  <tr bgcolor="#4A148C">
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Component</font
+                      >
+                    </th>
+                    <th>
+                      <font face="Courier New" size="2" color="white"
+                        >Purpose</font
+                      >
+                    </th>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                    <td>Declares HTML5, enabling standards mode.</td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;html lang="en"&gt;</code></td>
+                    <td>
+                      Root element with language attribute for SEO and
+                      accessibility.
+                    </td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;head&gt;</code></td>
+                    <td>Contains metadata (non-visible settings).</td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                    <td>Ensures correct character encoding for global text.</td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td>
+                      <code
+                        >&lt;meta name="viewport" content="width=device-width,
+                        initial-scale=1.0"&gt;</code
+                      >
+                    </td>
+                    <td>Enables responsive design for mobile devices.</td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;title&gt;</code></td>
+                    <td>Sets browser tab title for usability and SEO.</td>
+                  </tr>
+                  <tr bgcolor="#18181C">
+                    <td><code>&lt;body&gt;</code></td>
+                    <td>Contains visible content (headings, images, etc.).</td>
+                  </tr>
+                </table>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> A multilingual site uses
+                  <code>lang="hi"</code> for Hindi content and UTF-8 to display
+                  Devanagari script correctly.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 3: Structuring Content with div, class, id, and span -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >3. Structuring Content with div, class, id, and span 🔖</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;div&gt;</code>, <code>class</code>,
+                  <code>id</code>, and <code>&lt;span&gt;</code> elements are
+                  fundamental for organizing and targeting content for styling
+                  or JavaScript manipulation. <code>&lt;div&gt;</code> groups
+                  elements into blocks, <code>class</code> applies reusable
+                  styles, <code>id</code> uniquely identifies elements, and
+                  <code>&lt;span&gt;</code> styles inline content without
+                  breaking text flow. These tools enable modular, maintainable,
+                  and interactive web designs.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;div class="profile-card" id="featured-profile"&gt;
+    &lt;img src="avatar.png" alt="Avatar"&gt;
+    &lt;h2&gt;Arjun Kumar&lt;/h2&gt;
+    &lt;p&gt;Loves to code and teach &lt;span class="highlight"&gt;HTML&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+                </pre>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.1: div Tag for Grouping -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.1. The div Tag for Grouping Elements</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;div&gt;</code> tag is a generic block-level
+                  container used to group elements for styling or scripting. It
+                  has no semantic meaning, making it versatile for layout
+                  purposes, such as creating sections, cards, or columns.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;div class="card"&gt;
+    &lt;img src="avatar.png" alt="Avatar"&gt;
+    &lt;h2&gt;Arjun Kumar&lt;/h2&gt;
+    &lt;p&gt;Loves to code and teach HTML.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Grouping a login form’s input
+                  fields and button for consistent styling.<br />
+                  <b>Best Practices:</b><br />
+                  - Use <code>&lt;div&gt;</code> for layout, not semantics.<br />
+                  - Avoid excessive nesting to maintain clean code.<br />
+                  - Pair with <code>class</code> or <code>id</code> for
+                  targeting.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.2: class for Grouping and Styling -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.2. class for Grouping and Styling Multiple Elements</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>class</code> attribute assigns reusable names to
+                  elements, allowing shared styling or behavior across multiple
+                  elements. Classes are ideal for categorizing elements like
+                  buttons, cards, or alerts.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;p class="highlight"&gt;Centered Paragraph&lt;/p&gt;
+&lt;h4 class="highlight"&gt;Centered Heading&lt;/h4&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Applying a “btn” class to all
+                  buttons for consistent design.<br />
+                  <b>Best Practices:</b><br />
+                  - Use descriptive class names (e.g., “btn-primary” instead of
+                  “style1”).<br />
+                  - Reuse classes to reduce CSS redundancy.<br />
+                  - Combine multiple classes on one element for flexibility
+                  (e.g., <code>class="card featured"</code>).
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.3: id for Uniquely Identifying -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.3. id for Uniquely Identifying Elements</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>id</code> attribute assigns a unique identifier to a
+                  single element per page, ideal for targeting specific elements
+                  in CSS or JavaScript, such as a unique navigation bar or form.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;div id="main-header"&gt;Site Navigation&lt;/div&gt;
+&lt;p id="intro-text"&gt;Welcome to our site!&lt;/p&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Targeting a specific form field
+                  for JavaScript validation.<br />
+                  <b>Best Practices:</b><br />
+                  - Ensure <code>id</code> values are unique per page.<br />
+                  - Use descriptive names (e.g.,
+                  <code>id="main-nav"</code>).<br />
+                  - Reserve <code>id</code> for unique elements; use
+                  <code>class</code> for shared styles.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Sub-section 3.4: span for Inline Styling -->
+          <h3>
+            <font face="Trebuchet MS" size="4" color="white"
+              >3.4. span for Inline Styling</font
+            >
+          </h3>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The <code>&lt;span&gt;</code> tag is an inline container used
+                  to style or manipulate small portions of text without
+                  affecting the layout. Unlike <code>&lt;div&gt;</code>, it does
+                  not create line breaks, making it ideal for highlighting or
+                  styling specific words or phrases within a paragraph.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;p&gt;This is very &lt;span class="highlight"&gt;important&lt;/span&gt; information.&lt;/p&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> Highlighting a keyword in a
+                  blog post or applying a tooltip to a specific term.<br />
+                  <b>Best Practices:</b><br />
+                  - Use <code>&lt;span&gt;</code> for inline content only.<br />
+                  - Pair with <code>class</code> for reusable styling.<br />
+                  - Avoid using <code>&lt;span&gt;</code> for block-level
+                  grouping (use <code>&lt;div&gt;</code> instead).
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 4: Semantic Elements: header, main, footer -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >4. Structural HTML5 Semantic Elements: header, main, footer
+              🏗️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Semantic elements like <code>&lt;header&gt;</code>,
+                  <code>&lt;main&gt;</code>, and
+                  <code>&lt;footer&gt;</code> provide meaningful structure to
+                  web pages, improving accessibility, SEO, and maintainability.
+                  Unlike <code>&lt;div&gt;</code>, these elements convey the
+                  purpose of their content, helping browsers, search engines,
+                  and screen readers understand the page layout.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example:</b>
+                </font>
+                <pre>
+<code>
+&lt;header&gt;
+    &lt;img src="logo.png" alt="Site Logo"&gt;
+    &lt;nav&gt;
+        &lt;a href="home.html"&gt;Home&lt;/a&gt;
+        &lt;a href="about.html"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;h1&gt;Welcome to Our Site&lt;/h1&gt;
+    &lt;p&gt;This is the main content.&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;© 2025 MaterialFlow&lt;/p&gt;
+&lt;/footer&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Element Breakdown:</b><br />
+                  - <b>&lt;header&gt;</b>: Contains introductory content (e.g.,
+                  logo, navigation, main heading).<br />
+                  - <b>&lt;main&gt;</b>: Holds the unique content of the page
+                  (one per page).<br />
+                  - <b>&lt;footer&gt;</b>: Includes closing content (e.g.,
+                  copyright, contact info).<br />
+                  <b>Real-World Application:</b> A company website uses
+                  <code>&lt;header&gt;</code> for branding,
+                  <code>&lt;main&gt;</code> for service descriptions, and
+                  <code>&lt;footer&gt;</code> for legal links.<br />
+                  <b>Best Practices:</b><br />
+                  - Use one <code>&lt;main&gt;</code> per page.<br />
+                  - Include navigation in <code>&lt;header&gt;</code> or a
+                  separate <code>&lt;nav&gt;</code>.<br />
+                  - Ensure semantic elements are used for their intended
+                  purpose.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 5: Building Multipage Websites -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >5. Building Multipage Websites 🔗</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Multipage websites organize content into separate pages (e.g.,
+                  home, about, contact) linked via navigation menus. A
+                  consistent structure—shared headers, footers, and
+                  navigation—creates a cohesive user experience. Relative paths
+                  ensure seamless linking between pages, while semantic elements
+                  enhance accessibility and SEO.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example Navigation Menu:</b>
+                </font>
+                <pre>
+<code>
+&lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+    &lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Example Multipage Structure:</b><br />
+                  <pre>
+my-website/
+├── index.html
+├── about.html
+├── pages/
+│   ├── contact.html
+│   └── services.html
+├── css/
+│   └── styles.css
+└── images/
+    └── logo.png
+                  </pre>
+                </font>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Real-World Application:</b> An e-commerce site with pages
+                  for products, cart, and checkout, linked via a consistent
+                  navigation bar.<br />
+                  <b>Best Practices:</b><br />
+                  - Use relative paths for internal page links.<br />
+                  - Maintain consistent <code>&lt;header&gt;</code> and
+                  <code>&lt;footer&gt;</code> across pages.<br />
+                  - Test navigation links to ensure they resolve correctly.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 6: Practical Example -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >6. Practical Example: Building a Portfolio Site 🌐</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Let’s apply these concepts to a simple portfolio website with
+                  three pages: Home, About, and Contact. Each page uses the
+                  boilerplate, semantic elements, and relative paths for
+                  navigation and resources.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>File: index.html</b>
+                </font>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Portfolio - Home&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;img src="images/logo.png" alt="Portfolio Logo"&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+            &lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+        &lt;div class="intro"&gt;
+            &lt;p&gt;Hi, I'm &lt;span class="highlight"&gt;Arjun Kumar&lt;/span&gt;, a web developer.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2025 Arjun Kumar&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>File: about.html</b>
+                </font>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Portfolio - About&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;img src="images/logo.png" alt="Portfolio Logo"&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+            &lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;About Me&lt;/h1&gt;
+        &lt;div class="bio"&gt;
+            &lt;p&gt;I specialize in &lt;span class="highlight"&gt;HTML&lt;/span&gt; and CSS.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2025 Arjun Kumar&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>File: pages/contact.html</b>
+                </font>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Portfolio - Contact&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;img src="../images/logo.png" alt="Portfolio Logo"&gt;
+        &lt;nav&gt;
+            &lt;a href="../index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="../about.html"&gt;About&lt;/a&gt;
+            &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;Contact Me&lt;/h1&gt;
+        &lt;div class="contact-info"&gt;
+            &lt;p&gt;Email: &lt;span class="highlight"&gt;arjun@example.com&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2025 Arjun Kumar&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+                <br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Key Features:</b><br />
+                  - Consistent <code>&lt;header&gt;</code> and
+                  <code>&lt;footer&gt;</code> across pages.<br />
+                  - Relative paths for navigation and images.<br />
+                  - Semantic structure with <code>&lt;main&gt;</code> for unique
+                  content.<br />
+                  - Use of <code>&lt;span&gt;</code> for inline highlights.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 7: Conclusion and Next Steps -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >7. Conclusion and Next Steps 📝</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  Day 4 equips you with the skills to manage file paths,
+                  implement a robust HTML boilerplate, use semantic elements for
+                  structure, and build multipage websites. Practice creating a
+                  small site with multiple pages, using relative paths and
+                  semantic tags. Next, explore multimedia integration (images,
+                  videos) and basic CSS for styling.
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Section 8: HTML Tags Flow Chart -->
+          <h2>
+            <font face="Trebuchet MS" size="5" color="white"
+              >8. HTML Tags Flow Chart / Mind Map 🗺️</font
+            >
+          </h2>
+          <table
+            width="100%"
+            border="3"
+            cellpadding="10"
+            cellspacing="0"
+            bordercolor="#7610D0"
+          >
+            <tr bgcolor="#18181C">
+              <td>
+                <font face="Courier New" size="2" color="lightgray">
+                  The following mind map outlines the HTML structure for a
+                  typical webpage:<br />
+                  - <code>&lt;html&gt;</code>: Root element<br />
+                  &nbsp;&nbsp;└── <code>&lt;head&gt;</code>: Metadata (title,
+                  charset, viewport)<br />
+                  &nbsp;&nbsp;└── <code>&lt;body&gt;</code>: Visible content<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <code>&lt;header&gt;</code>:
+                  Logo, navigation<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <code>&lt;main&gt;</code>:
+                  Unique page content<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <code>&lt;footer&gt;</code>:
+                  Copyright, links<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <code>&lt;div&gt;</code>:
+                  Grouping elements<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <code>&lt;span&gt;</code>:
+                  Inline styling<br />
+                  Use <code>class</code> and <code>id</code> to target elements
+                  for styling or scripting.
+                </font>
+                <br /><br />
+                <font face="Courier New" size="2" color="lightgray">
+                  <b>Visual Placeholder:</b> [Insert HTML structure diagram
+                  here]
+                </font>
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- Navigation Links (Previous and Next as Buttons) -->
+          <table width="100%" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td align="left">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture3.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >⬅ Previous</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right">
+                <table cellpadding="5" cellspacing="0" bgcolor="#4A148C">
+                  <tr>
+                    <td align="center">
+                      <a href="lecture5.html"
+                        ><font face="Courier New" size="3" color="white"
+                          >Next ➡</font
+                        ></a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 🔻 Footer -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="#121212">
+      <tr>
+        <td align="center">
+          <font color="gray" face="Verdana" size="2">
+            Crafted by Arjun Kumar | Coder Army Rohit Negi Hackathon 1 2025 |
+            Pure HTML Dark Theme
+          </font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
