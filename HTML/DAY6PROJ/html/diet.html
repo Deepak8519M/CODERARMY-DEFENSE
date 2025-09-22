@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Essentials - CodeFlex</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <div class="dot"></div>
+        <h2>Code <span>Flex</span></h2>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="exercise.html">Exercise</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="progressHub.html">Progress Hub</a></li>
+      </ul>
+      <button>Join Now</button>
+    </nav>
+    <main class="diet-page">
+      <div class="section7">
+        <div class="section7-overlay"></div>
+        <h1>Diet Essentials</h1>
+        <p class="intro">
+          Transform your body with science-backed nutrition tailored to your
+          goals. Discover macro breakdowns, meal plans, tools, and recipes to
+          fuel muscle gain, fat loss, or sustainable health.
+        </p>
+        <div class="diet-content">
+          <div class="diet-column macros">
+            <h2>Macro Breakdown</h2>
+            <div class="macro-card">
+              <h3>Proteins</h3>
+              <p>
+                Essential for muscle repair and growth. Aim for 1.6-2.2g per kg
+                of body weight daily to support muscle preservation and satiety.
+              </p>
+              <ul>
+                <li>Chicken breast: 31g protein/100g</li>
+                <li>Eggs: 13g protein/100g</li>
+                <li>Greek yogurt: 10g protein/100g</li>
+                <li>
+                  Plant-based: Tofu (8g/100g), Lentils (9g/100g), Seitan
+                  (25g/100g)
+                </li>
+              </ul>
+              <p>
+                <strong>Tip:</strong> Spread protein intake across meals (20-30g
+                per meal) to optimize muscle synthesis. Use plant-based combos
+                like beans and rice for complete proteins.
+              </p>
+            </div>
+            <div class="macro-card">
+              <h3>Carbohydrates</h3>
+              <p>
+                Primary energy source for workouts. Target 3-6g/kg body weight
+                for active individuals, focusing on complex carbs for sustained
+                energy.
+              </p>
+              <ul>
+                <li>Sweet potatoes: 20g carbs/100g</li>
+                <li>Oats: 66g carbs/100g</li>
+                <li>Quinoa: 21g carbs/100g</li>
+                <li>
+                  Fruits: Bananas (23g/100g), Berries (8-12g/100g, low-carb
+                  option)
+                </li>
+              </ul>
+              <p>
+                <strong>Tip:</strong> Consume carbs 1-2 hours pre-workout and
+                within 30 min post-workout for glycogen replenishment.
+              </p>
+            </div>
+            <div class="macro-card">
+              <h3>Fats</h3>
+              <p>
+                Support hormone production and nutrient absorption. Aim for
+                0.8-1.2g/kg body weight, prioritizing healthy fats.
+              </p>
+              <ul>
+                <li>Avocado: 15g fat/100g</li>
+                <li>Nuts: Almonds (49g/100g), Walnuts (65g/100g)</li>
+                <li>Fish: Salmon (13g/100g, rich in Omega-3s)</li>
+                <li>
+                  Oils: Olive oil (14g fat/tbsp), Coconut oil (moderate use)
+                </li>
+              </ul>
+              <p>
+                <strong>Tip:</strong> Pair fats with fiber-rich foods to enhance
+                satiety. Avoid trans fats and limit processed oils.
+              </p>
+            </div>
+          </div>
+          <div class="diet-column tools">
+            <h2>Macro Calculator</h2>
+            <div class="tool-card">
+              <p>
+                Estimate your daily macro needs based on weight, activity level,
+                and goals.
+              </p>
+              <form class="macro-calculator">
+                <div class="form-group">
+                  <label for="weight">Weight (kg)</label>
+                  <input
+                    type="number"
+                    id="weight"
+                    placeholder="Enter weight"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="activity">Activity Level</label>
+                  <select id="activity" required>
+                    <option value="sedentary">
+                      Sedentary (little exercise)
+                    </option>
+                    <option value="moderate">Moderate (3-5 days/week)</option>
+                    <option value="active">Active (6-7 days/week)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="goal">Goal</label>
+                  <select id="goal" required>
+                    <option value="bulk">Muscle Gain</option>
+                    <option value="cut">Fat Loss</option>
+                    <option value="maintain">Maintenance</option>
+                  </select>
+                </div>
+                <button type="submit">Calculate Macros</button>
+              </form>
+              <div class="macro-result" style="display: none">
+                <p><strong>Your Daily Macros:</strong></p>
+                <p>Calories: <span id="calories"></span> kcal</p>
+                <p>Protein: <span id="protein"></span>g</p>
+                <p>Carbs: <span id="carbs"></span>g</p>
+                <p>Fats: <span id="fats"></span>g</p>
+              </div>
+            </div>
+            <h2>Meal Planner</h2>
+            <div class="tool-card">
+              <p>Build a daily meal plan by selecting options below.</p>
+              <form class="meal-planner">
+                <div class="form-group">
+                  <label for="breakfast">Breakfast</label>
+                  <select id="breakfast">
+                    <option value="oats">
+                      Oats with Greek yogurt, banana (500 kcal)
+                    </option>
+                    <option value="eggs">
+                      Egg whites, spinach, toast (400 kcal)
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="lunch">Lunch</label>
+                  <select id="lunch">
+                    <option value="chicken">
+                      Grilled chicken, brown rice, veggies (600 kcal)
+                    </option>
+                    <option value="salad">
+                      Turkey salad, olive oil dressing (500 kcal)
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="dinner">Dinner</label>
+                  <select id="dinner">
+                    <option value="salmon">
+                      Salmon, sweet potato, salad (700 kcal)
+                    </option>
+                    <option value="tofu">
+                      Tofu stir-fry, quinoa (550 kcal)
+                    </option>
+                  </select>
+                </div>
+                <button type="submit">Plan My Day</button>
+              </form>
+              <div class="meal-result" style="display: none">
+                <p><strong>Your Daily Plan:</strong></p>
+                <p>Breakfast: <span id="planned-breakfast"></span></p>
+                <p>Lunch: <span id="planned-lunch"></span></p>
+                <p>Dinner: <span id="planned-dinner"></span></p>
+                <p>Total Calories: <span id="total-calories"></span> kcal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-section">
+          <h2>Recipe Inspiration</h2>
+          <div class="recipe-card">
+            <h3>High-Protein Chicken Bowl</h3>
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/1N6hbRbyAeQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              A 40g protein-packed bowl with chicken, quinoa, and veggies. Prep
+              in 20 min!
+            </p>
+          </div>
+          <div class="recipe-card">
+            <h3>Vegan Power Smoothie</h3>
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/f1p6W1bTxQc"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              Blend spinach, banana, protein powder, and almond milk for a 30g
+              protein boost.
+            </p>
+          </div>
+        </div>
+        <div class="meal-prep-section">
+          <h2>Meal Prep Guide</h2>
+          <p>Save time and stay consistent with these meal prep tips:</p>
+          <ul>
+            <li>
+              <strong>Batch Cook:</strong> Prepare proteins (chicken, tofu) and
+              carbs (rice, quinoa) for 3-5 days.
+            </li>
+            <li>
+              <strong>Portion Control:</strong> Use containers to pre-measure
+              meals for accurate macros.
+            </li>
+            <li>
+              <strong>Storage:</strong> Refrigerate for up to 4 days; freeze for
+              longer storage.
+            </li>
+            <li>
+              <strong>Variety:</strong> Rotate recipes weekly to avoid burnout
+              and ensure nutrient diversity.
+            </li>
+            <li>
+              <strong>Tools:</strong> Invest in a food scale and quality
+              containers for precision.
+            </li>
+          </ul>
+        </div>
+        <div class="faq-section">
+          <h2>Nutrition FAQs</h2>
+          <div class="faq-item">
+            <h3 class="faq-question">How do I balance macros for my goals?</h3>
+            <div class="faq-answer">
+              <p>
+                Use our calculator to estimate needs. Muscle gain: 30-35%
+                protein, 40-50% carbs, 15-25% fats. Fat loss: 35-40% protein,
+                30-40% carbs, 20-30% fats. Track and adjust weekly.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I follow a vegan diet for fitness?</h3>
+            <div class="faq-answer">
+              <p>
+                Yes! Combine plant-based proteins (lentils, tofu, seitan) for
+                complete amino acids. Supplement with B12, iron, and consider
+                vegan protein powders.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How much water should I drink?</h3>
+            <div class="faq-answer">
+              <p>
+                Aim for 3-4L daily, more if active. Hydration supports
+                performance and recovery.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Are supplements necessary?</h3>
+            <div class="faq-answer">
+              <p>
+                Not mandatory, but whey protein, creatine (3-5g/day), and
+                multivitamins can fill gaps. Consult a nutritionist for
+                personalized advice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-overlay"></div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="dot"></div>
+          <h2>Code <span>Flex</span></h2>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-column explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="diet.html">Diet</a></li>
+              <li><a href="exercise.html">Exercise</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column connect">
+            <h3>Connect</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="ri-instagram-line"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="ri-twitter-x-line"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="ri-facebook-fill"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="ri-youtube-fill"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column newsletter">
+            <h3>Stay Updated</h3>
+            <p>Get the latest fitness tips and exclusive offers!</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CodeFlex. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Macro Calculator
+      document
+        .querySelector(".macro-calculator")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const weight = parseFloat(document.getElementById("weight").value);
+          const activity = document.getElementById("activity").value;
+          const goal = document.getElementById("goal").value;
+          let bmr = weight * 22; // Rough BMR estimate
+          let calories, protein, carbs, fats;
+
+          // Adjust for activity level
+          if (activity === "sedentary") bmr *= 1.2;
+          else if (activity === "moderate") bmr *= 1.55;
+          else bmr *= 1.9;
+
+          // Adjust for goal
+          if (goal === "bulk") {
+            calories = bmr * 1.15; // 15% surplus
+            protein = weight * 2.0;
+            carbs = weight * 5.0;
+            fats = weight * 1.0;
+          } else if (goal === "cut") {
+            calories = bmr * 0.85; // 15% deficit
+            protein = weight * 2.2;
+            carbs = weight * 3.0;
+            fats = weight * 0.8;
+          } else {
+            calories = bmr; // Maintenance
+            protein = weight * 1.8;
+            carbs = weight * 4.0;
+            fats = weight * 0.9;
+          }
+
+          document.getElementById("calories").textContent =
+            Math.round(calories);
+          document.getElementById("protein").textContent = Math.round(protein);
+          document.getElementById("carbs").textContent = Math.round(carbs);
+          document.getElementById("fats").textContent = Math.round(fats);
+          document.querySelector(".macro-result").style.display = "block";
+        });
+
+      // Meal Planner
+      document
+        .querySelector(".meal-planner")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const breakfast =
+            document.getElementById("breakfast").options[
+              document.getElementById("breakfast").selectedIndex
+            ].text;
+          const lunch =
+            document.getElementById("lunch").options[
+              document.getElementById("lunch").selectedIndex
+            ].text;
+          const dinner =
+            document.getElementById("dinner").options[
+              document.getElementById("dinner").selectedIndex
+            ].text;
+          const breakfastCals = breakfast.includes("Oats") ? 500 : 400;
+          const lunchCals = lunch.includes("Chicken") ? 600 : 500;
+          const dinnerCals = dinner.includes("Salmon") ? 700 : 550;
+          const totalCals = breakfastCals + lunchCals + dinnerCals;
+
+          document.getElementById("planned-breakfast").textContent = breakfast;
+          document.getElementById("planned-lunch").textContent = lunch;
+          document.getElementById("planned-dinner").textContent = dinner;
+          document.getElementById("total-calories").textContent = totalCals;
+          document.querySelector(".meal-result").style.display = "block";
+        });
+
+      // FAQ Toggle
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
+  </body>
+</html>

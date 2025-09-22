@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Project 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        font-family: "Urbanist", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>University Registration Form</h1>
+    <p>Please fill out the form</p>
+    <hr />
+    <form action="">
+      <h2>Personal Details</h2>
+
+      <label for="name">First Name</label>
+      <input type="text" name="name" id="name" placeholder="e.g: Arjun" />
+
+      <br /><br />
+
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="e.g: Kapoor" />
+
+      <br /><br />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" id="dob" />
+
+      <br /><br />
+
+      <input type="radio" name="gender" id="male" value="male" />
+      <label for="male">Male</label>
+      <br />
+
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">Female</label>
+      <br />
+
+      <input type="radio" name="gender" id="others" value="others" />
+      <label for="others">Others</label>
+      <br />
+      <br />
+      <h2>Upload Your Photo</h2>
+      <input type="file" name="file" id="file" />
+      <hr />
+      <h2>Contack Information</h2>
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" />
+
+      <br /><br />
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" />
+      <br /><br />
+
+      <label for="Address">Mailing Address</label>
+      <br />
+      <textarea name="Address" id="Address" rows="7" cols="30"></textarea>
+      <hr />
+
+      <h2>Academic Information</h2>
+      <label for="course">Select Your Course</label>
+      <select name="course" id="course">
+        <option value="CSE">CSE</option>
+        <option value="ME">ME</option>
+        <option value="EEE">EEE</option>
+      </select>
+
+      <br /><br />
+
+      <h3>Extracurricular Activites</h3>
+      <input type="checkbox" name="interest" id="Sports" value="Sports" />
+      <label for="Sports">Sports</label>
+      <br />
+      <input type="checkbox" name="interest" id="Music" value="Music" />
+      <label for="Music">Music</label>
+      <br />
+      <input
+        type="checkbox"
+        name="interest"
+        id="Technology"
+        value="Technology"
+      />
+      <label for="Technology">Technology Clubs</label>
+      <br />
+      <input
+        type="checkbox"
+        name="interest"
+        id="Voluntering"
+        value="Voluntering"
+      />
+      <label for="Voluntering">Voluntering</label>
+      <br />
+
+      <hr />
+      <h2>Create Your Account</h2>
+
+      <label for="pass">Create a Password</label>
+      <input type="password" name="password" id="password" />
+
+      <br />
+
+      <label for="security">Security Question</label>
+      <select name="security" id="security">
+        <option value="What was your First Pet Name">
+          What was your First Pet Name
+        </option>
+        <option value="What was your First Pet Name">
+          What was your First Child Name
+        </option>
+        <option value="What was your First Friend Name">
+          What was your First Friend Name
+        </option>
+      </select>
+
+      <br />
+      <label for="Secure">Security Answer</label>
+      <input type="text" name="Secure" id="Secure" />
+      <br />
+      <input
+        type="checkbox"
+        name="agree"
+        id="agree"
+        value="I agree to the Terms"
+      />
+      <label for="agree">I agree to the Terms and Conditions</label>
+      <hr />
+      <button type="submit">Register</button>
+      <button type="reset">Clear Form</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeFlex - Progress Hub</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='none'/></svg>"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Orbitron", sans-serif;
+      }
+
+      body {
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      .neon-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #000, #1a1a1a);
+        z-index: 0;
+      }
+
+      #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .neon-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(57, 255, 20, 0.1) 50px,
+            rgba(57, 255, 20, 0.1) 51px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 50px,
+            rgba(57, 255, 20, 0.1) 50px,
+            rgba(57, 255, 20, 0.1) 51px
+          );
+        z-index: 2;
+        opacity: 0.3;
+      }
+
+      body.green {
+        --primary: #39ff14;
+        --secondary: #00ffaa;
+        --primary-rgb: 57, 255, 20;
+      }
+      body.blue {
+        --primary: #00ccff;
+        --secondary: #0099cc;
+        --primary-rgb: 0, 204, 255;
+      }
+      body.purple {
+        --primary: #cc33ff;
+        --secondary: #9933cc;
+        --primary-rgb: 204, 51, 255;
+      }
+
+      .theme-orb {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 0 15px var(--primary);
+        cursor: pointer;
+        z-index: 4;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .theme-orb:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 25px var(--primary);
+      }
+
+      .theme-orb:hover .theme-menu {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .theme-menu {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+
+      .theme-option {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        width: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px 10px;
+        z-index: 3;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .sidebar:hover {
+        width: 200px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+      }
+
+      .sidebar li {
+        margin: 15px 0;
+      }
+
+      .sidebar a {
+        color: var(--primary);
+        text-decoration: none;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.2vw;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .sidebar:hover a {
+        opacity: 1;
+      }
+
+      .sidebar i {
+        font-size: 1.5vw;
+        margin-right: 10px;
+      }
+
+      .dashboard {
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+        z-index: 3;
+      }
+
+      .dashboard h1 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 3.5vw;
+        color: var(--primary);
+        text-shadow: 0 0 15px var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .dashboard-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(var(--primary-rgb), 0.03)
+        );
+        backdrop-filter: blur(12px);
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, var(--primary), var(--secondary)) 1;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 800px;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.4);
+      }
+
+      .stat-box {
+        text-align: center;
+      }
+
+      .stat-box h4 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.4vw;
+        color: var(--primary);
+      }
+
+      .stat-box span {
+        font-size: 2vw;
+        color: #fff;
+        animation: countUp 2s ease-out;
+      }
+
+      @keyframes countUp {
+        from {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .progress-hub-page {
+        margin: 0 80px 100px;
+        position: relative;
+        z-index: 3;
+      }
+
+      .progress-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 50px;
+        padding: 40px 0;
+      }
+
+      .progress-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(0, 0, 0, 0)
+        );
+        backdrop-filter: blur(12px);
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, var(--primary), var(--secondary)) 1;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.4);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+      }
+
+      .progress-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.6);
+      }
+
+      .progress-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease-in-out;
+      }
+
+      .progress-card:hover::before {
+        left: 100%;
+      }
+
+      .progress-card h3 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.6vw;
+        color: var(--primary);
+        text-shadow: 0 0 10px var(--primary);
+        margin-bottom: 10px;
+      }
+
+      .progress-card p {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1vw;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .form-group label {
+        font-family: "Orbitron", sans-serif;
+        font-size: 0.9vw;
+        color: var(--primary);
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid var(--primary);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+        font-size: 0.9vw;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: var(--secondary);
+        box-shadow: 0 0 10px var(--primary);
+      }
+
+      .form-group .tooltip {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: var(--secondary);
+        font-size: 0.8vw;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .form-group:hover .tooltip {
+        opacity: 1;
+      }
+
+      .progress-card button {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        padding: 8px 20px;
+        border: none;
+        border-radius: 50px;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1vw;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .progress-card button:hover {
+        background: linear-gradient(45deg, var(--secondary), var(--primary));
+        transform: scale(1.1);
+      }
+
+      .quick-action {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--primary);
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 0.8vw;
+      }
+
+      .progress-result,
+      .log-result,
+      .calc-result,
+      .insights,
+      .integration-result,
+      .suggestions {
+        margin-top: 10px;
+        font-size: 0.9vw;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 10px;
+        max-height: 100px;
+        overflow-y: auto;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        overflow: hidden;
+        margin: 10px 0;
+      }
+
+      .progress-bar div {
+        height: 100%;
+        background: var(--primary);
+        width: 0;
+        transition: width 1s ease-in-out;
+      }
+
+      .badge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 10px;
+      }
+
+      .badge {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: #000;
+        padding: 8px;
+        border-radius: 10px;
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        font-size: 0.8vw;
+        box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.4);
+      }
+
+      .badge:hover {
+        transform: scale(1.1);
+      }
+
+      canvas#full-width-chart {
+        width: 100% !important;
+        height: 200px !important; /* Adjusted height for better visibility */
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+      }
+
+      .timeline {
+        margin: 40px 0;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        position: relative;
+      }
+
+      .timeline h3 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.6vw;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .timeline ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .timeline li {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 0.9vw;
+        color: #fff;
+        white-space: nowrap;
+        position: relative;
+        animation: slideIn 0.5s ease-in-out;
+      }
+
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 8px;
+        background: var(--primary);
+        border-radius: 50%;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .progress-hub-page {
+          margin: 0 50px;
+        }
+        .dashboard h1 {
+          font-size: 5vw;
+        }
+        .stat-box h4 {
+          font-size: 2vw;
+        }
+        .stat-box span {
+          font-size: 3vw;
+        }
+        .progress-card h3 {
+          font-size: 2vw;
+        }
+        .form-group input,
+        .form-group select {
+          font-size: 1.2vw;
+        }
+        .progress-card button {
+          font-size: 1.3vw;
+        }
+        .sidebar {
+          width: 50px;
+        }
+        .sidebar:hover {
+          width: 150px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .progress-hub-page {
+          margin: 0 20px;
+        }
+        .progress-content {
+          grid-template-columns: 1fr;
+        }
+        .dashboard h1 {
+          font-size: 7vw;
+        }
+        .dashboard-card {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .stat-box h4 {
+          font-size: 3vw;
+        }
+        .stat-box span {
+          font-size: 4vw;
+        }
+        .progress-card h3 {
+          font-size: 3vw;
+        }
+        .form-group label {
+          font-size: 1.5vw;
+        }
+        .form-group input,
+        .form-group select {
+          font-size: 2vw;
+        }
+        .progress-card button {
+          font-size: 2vw;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .progress-hub-page {
+          margin: 0 10px;
+        }
+        .dashboard h1 {
+          font-size: 9vw;
+        }
+        .stat-box h4 {
+          font-size: 4vw;
+        }
+        .stat-box span {
+          font-size: 5vw;
+        }
+        .progress-card h3 {
+          font-size: 4vw;
+        }
+        .form-group input,
+        .form-group select {
+          font-size: 3vw;
+        }
+        .progress-card button {
+          font-size: 3vw;
+        }
+        .sidebar {
+          left: 10px;
+        }
+      }
+      .home {
+        background: red;
+        color: white;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 200;
+        background: #39ff14;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 4px solid transparent;
+        transition: all ease-in 0.1s;
+      }
+
+      .home a {
+        text-decoration: none;
+        color: white;
+      }
+      .home:hover {
+        color: #39ff14;
+        border: 4px solid #39ff14;
+        background: transparent;
+        transition: all ease-in 0.1s;
+      }
+    </style>
+  </head>
+
+  <body class="green">
+    <div class="home"><a href="./indexfirst.html">HOME</a></div>
+    <div class="neon-bg">
+      <div id="particles-js"></div>
+      <div class="neon-grid"></div>
+    </div>
+
+    <div class="theme-orb">
+      <div class="theme-menu">
+        <div
+          class="theme-option"
+          style="background: #39ff14"
+          data-theme="green"
+        ></div>
+        <div
+          class="theme-option"
+          style="background: #00ccff"
+          data-theme="blue"
+        ></div>
+        <div
+          class="theme-option"
+          style="background: #cc33ff"
+          data-theme="purple"
+        ></div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#goals"><i class="ri-target-line"></i> Goals</a>
+        </li>
+        <li>
+          <a href="#logs"><i class="ri-run-line"></i> Logs</a>
+        </li>
+        <li>
+          <a href="#charts"><i class="ri-line-chart-line"></i> Charts</a>
+        </li>
+        <li>
+          <a href="#achievements"
+            ><i class="ri-trophy-line"></i> Achievements</a
+          >
+        </li>
+        <li>
+          <a href="#suggestions"
+            ><i class="ri-lightbulb-line"></i> Suggestions</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="dashboard">
+      <h1>CodeFlex Progress Hub</h1>
+      <div class="dashboard-card">
+        <div class="stat-box">
+          <h4>Goals Set</h4>
+          <span id="stat-goals">0</span>
+        </div>
+        <div class="stat-box">
+          <h4>Workouts</h4>
+          <span id="stat-workouts">0</span>
+        </div>
+        <div class="stat-box">
+          <h4>Weekly Calories</h4>
+          <span id="stat-calories">0</span>
+        </div>
+      </div>
+    </div>
+
+    <main class="progress-hub-page">
+      <div class="progress-content" id="goals">
+        <div class="progress-card">
+          <button
+            class="quick-action"
+            onclick="document.getElementById('goal-form').querySelector('input').focus()"
+          >
+            Quick Add
+          </button>
+          <h3 aria-label="Set your fitness goals">Set Goals</h3>
+          <p>Create and track your objectives.</p>
+          <div class="progress-bar"><div></div></div>
+          <form class="goal-form" id="goal-form" aria-label="Goal setting form">
+            <div class="form-group">
+              <label for="goal-type">Goal Type</label>
+              <select id="goal-type" required>
+                <option value="">Select Goal</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="endurance">Endurance</option>
+              </select>
+              <span class="tooltip">e.g., Weight Loss</span>
+            </div>
+            <div class="form-group">
+              <label for="target-value">Target</label>
+              <input
+                type="text"
+                id="target-value"
+                placeholder="e.g., Lose 5kg"
+                required
+              />
+              <span class="tooltip">Specific target</span>
+            </div>
+            <div class="form-group">
+              <label for="deadline">Deadline</label>
+              <input type="date" id="deadline" required />
+              <span class="tooltip">Set a date</span>
+            </div>
+            <button type="submit">Set Goal</button>
+          </form>
+        </div>
+        <div class="progress-card">
+          <button class="quick-action" onclick="exportData()">
+            Export Goals
+          </button>
+          <h3 aria-label="Active goals">Active Goals</h3>
+          <p>Monitor your progress.</p>
+          <div class="progress-result" id="goal-result">
+            <p><strong>Active Goals:</strong></p>
+            <ul id="goal-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-content" id="logs">
+        <div class="progress-card">
+          <button
+            class="quick-action"
+            onclick="document.getElementById('workout-form').querySelector('input').focus()"
+          >
+            Quick Log
+          </button>
+          <h3 aria-label="Log your workouts">Log Workouts</h3>
+          <p>Track your exercise sessions.</p>
+          <form
+            class="log-form"
+            id="workout-form"
+            aria-label="Workout logging form"
+          >
+            <div class="form-group">
+              <label for="workout-type">Workout Type</label>
+              <select id="workout-type" required>
+                <option value="">Select Type</option>
+                <option value="strength">Strength</option>
+                <option value="cardio">Cardio</option>
+                <option value="hiit">HIIT</option>
+              </select>
+              <span class="tooltip">e.g., Cardio</span>
+            </div>
+            <div class="form-group">
+              <label for="duration">Duration (min)</label>
+              <input type="number" id="duration" min="1" required />
+              <span class="tooltip">Time spent</span>
+            </div>
+            <div class="form-group">
+              <label for="calories-burned">Calories</label>
+              <input type="number" id="calories-burned" min="0" required />
+              <span class="tooltip">Estimated burn</span>
+            </div>
+            <button type="submit">Log Workout</button>
+          </form>
+        </div>
+        <div class="progress-card">
+          <button
+            class="quick-action"
+            onclick="document.getElementById('nutrition-form').querySelector('input').focus()"
+          >
+            Quick Log
+          </button>
+          <h3 aria-label="Log your nutrition">Log Nutrition</h3>
+          <p>Monitor your daily intake.</p>
+          <form
+            class="log-form"
+            id="nutrition-form"
+            aria-label="Nutrition logging form"
+          >
+            <div class="form-group">
+              <label for="meal-type">Meal Type</label>
+              <select id="meal-type" required>
+                <option value="">Select Meal</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+              </select>
+              <span class="tooltip">e.g., Lunch</span>
+            </div>
+            <div class="form-group">
+              <label for="calories-intake">Calories</label>
+              <input type="number" id="calories-intake" min="0" required />
+              <span class="tooltip">Calorie count</span>
+            </div>
+            <div class="form-group">
+              <label for="macros">Macros (P/C/F)</label>
+              <input
+                type="text"
+                id="macros"
+                placeholder="e.g., 50/100/30"
+                required
+              />
+              <span class="tooltip">Protein/Carbs/Fats</span>
+            </div>
+            <button type="submit">Log Meal</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="progress-content" id="charts">
+        <div
+          class="progress-card"
+          style="width: 100%; padding: 0; margin-bottom: 20px"
+        >
+          <button
+            class="quick-action"
+            onclick="document.getElementById('bmi-form').querySelector('input').focus()"
+          >
+            Quick Calc
+          </button>
+          <h3 aria-label="Progress charts">Progress Chart</h3>
+          <p>Track weight and calories.</p>
+          <div style="width: 100%; margin: 0 auto">
+            <canvas id="full-width-chart"></canvas>
+          </div>
+          <div class="insights">
+            <h4>Insights</h4>
+            <p id="insight-text">Log data for insights!</p>
+          </div>
+          <button style="margin-top: 15px" onclick="clearHistory()">
+            Clear History
+          </button>
+        </div>
+        <div class="progress-card">
+          <h3 aria-label="Fitness calculators">Calculators</h3>
+          <p>Quick health assessments.</p>
+          <form
+            class="calc-form"
+            id="bmi-form"
+            aria-label="BMI calculator form"
+          >
+            <div class="form-group">
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" min="1" required />
+              <span class="tooltip">Your height</span>
+            </div>
+            <div class="form-group">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" min="1" required />
+              <span class="tooltip">Your weight</span>
+            </div>
+            <button type="submit">Calculate BMI</button>
+          </form>
+          <div class="calc-result" id="bmi-result"></div>
+        </div>
+      </div>
+
+      <div class="progress-content" id="achievements">
+        <div class="progress-card">
+          <button class="quick-action" onclick="exportData()">
+            Export Badges
+          </button>
+          <h3 aria-label="Your earned badges">Achievements</h3>
+          <p>Earn badges for your progress!</p>
+          <div class="badge-grid" id="badge-grid"></div>
+        </div>
+        <div class="progress-card">
+          <button
+            class="quick-action"
+            onclick="document.getElementById('share-progress').click()"
+          >
+            Quick Share
+          </button>
+          <h3 aria-label="Community integration">Community</h3>
+          <p>Share and connect.</p>
+          <button id="share-progress">Share Milestone</button>
+          <button id="join-challenge">Join Challenge</button>
+          <div class="integration-result" id="integration-result"></div>
+        </div>
+      </div>
+
+      <div class="progress-content" id="suggestions">
+        <div class="progress-card">
+          <h3 aria-label="Workout and nutrition suggestions">Suggestions</h3>
+          <p>Personalized fitness tips.</p>
+          <div class="suggestions" id="suggestions"></div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h3>Recent Activity</h3>
+        <ul id="timeline-list"></ul>
+      </div>
+    </main>
+
+    <script>
+      // Progress Data Management
+      const storageKey = "codeflex_progress_data";
+      let progressData;
+
+      // Initialize progressData with default structure
+      function initializeProgressData() {
+        try {
+          const savedData = localStorage.getItem(storageKey);
+          progressData = savedData ? JSON.parse(savedData) : {};
+          // Ensure all required properties exist
+          progressData.goals = progressData.goals || [];
+          progressData.workouts = progressData.workouts || [];
+          progressData.nutrition = progressData.nutrition || [];
+          progressData.badges = progressData.badges || [];
+          progressData.weightHistory = progressData.weightHistory || [];
+          progressData.calorieHistory = progressData.calorieHistory || [];
+          progressData.timeline = progressData.timeline || [];
+          console.log("progressData initialized:", progressData);
+        } catch (error) {
+          console.error("Error parsing localStorage:", error);
+          // Reset to default if parsing fails
+          progressData = {
+            goals: [],
+            workouts: [],
+            nutrition: [],
+            badges: [],
+            weightHistory: [],
+            calorieHistory: [],
+            timeline: [],
+          };
+          alert("Error loading saved data. Resetting to default.");
+        }
+      }
+
+      let chartInstance = null;
+      let particleColor = "#39ff14"; // Default for green theme
+
+      // Update particle color based on theme
+      function updateParticleColor(theme) {
+        const colors = {
+          green: "#39ff14",
+          blue: "#00ccff",
+          purple: "#cc33ff",
+        };
+        particleColor = colors[theme] || "#39ff14";
+      }
+
+      // Particle Background
+      function initializeParticles() {
+        try {
+          const particlesContainer = document.getElementById("particles-js");
+          if (particlesContainer && typeof particlesJS === "function") {
+            particlesJS("particles-js", {
+              particles: {
+                number: {
+                  value: 40,
+                  density: { enable: true, value_area: 1000 },
+                },
+                color: { value: particleColor },
+                shape: { type: "circle", stroke: { width: 0 } },
+                opacity: { value: 0.3, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: false },
+                move: {
+                  enable: true,
+                  speed: 0.5,
+                  direction: "none",
+                  random: true,
+                },
+              },
+              interactivity: {
+                detect_on: "canvas",
+                events: {
+                  onhover: { enable: true, mode: "repulse" },
+                  onclick: { enable: false },
+                },
+                modes: { repulse: { distance: 100 } },
+              },
+              retina_detect: true,
+            });
+            console.log("Particles initialized with color:", particleColor);
+          } else {
+            console.warn("Particles.js or container not found");
+          }
+        } catch (error) {
+          console.error("Error initializing particles:", error);
+        }
+      }
+
+      // Save Data
+      function saveData() {
+        try {
+          if (typeof localStorage !== "undefined") {
+            localStorage.setItem(storageKey, JSON.stringify(progressData));
+            updateUI();
+            console.log("Data saved successfully");
+          } else {
+            console.warn("localStorage not available");
+            alert("Cannot save data: localStorage not available.");
+          }
+        } catch (error) {
+          console.error("Error saving data:", error);
+          alert("Error saving data. Check console for details.");
+        }
+      }
+
+      // Export Data
+      function exportData() {
+        try {
+          const dataStr = JSON.stringify(progressData, null, 2);
+          const blob = new Blob([dataStr], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "codeflex_progress.json";
+          a.click();
+          URL.revokeObjectURL(url);
+          progressData.timeline.push(
+            `Exported data - ${new Date().toLocaleString()}`
+          );
+          saveData();
+          alert("Data exported successfully!");
+        } catch (error) {
+          console.error("Error exporting data:", error);
+          alert("Error exporting data. Check console for details.");
+        }
+      }
+
+      // Clear History
+      function clearHistory() {
+        try {
+          if (
+            confirm(
+              "Are you sure you want to clear all progress history? This action cannot be undone."
+            )
+          ) {
+            progressData = {
+              goals: [],
+              workouts: [],
+              nutrition: [],
+              badges: [],
+              weightHistory: [],
+              calorieHistory: [],
+              timeline: [],
+            };
+            saveData();
+            alert("History cleared successfully!");
+            console.log("History cleared");
+          }
+        } catch (error) {
+          console.error("Error clearing history:", error);
+          alert("Error clearing history. Check console for details.");
+        }
+      }
+
+      // Update UI
+      function updateUI() {
+        try {
+          document.getElementById("stat-goals").textContent =
+            progressData.goals.length || 0;
+          document.getElementById("stat-workouts").textContent =
+            progressData.workouts.length || 0;
+          const weeklyCalories = (progressData.calorieHistory || [])
+            .slice(-7)
+            .reduce((sum, cal) => sum + parseInt(cal || 0), 0);
+          document.getElementById("stat-calories").textContent = weeklyCalories;
+
+          const goalList = document.getElementById("goal-list");
+          goalList.innerHTML = "";
+          (progressData.goals || []).forEach((goal) => {
+            const li = document.createElement("li");
+            const progress = calculateGoalProgress(goal);
+            li.innerHTML = `${goal.type}: ${goal.target} by ${goal.deadline} <span>(${progress}%)</span>`;
+            goalList.appendChild(li);
+          });
+          updateProgressBar();
+
+          const timelineList = document.getElementById("timeline-list");
+          timelineList.innerHTML = "";
+          (progressData.timeline || []).slice(-5).forEach((event) => {
+            const li = document.createElement("li");
+            li.textContent = event;
+            timelineList.appendChild(li);
+          });
+
+          updateBadges();
+          updateCharts();
+          generateInsights();
+          generateSuggestions();
+          console.log("UI updated successfully");
+        } catch (error) {
+          console.error("Error updating UI:", error);
+          alert("Error updating UI. Check console for details.");
+        }
+      }
+
+      // Calculate Goal Progress
+      function calculateGoalProgress(goal) {
+        try {
+          const now = new Date();
+          const deadline = new Date(goal.deadline);
+          const created = new Date(goal.created || new Date().toISOString());
+          const totalDays = (deadline - created) / (1000 * 60 * 60 * 24);
+          const daysLeft = (deadline - now) / (1000 * 60 * 60 * 24);
+          return Math.min(
+            Math.max(Math.round((1 - daysLeft / totalDays) * 100), 0),
+            100
+          );
+        } catch (error) {
+          console.error("Error calculating goal progress:", error);
+          return 0;
+        }
+      }
+
+      // Progress Bar Update
+      function updateProgressBar() {
+        try {
+          const progressBars = document.querySelectorAll(".progress-bar div");
+          progressBars.forEach((bar, index) => {
+            if (progressData.goals[index]) {
+              const progress = calculateGoalProgress(progressData.goals[index]);
+              bar.style.width = `${progress}%`;
+            }
+          });
+        } catch (error) {
+          console.error("Error updating progress bar:", error);
+        }
+      }
+
+      // Update Charts
+      function updateCharts() {
+        try {
+          const weightData =
+            (progressData.weightHistory || []).length > 0
+              ? progressData.weightHistory
+              : [0];
+          const calorieData =
+            (progressData.calorieHistory || []).length > 0
+              ? progressData.calorieHistory
+              : [0];
+          const labels = Array.from(
+            { length: Math.max(weightData.length, calorieData.length) },
+            (_, i) => `Entry ${i + 1}`
+          );
+
+          if (chartInstance) {
+            chartInstance.destroy();
+            console.log("Previous chart destroyed");
+          }
+
+          const combinedCtx = document
+            .getElementById("full-width-chart")
+            .getContext("2d");
+          chartInstance = new Chart(combinedCtx, {
+            type: "line",
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  label: "Weight (kg)",
+                  data: weightData,
+                  borderColor: "var(--primary)", // Green stroke
+                  backgroundColor: "transparent", // Removed fill
+                  borderWidth: 2,
+                  tension: 0.4,
+                  pointRadius: 4,
+                  yAxisID: "y1",
+                },
+                {
+                  label: "Calories Burned",
+                  data: calorieData,
+                  borderColor: "var(--primary)", // Green stroke
+                  backgroundColor: "transparent", // Removed fill
+                  borderWidth: 2,
+                  tension: 0.4,
+                  pointRadius: 4,
+                  yAxisID: "y2",
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y1: {
+                  type: "linear",
+                  position: "left",
+                  beginAtZero: false,
+                  title: { display: true, text: "Weight (kg)", color: "#fff" },
+                  ticks: { color: "#fff" },
+                  grid: { color: "rgba(255, 255, 255, 0.1)" },
+                },
+                y2: {
+                  type: "linear",
+                  position: "right",
+                  beginAtZero: true,
+                  title: { display: true, text: "Calories", color: "#fff" },
+                  ticks: { color: "#fff" },
+                  grid: {
+                    drawOnChartArea: false,
+                    color: "rgba(255, 255, 255, 0.1)",
+                  },
+                },
+                x: {
+                  title: { display: true, text: "Entries", color: "#fff" },
+                  ticks: { color: "#fff" },
+                  grid: { color: "rgba(255, 255, 255, 0.1)" },
+                },
+              },
+              plugins: {
+                legend: { labels: { color: "#fff" }, position: "bottom" },
+                tooltip: {
+                  enabled: true,
+                  backgroundColor: "rgba(0, 0, 0, 0.8)",
+                  titleColor: "#fff",
+                  bodyColor: "#fff",
+                },
+              },
+            },
+          });
+          console.log(
+            "Chart updated with",
+            weightData.length,
+            "weight entries and",
+            calorieData.length,
+            "calorie entries"
+          );
+        } catch (error) {
+          console.error("Error rendering charts:", error);
+          alert("Error rendering chart. Check console for details.");
+        }
+      }
+
+      // Generate Insights
+      function generateInsights() {
+        try {
+          const insightText = document.getElementById("insight-text");
+          let insights = [];
+          if ((progressData.workouts || []).length > 3)
+            insights.push(
+              `Crushing it with ${progressData.workouts.length} workouts!`
+            );
+          if ((progressData.nutrition || []).length > 3)
+            insights.push(`${progressData.nutrition.length} meals tracked.`);
+          if ((progressData.weightHistory || []).length > 1) {
+            const weightChange =
+              progressData.weightHistory[
+                progressData.weightHistory.length - 1
+              ] - progressData.weightHistory[0];
+            insights.push(
+              `Weight ${weightChange > 0 ? "up" : "down"} by ${Math.abs(
+                weightChange
+              )}kg.`
+            );
+          }
+          insightText.textContent =
+            insights.join(" | ") || "Log data for insights!";
+        } catch (error) {
+          console.error("Error generating insights:", error);
+        }
+      }
+
+      // Generate Suggestions
+      function generateSuggestions() {
+        try {
+          const suggestions = document.getElementById("suggestions");
+          let tips = [];
+          if ((progressData.workouts || []).length > 0) {
+            const lastWorkout =
+              progressData.workouts[progressData.workouts.length - 1];
+            tips.push(
+              `Try a ${
+                lastWorkout.type === "cardio" ? "strength" : "cardio"
+              } session next!`
+            );
+          }
+          if ((progressData.nutrition || []).length > 0) {
+            tips.push(`Balance your next meal with 40/40/20 macros (P/C/F).`);
+          }
+          if ((progressData.goals || []).length > 0) {
+            const goal = progressData.goals[0];
+            tips.push(`Keep pushing towards your ${goal.type} goal!`);
+          }
+          suggestions.innerHTML =
+            tips.map((tip) => `<p>${tip}</p>`).join("") ||
+            "<p>Log data for personalized tips!</p>";
+        } catch (error) {
+          console.error("Error generating suggestions:", error);
+        }
+      }
+
+      // Update Badges
+      function updateBadges() {
+        try {
+          const badgeGrid = document.getElementById("badge-grid");
+          badgeGrid.innerHTML = "";
+          (progressData.badges || []).forEach((badge) => {
+            const div = document.createElement("div");
+            div.className = "badge";
+            div.textContent = badge;
+            badgeGrid.appendChild(div);
+          });
+          checkForNewBadges();
+        } catch (error) {
+          console.error("Error updating badges:", error);
+        }
+      }
+
+      // Check and Award Badges
+      function checkForNewBadges() {
+        try {
+          if (
+            (progressData.workouts || []).length >= 5 &&
+            !(progressData.badges || []).includes("Workout Pro")
+          ) {
+            progressData.badges.push("Workout Pro");
+            progressData.timeline.push(
+              `Earned badge: Workout Pro - ${new Date().toLocaleString()}`
+            );
+            alert("New Badge: Workout Pro!");
+            saveData();
+          }
+          if (
+            (progressData.nutrition || []).length >= 5 &&
+            !(progressData.badges || []).includes("Nutrition Star")
+          ) {
+            progressData.badges.push("Nutrition Star");
+            progressData.timeline.push(
+              `Earned badge: Nutrition Star - ${new Date().toLocaleString()}`
+            );
+            alert("New Badge: Nutrition Star!");
+            saveData();
+          }
+        } catch (error) {
+          console.error("Error checking badges:", error);
+        }
+      }
+
+      // Event Listeners
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          // Initialize progressData
+          initializeProgressData();
+
+          // Theme Orb
+          const orb = document.querySelector(".theme-orb");
+          if (!orb) throw new Error("Theme orb not found");
+          const menu = document.querySelector(".theme-menu");
+          if (!menu) throw new Error("Theme menu not found");
+          orb.addEventListener("mouseenter", () => {
+            menu.style.opacity = "1";
+            menu.style.transform = "translateY(0)";
+          });
+          orb.addEventListener("mouseleave", () => {
+            menu.style.opacity = "0";
+            menu.style.transform = "translateY(-10px)";
+          });
+          document.querySelectorAll(".theme-option").forEach((option) => {
+            option.addEventListener("click", () => {
+              const newTheme = option.dataset.theme;
+              document.body.className = newTheme;
+              updateParticleColor(newTheme);
+              initializeParticles(); // Reinitialize particles with new color
+              updateCharts();
+              console.log(`Theme changed to ${newTheme}`);
+            });
+          });
+
+          // Initialize particles with default theme
+          updateParticleColor("green");
+          initializeParticles();
+
+          // Goal Form
+          const goalForm = document.getElementById("goal-form");
+          if (!goalForm) throw new Error("Goal form not found");
+          goalForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            try {
+              const type = document.getElementById("goal-type").value;
+              const target = document
+                .getElementById("target-value")
+                .value.trim();
+              const deadline = document.getElementById("deadline").value;
+              if (!type || !target || !deadline) {
+                alert("Please fill all goal fields.");
+                return;
+              }
+              progressData.goals.push({
+                type,
+                target,
+                deadline,
+                created: new Date().toISOString(),
+              });
+              progressData.timeline.push(
+                `Set goal: ${type} - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("Goal saved successfully!");
+              e.target.reset();
+            } catch (error) {
+              console.error("Error saving goal:", error);
+              alert("Error saving goal. Check console for details.");
+            }
+          });
+
+          // Workout Form
+          const workoutForm = document.getElementById("workout-form");
+          if (!workoutForm) throw new Error("Workout form not found");
+          workoutForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            try {
+              const type = document.getElementById("workout-type").value;
+              const duration = parseInt(
+                document.getElementById("duration").value
+              );
+              const calories = parseInt(
+                document.getElementById("calories-burned").value
+              );
+              if (
+                !type ||
+                isNaN(duration) ||
+                duration < 1 ||
+                isNaN(calories) ||
+                calories < 0
+              ) {
+                alert(
+                  "Please fill all workout fields with valid numbers (Duration > 0, Calories >= 0)."
+                );
+                return;
+              }
+              progressData.workouts.push({ type, duration, calories });
+              progressData.calorieHistory.push(calories);
+              progressData.timeline.push(
+                `Logged workout: ${type} - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("Workout logged successfully!");
+              e.target.reset();
+            } catch (error) {
+              console.error("Error logging workout:", error);
+              alert("Error logging workout. Check console for details.");
+            }
+          });
+
+          // Nutrition Form
+          const nutritionForm = document.getElementById("nutrition-form");
+          if (!nutritionForm) throw new Error("Nutrition form not found");
+          nutritionForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            try {
+              const type = document.getElementById("meal-type").value;
+              const calories = parseInt(
+                document.getElementById("calories-intake").value
+              );
+              const macros = document.getElementById("macros").value.trim();
+              if (!type || isNaN(calories) || calories < 0 || !macros) {
+                alert(
+                  "Please fill all nutrition fields with valid data (Calories >= 0)."
+                );
+                return;
+              }
+              progressData.nutrition.push({ type, calories, macros });
+              progressData.timeline.push(
+                `Logged meal: ${type} - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("Meal logged successfully!");
+              e.target.reset();
+            } catch (error) {
+              console.error("Error logging nutrition:", error);
+              alert("Error logging nutrition. Check console for details.");
+            }
+          });
+
+          // BMI Calculator
+          const bmiForm = document.getElementById("bmi-form");
+          if (!bmiForm) throw new Error("BMI form not found");
+          bmiForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            try {
+              const height = parseFloat(
+                document.getElementById("height").value
+              );
+              const weight = parseFloat(
+                document.getElementById("weight").value
+              );
+              if (
+                isNaN(height) ||
+                isNaN(weight) ||
+                height <= 0 ||
+                weight <= 0
+              ) {
+                alert("Please enter valid height and weight (both > 0).");
+                return;
+              }
+              const bmi = (weight / ((height / 100) * (height / 100))).toFixed(
+                2
+              );
+              document.getElementById(
+                "bmi-result"
+              ).innerHTML = `<p>BMI: ${bmi} (${
+                bmi < 18.5
+                  ? "Underweight"
+                  : bmi < 25
+                  ? "Normal"
+                  : bmi < 30
+                  ? "Overweight"
+                  : "Obese"
+              })</p>`;
+              progressData.weightHistory.push(weight);
+              progressData.timeline.push(
+                `Calculated BMI: ${bmi} - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("BMI calculated successfully!");
+              e.target.reset();
+            } catch (error) {
+              console.error("Error calculating BMI:", error);
+              alert("Error calculating BMI. Check console for details.");
+            }
+          });
+
+          // Community Integration
+          const shareButton = document.getElementById("share-progress");
+          const joinButton = document.getElementById("join-challenge");
+          if (!shareButton || !joinButton)
+            throw new Error("Community buttons not found");
+          shareButton.addEventListener("click", () => {
+            try {
+              document.getElementById("integration-result").textContent =
+                "Shared to Community!";
+              progressData.timeline.push(
+                `Shared progress - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("Progress shared successfully!");
+            } catch (error) {
+              console.error("Error sharing progress:", error);
+              alert("Error sharing progress. Check console for details.");
+            }
+          });
+          joinButton.addEventListener("click", () => {
+            try {
+              document.getElementById("integration-result").textContent =
+                "Joined challenge!";
+              progressData.timeline.push(
+                `Joined challenge - ${new Date().toLocaleString()}`
+              );
+              saveData();
+              alert("Challenge joined successfully!");
+            } catch (error) {
+              console.error("Error joining challenge:", error);
+              alert("Error joining challenge. Check console for details.");
+            }
+          });
+
+          // Initial UI Update
+          updateUI();
+          console.log("Initial UI loaded");
+        } catch (error) {
+          console.error("Error during initialization:", error);
+          alert("Error initializing page. Check console for details.");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.second {
+  text-align: center;
+  background: seagreen;
+  padding: 10px;
+  color: white;
+}
+
+#first {
+  background-color: pink;
+}
+body {
+  font-family: "Urbanist", sans-serif;
+}
