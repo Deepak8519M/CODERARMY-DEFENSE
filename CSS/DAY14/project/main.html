@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interactive CSS Solar System</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="space" aria-label="Solar system simulation">
+      <!-- The Sun -->
+      <div class="sun" role="img" aria-label="The Sun"></div>
+
+      <!-- Mercury -->
+      <div class="orbit" style="--distance: 120px; --orbit-duration: 4s">
+        <div
+          class="planet mercury"
+          data-name="Mercury"
+          style="--size: 8px; --color: #b6b6b6; --spin-duration: 8s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+
+      <!-- Venus -->
+      <div class="orbit" style="--distance: 160px; --orbit-duration: 7s">
+        <div
+          class="planet venus"
+          data-name="Venus"
+          style="--size: 14px; --color: #e0b07a; --spin-duration: 20s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+
+      <!-- Earth with Moon -->
+      <div class="orbit" style="--distance: 210px; --orbit-duration: 10s">
+        <div
+          class="planet earth"
+          data-name="Earth"
+          style="--size: 16px; --color: #2a6cff; --spin-duration: 6s"
+        >
+          <div class="globe">
+            <div
+              class="moon-orbit"
+              style="--distance: 28px; --orbit-duration: 1.6s"
+            >
+              <div class="moon" style="--size: 5px; --color: #d6d6d6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mars -->
+      <div class="orbit" style="--distance: 260px; --orbit-duration: 15s">
+        <div
+          class="planet mars"
+          data-name="Mars"
+          style="--size: 12px; --color: #bf6b3a; --spin-duration: 7s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+
+      <!-- Jupiter -->
+      <div class="orbit" style="--distance: 330px; --orbit-duration: 30s">
+        <div
+          class="planet jupiter"
+          data-name="Jupiter"
+          style="--size: 36px; --color: #d7a87a; --spin-duration: 2.5s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+
+      <!-- Saturn -->
+      <div class="orbit" style="--distance: 420px; --orbit-duration: 45s">
+        <div
+          class="planet saturn"
+          data-name="Saturn"
+          style="--size: 30px; --color: #e6c48a; --spin-duration: 3.5s"
+        >
+          <div class="globe">
+            <!-- Ring of Saturn -->
+            <div class="ring"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Uranus -->
+      <div class="orbit" style="--distance: 520px; --orbit-duration: 60s">
+        <div
+          class="planet uranus"
+          data-name="Uranus"
+          style="--size: 22px; --color: #9fd6e6; --spin-duration: 3.8s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+
+      <!-- Neptune -->
+      <div class="orbit" style="--distance: 600px; --orbit-duration: 80s">
+        <div
+          class="planet neptune"
+          data-name="Neptune"
+          style="--size: 22px; --color: #2b57b6; --spin-duration: 3.2s"
+        >
+          <div class="globe"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip box -->
+    <div class="legend">
+      <strong>Tip</strong>
+      <small>Hover any planet to see its name. </small>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

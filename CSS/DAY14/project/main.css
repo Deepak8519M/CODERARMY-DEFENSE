@@ -1,0 +1,195 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 50% 20%, #022 0%, #001 40%, #000 100%);
+  color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  overflow: hidden;
+}
+
+.space {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---------------- The Sun ---------------- */
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  margin-left: -110px;
+  margin-top: -110px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fff176 0%,
+    #ff9800 45%,
+    #ff5722 75%
+  );
+  box-shadow: 0 0 120px 30px rgba(255, 150, 0, 0.45),
+    inset 0 -30px 80px rgba(0, 0, 0, 0.15);
+  animation: sunPulse 8s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+/* ---------------- Orbit ---------------- */
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: center center;
+  animation: orbit-rotate var(--orbit-duration) linear infinite;
+  pointer-events: none; /* Allow hover only on planets */
+}
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Visual ring for orbit */
+.orbit::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--distance));
+  top: calc(-1 * var(--distance));
+  width: calc(var(--distance) * 2);
+  height: calc(var(--distance) * 2);
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+/* ---------------- Planet ---------------- */
+.planet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--distance));
+  width: var(--size);
+  height: var(--size);
+  pointer-events: auto;
+  --size: 12px;
+  --spin-duration: 8s;
+  --color: #999;
+}
+
+.globe {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.03);
+  animation: spin var(--spin-duration) linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover label */
+.planet::after {
+  content: attr(data-name);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.planet:hover::after {
+  opacity: 1;
+}
+
+/* Moon orbit */
+.moon-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: center center;
+  --distance: 28px;
+  --orbit-duration: 1.5s;
+  animation: orbit-rotate var(--orbit-duration) linear infinite;
+}
+.moon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--distance));
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Saturn Ring */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--size) * 1.9);
+  height: calc(var(--size) * 0.6);
+  border-radius: 50%;
+  border: 3px solid rgba(200, 170, 120, 0.6);
+}
+
+/* Tip box */
+.legend {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.legend small {
+  display: block;
+  opacity: 0.8;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .globe,
+  .sun,
+  .moon-orbit {
+    animation: none;
+  }
+}

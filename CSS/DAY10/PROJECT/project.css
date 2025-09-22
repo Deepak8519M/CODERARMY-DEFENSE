@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: black;
+  font-family: "Urbanist", sans-serif;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 600px;
+  height: fit-content;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+}
+
+.box h1 {
+  color: #39ff14;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.9vw;
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.name,
+.pw {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  color: #39ff14;
+  font-size: 1.7vw;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+input {
+  padding: 15px;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4vw;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus {
+  border-color: white;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+button {
+  background: #39ff14;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  font-size: 1.3vw;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  color: #39ff14;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .box h1 {
+    font-size: 5vw;
+  }
+
+  label {
+    font-size: 3vw;
+  }
+
+  input {
+    font-size: 2.5vw;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 3vw;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .box h1 {
+    font-size: 6vw;
+  }
+
+  label {
+    font-size: 4vw;
+  }
+
+  input {
+    font-size: 3.5vw;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 4vw;
+    padding: 10px 20px;
+  }
+}

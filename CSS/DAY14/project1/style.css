@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 50% 20%, #022 0%, #001 40%, #000 100%);
+  color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  overflow: hidden;
+}
+.space {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  margin-left: -110px;
+  margin-top: -110px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fff176 0%,
+    #ff9800 45%,
+    #ff5722 75%
+  );
+
+  box-shadow: 0 0 120px 20px rgba(255, 150, 0, 0.45),
+    inset 0 -30px 80px rgb(255, 0, 0);
+  animation: sunPulse 8s ease-in-out infinite;
+}
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  /* background: greenyellow; */
+  transform-origin: center center;
+  animation: orbit-rotate var(--orbit-duration) linear infinite;
+  pointer-events: none;
+}
+@keyframes orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.orbit::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--distance));
+  top: calc(-1 * var(--distance));
+  width: calc(var(--distance) * 2);
+  height: calc(var(--distance) * 2);
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+.planet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--distance));
+  width: var(--size);
+  height: var(--size);
+  pointer-events: auto;
+  --size: 12px;
+  --spin-duration: 8s;
+  --color: #999;
+  background: red;
+}
+.globe {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.03);
+  animation: spin var(--spin-duration) linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.moon-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: center center;
+  --distance: 28px;
+  --orbit-duration: 1.5s;
+  animation: orbit-rotate var(--orbit-duration) linear infinite;
+}
+.moon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--distance));
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
