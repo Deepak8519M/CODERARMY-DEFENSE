@@ -10,7 +10,7 @@ body {
   height: 100%;
 }
 html {
-  scroll-behavior: smooth; /* ✅ Smooth scrolling */
+  scroll-behavior: smooth;
 }
 body {
   background-color: #1e1e1e;
@@ -38,7 +38,6 @@ body {
   top: 30px;
 }
 .main-content {
-  /* height: 90vh; */
   background: #2a2a2a;
   border-radius: 16px;
   border: 3px solid #3a3a3a;
@@ -69,15 +68,11 @@ body {
   border-radius: 5px;
   border: 1px solid #ffbf00;
 }
-
-/* Contact Section */
-
 .contact {
   margin-top: 20px;
   border-top: 3px solid #3a3a3a;
   padding-top: 10px;
 }
-
 .contact h3 {
   font-weight: 500;
   font-size: 0.8rem;
@@ -90,9 +85,6 @@ body {
 .contact p {
   color: #ffbf00;
 }
-
-/* Social */
-
 .social {
   margin-top: 20px;
   border-top: 3px solid #3a3a3a;
@@ -111,12 +103,6 @@ body {
     hue-rotate(359deg) brightness(101%) contrast(105%);
   transition: all ease-in 0.3s;
 }
-
-/* Main_Content */
-
-/* .main-content {
-} */
-
 .navigation {
   padding: 5px 15px;
   border-bottom: 1px solid #ffbf00;
@@ -143,16 +129,12 @@ nav a:hover {
   color: #ffbf00;
   border-bottom: 2px solid #ffbf00;
 }
-
-/* About */
 #about {
   margin-bottom: 10px;
 }
-
 #about h2 {
   color: #e0e0e0;
   font-size: 2rem;
-  /* margin-bottom: 2px; */
 }
 .line {
   width: 40px;
@@ -163,16 +145,10 @@ nav a:hover {
 #about p {
   text-align: justify;
 }
-
-/* Skills */
-
 #skill h2 {
-  /* margin-bottom: 2px; */
   color: #e0e0e0;
   font-size: 2rem;
 }
-/* Skills Section */
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -198,22 +174,53 @@ nav a:hover {
   text-align: center;
   transition: all ease-in 0.2s;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .item:hover {
   transform: scale(1.07);
-  box-shadow: 0px 0px 10px 5px #1e1e1e;
-
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .item h3 {
   font-size: 1vw;
 }
-
+.item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 150%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(76, 76, 76, 0.3),
+    transparent
+  );
+  /* background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 191, 0, 0.3),
+    transparent
+  ); */
+  transform: rotate(30deg);
+  animation: shine 2.5s ease-in-out infinite;
+}
+@keyframes shine {
+  0% {
+    left: -140%;
+  }
+  50% {
+    left: 180%;
+  }
+  100% {
+    left: 210%;
+  }
+}
 #education {
   margin-top: 10px;
 }
 #education h2 {
-  /* margin-bottom: 2px; */
   color: #e0e0e0;
   font-size: 2rem;
 }
@@ -270,9 +277,7 @@ nav a:hover {
   bottom: 0px;
   border: 2px solid #3a3a3a;
 }
-
 #portfolio h2 {
-  /* margin-bottom: 2px; */
   color: #e0e0e0;
   font-size: 2rem;
 }
@@ -294,6 +299,7 @@ nav a:hover {
   border: 1px solid #3a3a3a;
   overflow: hidden;
   transition: all ease-in 0.3s;
+  position: relative;
 }
 .project .card {
   padding: 20px;
@@ -307,7 +313,6 @@ nav a:hover {
   line-height: 1.6;
   margin-bottom: 10px;
 }
-
 .card span {
   background-color: rgba(255, 191, 0, 0.1);
   color: #ffbf00;
@@ -319,6 +324,22 @@ nav a:hover {
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.project::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 150%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(128, 128, 128, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 2.5s ease-in-out infinite;
 }
 @media (max-width: 900px) {
   .main-container {
