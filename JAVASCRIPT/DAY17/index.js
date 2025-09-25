@@ -3,43 +3,45 @@
 // primitive data type
 // number,string,boolean,undefined,null,bigInt,symbol
 
-let a = 10;
-let b = 20.35;
-console.log(b);
-console.log(a);
+// let a = 10;
+// let b = 20.35;
+// console.log(b);
+// console.log(a);
 
-let c = "Strike is Coming";
+// let c = "Strike is Coming";
 
-let d = "Rohit";
+// let d = "Rohit";
 
-console.log(c + " " + d);
+// console.log(c + " " + d);
 
-// non Primitve Data Type
-//array,obj,function,
+// // non Primitve Data Type
+// //array,obj,function,
 
-let f = false;
+// let f = false;
 
-console.log(f);
+// console.log(f);
 
-let user;
+// let user;
 
-console.log(user);
+// console.log(user);
 
-const p = 2;
-console.log(p);
+// const p = 2;
+// console.log(p);
 
-let num = 1193280930983083028390898989098908908938;
-console.log(num);
+// let num = 1193280930983083028390898989098908908938;
+// console.log(num);
 
-let weather = null;
-console.log(weather);
+// let weather = null;
+// console.log(weather);
 
-const id1 = Symbol("id");
-const id2 = Symbol("id");
+// const id1 = Symbol("id");
+// const id2 = Symbol("id");
 
-console.log(id2 == id1);
-console.log(id1);
+// console.log(id2 == id1);
+// console.log(id1);
 
-let arr = [10, 20, 30, 40, "Rohit", true, undefined, null];
+// let arr = [10, 20, 30, 40, "Rohit", true, undefined, null];
 
-console.log(arr);
+// console.log(arr);
+
+
