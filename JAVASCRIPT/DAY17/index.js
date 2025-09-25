@@ -64,10 +64,10 @@
 // // console.log(b);
 // // console.log(typeof b);
 
-// // let s = function add() {
-// //   return "Hello";
-// // };
-// // console.log(s());
+let s = function add() {
+  return "Hello";
+};
+console.log(typeof s);
 
 // let a = 10;
 
