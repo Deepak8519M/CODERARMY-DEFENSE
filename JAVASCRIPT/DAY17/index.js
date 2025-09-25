@@ -39,3 +39,7 @@ const id2 = Symbol("id");
 
 console.log(id2 == id1);
 console.log(id1);
+
+let arr = [10, 20, 30, 40, "Rohit", true, undefined, null];
+
+console.log(arr);
