@@ -100,14 +100,17 @@
 //   console.log("Not Eligible for Vote");
 // }
 
-console.log(true && true);
-console.log(true ** false);
-console.log(true || true);
-console.log(true || false);
-console.log(null || null);
+// console.log(true && true);
+// console.log(true ** false);
+// console.log(true || true);
+// console.log(true || false);
+// console.log(null || null);
 
 let a = "Rohit";
 let b = "Mohit";
 
 let c = a && b;
+let d = a || b;
+
+console.log(d);
 console.log(c);
