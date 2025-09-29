@@ -66,7 +66,15 @@
 // console.log(typeof null);
 // console.log(typeof undefined);
 
-console.log(null >= undefined);
-console.log(0 >= undefined);
+// console.log(null >= undefined);
+// console.log(0 >= undefined);
 
-console.log(null >= 0);
+// console.log(null >= 0);
+
+console.log("Rohit" === "Rohit");
+
+console.log(10 >= "10");
+
+console.log(null >= "");
+
+// At first these are converted to Numbers when comparison operatiors exist
