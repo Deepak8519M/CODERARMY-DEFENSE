@@ -32,9 +32,17 @@
 // console.log(c);
 // console.log(typeof c)
 
-let a = true;
-let b = false;
-console.log(Number(a));
-console.log(Number(b));
-console.log(Number(null));
-console.log(Number(undefined));
+// let a = true;
+// let b = false;
+// console.log(Number(a));
+// console.log(Number(b));
+// console.log(Number(null));
+// console.log(Number(undefined));
+
+// console.log(object)
+// console.log(typeof String(true));
+
+console.log(Boolean(true));
+console.log(Boolean(-1));
+console.log(Boolean(0));
+console.log(Boolean("hello"));
