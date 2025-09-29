@@ -81,21 +81,33 @@
 
 // console.log(NaN===NaN)
 
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
 
-// post decrement
-i = 10;
-while (i < 20) {
-  i++;
-  console.log(i);
-}
+// // post decrement
+// i = 10;
+// while (i < 20) {
+//   i++;
+//   console.log(i);
+// }
 
-let age = 17;
+// let age = 17;
 
-if (age >= 18) {
-  console.log("Eligible for Vote");
-} else {
-  console.log("Not Eligible for Vote");
-}
+// if (age >= 18) {
+//   console.log("Eligible for Vote");
+// } else {
+//   console.log("Not Eligible for Vote");
+// }
+
+console.log(true && true);
+console.log(true ** false);
+console.log(true || true);
+console.log(true || false);
+console.log(null || null);
+
+let a = "Rohit";
+let b = "Mohit";
+
+let c = a && b;
+console.log(c);
