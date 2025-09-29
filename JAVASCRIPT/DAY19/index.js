@@ -49,10 +49,24 @@
 // console.log(Boolean(null));
 // console.log(Boolean(NaN));
 
-let a = 0.1;
+// Classic Errors
 
-let b = 0.2;
+// let a = 0.1;
 
-let c = a + b;
+// let b = 0.2;
 
-console.log(c);
+// let c = a + b;
+
+// console.log(c);
+
+// null is  loosely equal to undefined
+
+// console.log(null == undefined);
+// console.log(null === undefined);
+// console.log(typeof null);
+// console.log(typeof undefined);
+
+console.log(null >= undefined);
+console.log(0 >= undefined);
+
+console.log(null >= 0);
