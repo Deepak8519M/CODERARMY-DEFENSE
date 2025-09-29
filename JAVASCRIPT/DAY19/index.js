@@ -71,10 +71,16 @@
 
 // console.log(null >= 0);
 
-console.log("Rohit" === "Rohit");
+// console.log("Rohit" === "Rohit");
 
-console.log(10 >= "10");
+// console.log(10 >= "10");
 
-console.log(null >= "");
+// console.log(null >= "");
 
-// At first these are converted to Numbers when comparison operatiors exist
+// At first these are converted to Numbers when comparison operatiors exist, They need to come into common ground
+
+// console.log(NaN===NaN)
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
