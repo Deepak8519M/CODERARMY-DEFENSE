@@ -84,3 +84,10 @@
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }
+
+// post decrement
+i = 10;
+while (i < 20) {
+  i++;
+  console.log(i);
+}
