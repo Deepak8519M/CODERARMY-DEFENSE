@@ -42,7 +42,9 @@
 // console.log(object)
 // console.log(typeof String(true));
 
-console.log(Boolean(true));
-console.log(Boolean(-1));
-console.log(Boolean(0));
-console.log(Boolean("hello"));
+// console.log(Boolean(true));
+// console.log(Boolean(-1));
+// console.log(Boolean("hello"));
+// console.log(Boolean(0));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
