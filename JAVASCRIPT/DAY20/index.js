@@ -35,6 +35,9 @@
 // console.log(Math.cos(45));
 // console.log(Math.max(1, 2, 3, 4));
 
-for (let i = 0; i <= 30; i++) {
-  console.log(Math.floor(Math.random() * 6) + 1);
+// for (let i = 0; i <= 30; i++) {
+//   console.log(Math.floor(Math.random() * 6) + 1);
+// }
+for (let i = 0; i < 20; i++) {
+  console.log(Math.floor(Math.random() * 11) + 15);
 }
