@@ -23,3 +23,15 @@
 // };
 // let obj2 = obj1;
 // console.log(obj1 == obj2);
+
+// console.log(Boolean(0));
+
+// console.log(Math.abs(-114));
+// console.log(Math.PI);
+// console.log(Math.log10(20));
+// console.log(Math.LOG10E);
+// console.log(Math.LOG2E);
+// console.log(Math.SQRT2);
+// console.log(Math.cos(45));
+// console.log(Math.max(1, 2, 3, 4));
+console.log(Math.random() * 8);
