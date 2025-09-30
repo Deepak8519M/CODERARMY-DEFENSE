@@ -34,4 +34,7 @@
 // console.log(Math.SQRT2);
 // console.log(Math.cos(45));
 // console.log(Math.max(1, 2, 3, 4));
-console.log(Math.random() * 8);
+
+for (let i = 0; i <= 30; i++) {
+  console.log(Math.floor(Math.random() * 6) + 1);
+}
