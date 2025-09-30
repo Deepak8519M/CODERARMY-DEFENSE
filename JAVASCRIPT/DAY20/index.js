@@ -18,8 +18,8 @@
 // console.log(typeof b);
 // console.log(b);
 
-let obj1 = {
-  name: "Rohit",
-};
-let obj2 = obj1;
-console.log(obj1 == obj2);
+// let obj1 = {
+//   name: "Rohit",
+// };
+// let obj2 = obj1;
+// console.log(obj1 == obj2);
