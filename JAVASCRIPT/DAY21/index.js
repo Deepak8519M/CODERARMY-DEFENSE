@@ -36,6 +36,10 @@
 // const c = a + "      " + b;
 // console.log(c);
 
-const str = `Hello Coder Code Army Hellok`;
+const str = ` Hello Coder Code Army Hellok`;
 
-console.log(str.replaceAll("ode", "iamm"));
+// console.log(str.replaceAll("ode", "iamm"));
+
+console.log(str.trim());
+
+
