@@ -42,6 +42,12 @@ const str = ` Hello Coder Code Army Hellok`;
 
 // console.log(str.trim());
 
-const names = "Rohist,Ajay,Sharma;Rahul";
+// const names = "Rohist,Ajay,Sharma;Rahul";
 
-console.log(names.split(" "));
+// console.log(names.split(" "));
+
+const now = new Date();
+
+console.log(now);
+
+console.log(now.toString());
