@@ -40,6 +40,8 @@ const str = ` Hello Coder Code Army Hellok`;
 
 // console.log(str.replaceAll("ode", "iamm"));
 
-console.log(str.trim());
+// console.log(str.trim());
 
+const names = "Rohist,Ajay,Sharma;Rahul";
 
+console.log(names.split(" "));
