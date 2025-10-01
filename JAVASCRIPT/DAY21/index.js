@@ -69,3 +69,8 @@ console.log(typeof now);
 console.log(dates.toString());
 console.log(typeof dates)
 1759346500272;
+
+
+// server only keeps utc formate so it plays a vital role in the web field to constantly monitro and maintain uniform dataz
+
+
