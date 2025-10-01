@@ -9,7 +9,7 @@
 
 // console.log(str1, str2, str3);
 
-const str = `Hello Coder Army `;
+const str = `Hello Coder Army Hello`;
 
 console.log(str.length);
 console.log(str[0]);
@@ -24,4 +24,4 @@ str[0] = "A";
 
 console.log(str[0]);
 console.log(str.includes("C"));
-console.log(str.indexOf("Hel"))
+console.log(str.lastIndexOf("Hel"));
