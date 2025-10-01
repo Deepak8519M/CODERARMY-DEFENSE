@@ -23,3 +23,5 @@ console.log(str);
 str[0] = "A";
 
 console.log(str[0]);
+console.log(str.includes("C"));
+console.log(str.indexOf("Hel"))
