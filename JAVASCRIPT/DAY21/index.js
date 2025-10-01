@@ -24,15 +24,18 @@
 // console.log(str.includes("Am"));
 // console.log(str.lastIndexOf("Hel"));
 
-const str = `Hello Coder Army Hellok`;
 // console.log(str.slice(0, 2));
 // console.log(str.slice(3));
 // console.log(str.slice(-2));
 
 // console.log(str.substring(2, 5));  --> negative index cant be marked down
 
-const a = "Rohit ";
-const b = "Negi";
+// const a = "Rohit ";
+// const b = "Negi";
 
-const c = a + "      " + b;
-console.log(c);
+// const c = a + "      " + b;
+// console.log(c);
+
+const str = `Hello Coder Code Army Hellok`;
+
+console.log(str.replaceAll("ode", "iamm"));
