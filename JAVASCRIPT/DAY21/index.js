@@ -46,15 +46,26 @@ const str = ` Hello Coder Code Army Hellok`;
 
 // console.log(names.split(" "));
 
-const now = new Date();
-
 // console.log(now);
 
 // console.log(now.toString());
 // console.log(now.toISOString());
 // console.log(now.toLocaleString());
 
-console.log(now.getDate());
-console.log(now.getDay());
-console.log(now.getFullYear());
-console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+
+// console.log(now.getSeconds());
+
+// const now = new Date(2025, 9, 20, 8, 24, 15, 125);
+// console.log(now.toString());
+
+const now = Date.now();
+
+const dates = new Date(1759346500272);
+console.log(typeof now);
+console.log(dates.toString());
+console.log(typeof dates)
+1759346500272;
