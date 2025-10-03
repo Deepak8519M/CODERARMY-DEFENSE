@@ -23,7 +23,10 @@
 
 // console.log(arr2);
 
-const arr = [10, 20, 50, 60, 90];
+const arr = [10, "Ajay", 20, 50, 60, 90];
+
+console.log(arr.reverse());
+console.log(arr);
 
 // console.log(arr.toString());
 
