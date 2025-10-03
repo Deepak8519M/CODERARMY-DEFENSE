@@ -23,14 +23,15 @@
 
 // console.log(arr2);
 
-const arr = [10, "Ajay", 20, 50, 60, 90];
-
-console.log(arr.reverse());
-console.log(arr);
+// console.log(arr.reverse());
+// console.log(arr);
 
 // console.log(arr.toString());
 
 // console.log(arr.join("-12-12-"));
 
 // console.log(arr.indexOf(50));
+
+const arr = [10, "Ajay", 20, 50, 60, 90];
+console.log(arr.sort());
 console.log(arr);
