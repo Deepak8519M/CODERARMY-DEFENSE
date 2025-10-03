@@ -6,6 +6,10 @@
 
 let arr = [10, 20, 50, 60, 90];
 
+let arr2 = arr;
+
+arr2[2] = "Rohit";
+
 for (let a in arr) {
-  console.log(a);
+  console.log(arr[a]);
 }
