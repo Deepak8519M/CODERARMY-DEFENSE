@@ -32,6 +32,13 @@
 
 // console.log(arr.indexOf(50));
 
-const arr = [10, "Ajay", 20, 50, 60, 90];
-console.log(arr.sort());
-console.log(arr);
+// const arr = [10, "Ajay", 20, 50, 60, 90];
+// console.log(arr.sort());
+// console.log(arr);
+
+const a = [10, 20, 300, [10, 20, 30, [40, 50, 60]], 40, 4, 100];
+
+// a.sort((a, b) => a - b);
+// 52:38 sec rule and intution behind the sort function
+
+console.log(a[3][3][2]);
