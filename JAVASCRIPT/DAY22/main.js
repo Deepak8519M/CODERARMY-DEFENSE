@@ -12,11 +12,16 @@
 //   console.log(arr[a]);
 // }
 
-const arr = [10, 20, 50, 60, 90];
-
 // arr[4] = "Rohit";
 
-// const arr2 = arr.slice(2, 4);
-console.log(arr.splice(0, 6));
+// // const arr2 = arr.slice(2, 4);
+// console.log(arr.splice(0, 6, "ROhit", "Negi"));
+
+// console.log(arr);
+
+const arr = [10, 20, 50, 60, 90];
+
+const arr2 = [1, 2, 3, ...arr];
 
 console.log(arr);
+console.log(arr2);
