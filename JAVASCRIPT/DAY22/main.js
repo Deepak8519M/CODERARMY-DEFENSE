@@ -1,9 +1,7 @@
-let marks = [10, 20, 30, 40, 50, "Rohit", true];
+//
 
-marks[4] = "Hello";
-// marks.push(10, 30, 40);
-// marks.pop();
+let arr = [10, 20, 50, 60, 90];
 
-marks.unshift(1000);
-
-console.log(marks);
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
