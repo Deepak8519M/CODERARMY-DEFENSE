@@ -25,8 +25,9 @@
 
 const arr = [10, 20, 50, 60, 90];
 
-console.log(arr.toString());
+// console.log(arr.toString());
 
-console.log(arr.join("-12-12-"));
+// console.log(arr.join("-12-12-"));
 
+// console.log(arr.indexOf(50));
 console.log(arr);
