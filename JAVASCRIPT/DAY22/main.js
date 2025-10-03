@@ -14,5 +14,9 @@
 
 const arr = [10, 20, 50, 60, 90];
 
-arr[4] = "Rohit";
+// arr[4] = "Rohit";
+
+// const arr2 = arr.slice(2, 4);
+console.log(arr.splice(0, 6));
+
 console.log(arr);
