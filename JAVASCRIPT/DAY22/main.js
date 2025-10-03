@@ -43,4 +43,4 @@ const a = [10, 20, 300, [10, 20, 30, [40, 50, 60]], 40, 4, 100];
 
 // console.log(a[3][3][2]);
 
-console.log(a.flat(2));
+console.log(a.flat(Infinity));
