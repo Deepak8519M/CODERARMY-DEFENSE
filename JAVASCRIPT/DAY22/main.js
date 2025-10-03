@@ -19,9 +19,14 @@
 
 // console.log(arr);
 
+// const arr2 = [1, 2, 3, ...arr];
+
+// console.log(arr2);
+
 const arr = [10, 20, 50, 60, 90];
 
-const arr2 = [1, 2, 3, ...arr];
+console.log(arr.toString());
+
+console.log(arr.join("-12-12-"));
 
 console.log(arr);
-console.log(arr2);
