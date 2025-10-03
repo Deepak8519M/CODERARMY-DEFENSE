@@ -1,3 +1,9 @@
-let marks = [10, 20, 30, 40, 50];
+let marks = [10, 20, 30, 40, 50, "Rohit", true];
 
-let marks1 = [10,2010,20]
+marks[4] = "Hello";
+// marks.push(10, 30, 40);
+// marks.pop();
+
+marks.unshift(1000);
+
+console.log(marks);
